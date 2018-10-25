@@ -1,0 +1,207 @@
+[
+  {
+    "question": "What's not in Rails?",
+    "type": "mc",
+    "choices": {
+      "1": "ActiveDispatcher",
+      "2": "ActiveRecord",
+      "3": "ActiveSupport",
+      "4": "ActionCable"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What does CRUD stand for?",
+    "type": "mc",
+    "choices": {
+      "1": "Create, Read, Update, Delete",
+      "2": "Create, Read, Update, Destroy",
+      "3": "Create, Reload, Update, Delete",
+      "4": "Create, Reload, Update, Destroy"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What Does MVC Stand For?",
+    "type": "mc",
+    "choices": {
+      "1": "Model View Controller",
+      "2": "Model View Contractor",
+      "3": "Model View Compressor",
+      "4": "Model View Creator"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which query corresponds to the following code?\nUser.order(\"last_name DESC\").limit(1).offset(1)",
+    "type": "mc",
+    "choices": {
+      "1": "SELECT * FROM users ORDER BY last_name DESC LIMIT 1,1;",
+      "2": "SELECT * FROM users ORDER BY last_name DESC LIMIT 1 OFFSET 1;",
+      "3": "SELECT * FROM users SORT BY last_name DESC LIMIT 1,1;",
+      "4": "SELECT * FROM users SORT BY last_name DESC LIMIT 1 OFFSET 1;"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "There is animals table.\nid name legs eyes\n1 cat 4 2\n2 dog 4 2\n3 spider 8 8\nWhat will the following code output?\nAnimals.where(legs: 4).pluck(:name)",
+    "type": "mc",
+    "choices": {
+      "1": "+ ['cat', 'dog']",
+      "2": "[{ name: 'cat' }, { name: 'dog' }]",
+      "3": "array of Animal models with models \"cat\" and \"dog\"",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to remove row with callbacks",
+    "type": "mc",
+    "choices": {
+      "1": "destroy",
+      "2": "delete",
+      "3": "drop",
+      "4": "remove"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is correct Action Controller filters",
+    "type": "ma",
+    "choices": {
+      "1": "+before_action",
+      "2": "+after_action",
+      "3": "+around_action",
+      "4": "resque_action"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Flash is a object of",
+    "type": "mc",
+    "choices": {
+      "1": "ActionDispatch",
+      "2": "ActiveView",
+      "3": "ActionController",
+      "4": "ActiveSupport"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Select the correct manners of model getting:",
+    "type": "ma",
+    "choices": {
+      "1": "Client.find(id: 4)",
+      "2": "Client.find_by(id: 4)",
+      "3": "Client.find(4)",
+      "4": "Client.find_by_id(4)"
+    },
+    "answer": [
+      "2",
+      "3",
+      "4"
+    ],
+    "tags": [
+      "rails5",
+      "intermediate-level"
+    ],
+    "explanation": "<p>For every field (also known as an attribute) you define in your table, Active Record provides a finder method. If you have a field called <code>first_name</code> on your <code>Client</code> model for example, you get <code>find_by_first_name</code> for free from Active Record. If you have a <code>locked</code> field on the <code>Client</code> model, you also get <code>find_by_locked</code> method.</p>"
+  },
+  {
+    "question": "Is this code correct?\nProduct.find_by_sql('SELECT * FROM products')",
+    "type": "",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which SQL-query generates next code?\nConnection.where(active: true).pluck(:id)",
+    "type": "mc",
+    "choices": {
+      "1": "SELECT id FROM connections WHERE active = 1",
+      "2": "SELECT * as id FROM connections WHERE active = 1",
+      "3": "SELECT * FROM connections WHERE active = 1 GROUP BY id",
+      "4": "SELECT DISTINCT id FROM connections WHERE active = 1"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5, advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which SQL-query generates next code?\nConnection.uniq.pluck(: interface)",
+    "type": "",
+    "choices": {
+      "1": "SELECT DISTINCT interface FROM connections",
+      "2": "SELECT * FROM connections GROUP BY interface",
+      "3": "SELECT DISTINCT FROM connections GROUP BY interface",
+      "4": "SELECT DISTINCT interface FROM connections GROUP BY interface"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "type": "",
+    "choices": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  }
+]
+

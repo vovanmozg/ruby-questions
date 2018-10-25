@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What will code output?\nx = true and false\ny = true && false\nx == y",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "ruby"
+    ],
+    "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
+  }
+]
+
+

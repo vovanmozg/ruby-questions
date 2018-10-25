@@ -4,6 +4,7 @@
 ## Quiz types:
 
 mc - Multiply Choice Question
+
 ma - Multiply Answer Question
 
 

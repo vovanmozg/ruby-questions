@@ -8,10 +8,81 @@
     },
     "answer": "1",
     "tags": [
-      "ruby"
+      "ruby", "intermediate-level"
     ],
     "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
+  },
+  {
+    "question": "It what cases a.object_id == b.object_id will return true",
+    "type": "ma",
+    "choices": {
+      "1": "b = (a = 42).dup",
+      "2": "b = (a = :red).dup",
+      "3": "b = (a = { x: 42 }).dup",
+      "4": "b = (a = 'red').dup"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What the right way to get 'buzz' string from array without array modify?\n<code>ary = ['foo', 'bar', 'buzz']</code>",
+    "type": "ma",
+    "choices": {
+      "1": "ary.last",
+      "2": "ary[-1]",
+      "3": "ary[3]",
+      "4": "ary.shift"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Can ary contain different types of variables\n<code>ary = [-3, :albert, 'einstein', Object.new]</code>",
+    "type": "",
+    "choices": {
+      "1": "yes",
+      "2": "no"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>[1, 2, 3].map {|num| num == 1 ? 'first' : num}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "['first', 2, 3]",
+      "2": "[1, 2, 3]",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "",
+    "type": "",
+    "choices": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [
+      ""
+    ],
+    "explanation": ""
   }
 ]
-
-

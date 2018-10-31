@@ -48,7 +48,7 @@
     "explanation": ""
   },
   {
-    "question": "Which query corresponds to the following code?\nUser.order(\"last_name DESC\").limit(1).offset(1)",
+    "question": "Which query corresponds to the following code?\n<code>User.order(\"last_name DESC\").limit(1).offset(1)</code>",
     "type": "mc",
     "choices": {
       "1": "SELECT * FROM users ORDER BY last_name DESC LIMIT 1,1;",
@@ -64,7 +64,7 @@
     "explanation": ""
   },
   {
-    "question": "There is animals table.\nid name legs eyes\n1 cat 4 2\n2 dog 4 2\n3 spider 8 8\nWhat will the following code output?\nAnimals.where(legs: 4).pluck(:name)",
+    "question": "There is animals table.\nid name legs eyes\n1 cat 4 2\n2 dog 4 2\n3 spider 8 8\nWhat will the following code output?\n<code>Animals.where(legs: 4).pluck(:name)</code>",
     "type": "mc",
     "choices": {
       "1": "+ ['cat', 'dog']",
@@ -98,12 +98,12 @@
     "question": "What is correct Action Controller filters",
     "type": "ma",
     "choices": {
-      "1": "+before_action",
-      "2": "+after_action",
-      "3": "+around_action",
+      "1": "before_action",
+      "2": "after_action",
+      "3": "around_action",
       "4": "resque_action"
     },
-    "answer": "1",
+    "answer": ["1", "2", "3"],
     "tags": [
       "rails5"
     ],
@@ -145,7 +145,7 @@
     "explanation": "<p>For every field (also known as an attribute) you define in your table, Active Record provides a finder method. If you have a field called <code>first_name</code> on your <code>Client</code> model for example, you get <code>find_by_first_name</code> for free from Active Record. If you have a <code>locked</code> field on the <code>Client</code> model, you also get <code>find_by_locked</code> method.</p>"
   },
   {
-    "question": "Is this code correct?\nProduct.find_by_sql('SELECT * FROM products')",
+    "question": "Is this code correct?\n<code>Product.find_by_sql('SELECT * FROM products')</code>",
     "type": "",
     "choices": {
       "1": "true",
@@ -158,7 +158,7 @@
     "explanation": ""
   },
   {
-    "question": "Which SQL-query generates next code?\nConnection.where(active: true).pluck(:id)",
+    "question": "Which SQL-query generates next code?\n<code>Connection.where(active: true).pluck(:id)</code>",
     "type": "mc",
     "choices": {
       "1": "SELECT id FROM connections WHERE active = 1",
@@ -173,7 +173,7 @@
     "explanation": ""
   },
   {
-    "question": "Which SQL-query generates next code?\nConnection.uniq.pluck(: interface)",
+    "question": "Which SQL-query generates next code?\n<code>Connection.uniq.pluck(: interface)</code>",
     "type": "",
     "choices": {
       "1": "SELECT DISTINCT interface FROM connections",

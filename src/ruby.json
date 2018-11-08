@@ -1,16 +1,331 @@
-
 [
   {
-    "question": "",
-    "type": "",
+    "question": "What returns <code>...</code>",
     "choices": {
       "1": "",
       "2": "",
       "3": "",
       "4": ""
     },
+    "type": "mc",
     "answer": "1",
-    "tags": [""],
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which way to call lambda is incorrect?\n<code>l = ->(a, &b){b.call(a)}</code>",
+    "choices": {
+      "1": "l['world'] { |who| \"Hello, #{who}!\" }",
+      "2": "l.('world') { |who| \"Hello, #{who}!\" }",
+      "3": "l.call('world') { |who| \"Hello, #{who}!\" }",
+      "4": "l.yield('world') { |who| \"Hello, #{who}!\" }"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
+    "choices": {
+      "1": "l.call('kuku')",
+      "2": "l['kuku']",
+      "3": "l.('kuku')",
+      "4": "lam.yield 'kuku'"
+    },
+    "type": "ma",
+    "answer": ["1", "2", "3", "4"],
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is correct ways to create and call lambda?",
+    "choices": {
+      "1": "-> a,b {a+b}[1,2]",
+      "2": "-> |a,b| {a+b}[1,2]",
+      "3": "-> a,b {a+b}(1,2)",
+      "4": "-> (a,b){a+b}(1,2)"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Is code correct?\n<code>l = -> a,b,c {a+b+c}\np l[1,2,3]</code>",
+    "choices": {
+      "1": "yes",
+      "2": "no"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns <code>(1..3).each</code>",
+    "choices": {
+      "1": "<Enumerator:0x12627c>",
+      "2": "[1, 2, 3]",
+      "3": "Error",
+      "4": "nil"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns <code>(1..5).class</code>",
+    "choices": {
+      "1": "Range",
+      "2": "Array",
+      "3": "Enumerator",
+      "4": "Integer"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns <code>(1...10) === 5</code>",
+    "choices": {
+      "1": "true",
+      "2": "false",
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level "
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p \"#{5 <=> 6}#{5 <=> 4}#{5 <=> 5}\"</code>",
+    "choices": {
+      "1": "-110",
+      "2": "655",
+      "3": "545",
+      "4": "1-10"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+
+
+  {
+    "question": "What returns <code>loop.size</code>",
+    "choices": {
+      "1": "Infinity",
+      "2": "Error",
+      "3": "0",
+      "4": "Enumerator"
+    },
+    "type": "",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns this code?\n<code>[3,2,1].to_enum.next.next.next.next</code>",
+    "choices": {
+      "1": "6",
+      "2": "5",
+      "3": "3",
+      "4": "Error"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns this code?\n<code>(1..5).to_a.inject(:+)</code>",
+    "choices": {
+      "1": "15",
+      "2": "Error",
+      "3": "5",
+      "4": "[1, 2, 3, 4, 5]"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What preferable way to write hash?",
+    "type": "mc",
+    "choices": {
+      "1": "{a: 'b'}",
+      "2": "{:a => 'b'}"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which method returns Integer ordinal of the first character of the string?",
+    "type": "mc",
+    "choices": {
+      "1": "ord",
+      "2": "code",
+      "3": "enc",
+      "4": "mime"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What methods are in String?",
+    "choices": {
+      "1": "each_line",
+      "2": "each_byte",
+      "3": "each",
+      "4": "forEach"
+    },
+    "type": "ma",
+    "answer": [
+      "1",
+      "2"
+    ],
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p [1,2,3].to_s</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"[1, 2, 3]\"",
+      "2": "\"1 2 3\"",
+      "3": "\"1,2,3\"",
+      "4": "\"[1 2 3]\""
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to make string 'abcde' with all elements of ary = array [a b c d e]",
+    "type": "mc",
+    "choices": {
+      "1": "ary.join",
+      "2": "ary.to_s",
+      "3": "ary.implode",
+      "4": "ary.concat"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>i = 0\n[1,2,3].each{|i| i += i}\np i</code>",
+    "type": "mc",
+    "choices": {
+      "1": "0",
+      "2": "3",
+      "3": "6",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "https://stackoverflow.com/questions/6259314/"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>@a = 7\n[1,2,3].each{|@a| print @a}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "123",
+      "3": "777",
+      "4": "nilnilnil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Are Hashes (or rather, the keys in them) sorted?",
+    "type": "mc",
+    "choices": {
+      "1": "Sorted, order is insertion order",
+      "2": "Sorted, order is reverse insertion order",
+      "3": "Not sorted",
+      "4": "Sorted alphabetically"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>BasicObject.ancestors</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[BasicObject]",
+      "2": "[Object, Kernel, BasicObject]",
+      "3": "[Kernel, BasicObject]",
+      "4": "[Kernel]"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns <code>instance_methods</code>?",
+    "type": "mc",
+    "choices": {
+      "1": "Array of symbols",
+      "2": "Array of defs",
+      "3": "Array of strings",
+      "4": "Array of lambdas"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
     "explanation": ""
   },
   {
@@ -23,7 +338,9 @@
       "4": "117!85!97!110!100!114!105!107!"
     },
     "answer": "1",
-    "tags": ["intermediate-level"],
+    "tags": [
+      "intermediate-level"
+    ],
     "explanation": ""
   },
   {
@@ -36,7 +353,9 @@
       "4": "ruby"
     },
     "answer": "1",
-    "tags": ["beginner-level"],
+    "tags": [
+      "beginner-level"
+    ],
     "explanation": ""
   },
   {
@@ -49,18 +368,9 @@
       "4": "true"
     },
     "answer": "1",
-    "tags": ["advanced-level"],
-    "explanation": ""
-  },
-  {
-    "question": "What is the preferred method for naming controllers?",
-    "type": "mc",
-    "choices": {
-      "1": "BooksController",
-      "2": "BookController"
-    },
-    "answer": "1",
-    "tags": ["beginner-level"],
+    "tags": [
+      "advanced-level"
+    ],
     "explanation": ""
   },
   {
@@ -73,7 +383,9 @@
       "4": "2"
     },
     "answer": "1",
-    "tags": ["#advanced-level"],
+    "tags": [
+      "#advanced-level"
+    ],
     "explanation": ""
   },
   {
@@ -86,7 +398,9 @@
       "4": "[]"
     },
     "answer": "1",
-    "tags": ["advanced-level"],
+    "tags": [
+      "advanced-level"
+    ],
     "explanation": ""
   },
   {
@@ -98,7 +412,8 @@
     },
     "answer": "1",
     "tags": [
-      "ruby", "intermediate-level"
+      "ruby",
+      "intermediate-level"
     ],
     "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
   },
@@ -111,7 +426,10 @@
       "3": "b = (a = { x: 42 }).dup",
       "4": "b = (a = 'red').dup"
     },
-    "answer": ["1", "2"],
+    "answer": [
+      "1",
+      "2"
+    ],
     "tags": [
       "advanced-level"
     ],
@@ -126,7 +444,10 @@
       "3": "ary[3]",
       "4": "ary.shift"
     },
-    "answer": ["1", "2"],
+    "answer": [
+      "1",
+      "2"
+    ],
     "tags": [
       "intermediate-level"
     ],

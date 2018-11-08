@@ -1,5 +1,19 @@
 [
   {
+    "question": "What is the preferred method for naming controllers?",
+    "type": "mc",
+    "choices": {
+      "1": "BooksController",
+      "2": "BookController"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5",
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What's not in Rails?",
     "type": "mc",
     "choices": {
@@ -125,7 +139,7 @@
     "explanation": ""
   },
   {
-    "question": "Select the correct manners of model getting:",
+    "question": "Select the correct way of model getting:",
     "type": "ma",
     "choices": {
       "1": "Client.find(id: 4)",

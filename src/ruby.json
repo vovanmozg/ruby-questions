@@ -1,4 +1,94 @@
+
 [
+  {
+    "question": "",
+    "type": "",
+    "choices": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [""],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'andrik'.each { |s| print \"#{s}!\" }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "andrik!",
+      "3": "a!n!d!r!i!k!",
+      "4": "117!85!97!110!100!114!105!107!"
+    },
+    "answer": "1",
+    "tags": ["intermediate-level"],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p 'ruby'[1]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "u",
+      "2": "r",
+      "3": "117",
+      "4": "ruby"
+    },
+    "answer": "1",
+    "tags": ["beginner-level"],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p ?с</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"с\"",
+      "2": "Error",
+      "3": "99",
+      "4": "true"
+    },
+    "answer": "1",
+    "tags": ["advanced-level"],
+    "explanation": ""
+  },
+  {
+    "question": "What is the preferred method for naming controllers?",
+    "type": "mc",
+    "choices": {
+      "1": "BooksController",
+      "2": "BookController"
+    },
+    "answer": "1",
+    "tags": ["beginner-level"],
+    "explanation": ""
+  },
+  {
+    "question": "p ->(_){->(){_*_}}[2][]",
+    "type": "mc",
+    "choices": {
+      "1": "4",
+      "2": "nil",
+      "3": "Error",
+      "4": "2"
+    },
+    "answer": "1",
+    "tags": ["#advanced-level"],
+    "explanation": ""
+  },
+  {
+    "question": "[1,2,3].map{|_| ->(_){->(_){_*_}[_]}[_]}",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 4, 9]",
+      "2": "Error",
+      "3": "[1, 2, 3, 2, 4, 6, 3, 6, 9]",
+      "4": "[]"
+    },
+    "answer": "1",
+    "tags": ["advanced-level"],
+    "explanation": ""
+  },
   {
     "question": "What will code output?\nx = true and false\ny = true && false\nx == y",
     "type": "mc",
@@ -67,21 +157,6 @@
     "answer": "1",
     "tags": [
       "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "type": "",
-    "choices": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": ""
-    },
-    "answer": "1",
-    "tags": [
-      ""
     ],
     "explanation": ""
   }

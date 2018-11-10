@@ -15,6 +15,81 @@
     "explanation": ""
   },
   {
+    "question": "What will code output?\n<code>print Array.new.tap { |a| a << 1 << 2 << 3 }</code>",
+    "choices": {
+      "1": "[1, 2, 3]",
+      "2": "[]",
+      "3": "Error",
+      "4": "3"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns code:\n<code>def foo(a,*b,c)\n    a,b,c\n    end\n    foo(1,2,3,4,5)</code>",
+    "choices": {
+      "1": "[1, [2, 3, 4], 5]",
+      "2": "1",
+      "3": "5",
+      "4": "[1, 2, 3, 4, 5]"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What’s the output of the following code?<code>def foo(*args)\nputs args[1]\nend\nfoo <<EOS, __LINE__\nhello\nEOS</code>",
+    "choices": {
+      "1": "4",
+      "2": "hello",
+      "3": "nil",
+      "4": "Error"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will the variables contain after executing the code?\n<code>a, *b = [1, 2, 3]</code>",
+    "choices": {
+      "1": "a = 1, b = [2, 3]",
+      "2": "a = 1, b = 2",
+      "3": "a = [1, 2], b = 3",
+      "4": "Error"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will the variables contain after executing the code?\n<code>a, b = [1, 2, 3]</code>",
+    "type": "wc",
+    "choices": {
+      "1": "a = 1, b = 2",
+      "2": "a = 1, b = [2, 3]",
+      "3": "a = [1, 2], b = 3",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "Which way to call lambda is incorrect?\n<code>l = ->(a, &b){b.call(a)}</code>",
     "choices": {
       "1": "l['world'] { |who| \"Hello, #{who}!\" }",
@@ -106,12 +181,12 @@
     "question": "What returns <code>(1...10) === 5</code>",
     "choices": {
       "1": "true",
-      "2": "false",
+      "2": "false"
     },
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level "
+      "advanced-level"
     ],
     "explanation": ""
   },
@@ -404,7 +479,7 @@
     "explanation": ""
   },
   {
-    "question": "What will code output?\nx = true and false\ny = true && false\nx == y",
+    "question": "What will code output?\n<code>x = true and false\ny = true && false\nx == y</code>",
     "type": "mc",
     "choices": {
       "1": "true",

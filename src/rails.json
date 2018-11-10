@@ -1,5 +1,51 @@
 [
   {
+    "question": "",
+    "type": "",
+    "choices": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+
+  {
+    "question": "Where is the session method not accessible?",
+    "type": "mc",
+    "choices": {
+      "1": "Model",
+      "2": "Controller",
+      "3": "View",
+      "4": "Helper"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will add the params.require(:person) code to the controller and send the HTTP request with the fields name, age, sometext?",
+    "type": "mc",
+    "choices": {
+      "1": "400 HTTP status",
+      "2": "500 HTTP status",
+      "3": "Above code returns false",
+      "4": "The above code returns only specified params"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What is the preferred method for naming controllers?",
     "type": "mc",
     "choices": {
@@ -117,7 +163,11 @@
       "3": "around_action",
       "4": "resque_action"
     },
-    "answer": ["1", "2", "3"],
+    "answer": [
+      "1",
+      "2",
+      "3"
+    ],
     "tags": [
       "rails5"
     ],
@@ -199,21 +249,6 @@
     "tags": [
       "rails5",
       "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "",
-    "type": "",
-    "choices": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": ""
-    },
-    "answer": "1",
-    "tags": [
-      "rails5"
     ],
     "explanation": ""
   }

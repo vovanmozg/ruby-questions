@@ -1,13 +1,13 @@
 [
   {
-    "question": "What returns <code>...</code>",
+    "question": "What will be the output of the following code?\n<code>...</code>",
+    "type": "mc",
     "choices": {
       "1": "",
       "2": "",
       "3": "",
       "4": ""
     },
-    "type": "mc",
     "answer": "1",
     "tags": [
       "-level"
@@ -15,7 +15,523 @@
     "explanation": ""
   },
   {
-    "question": "What will code output?\n<code>print Array.new.tap { |a| a << 1 << 2 << 3 }</code>",
+    "question": "What ways you can create an array [1, 2, 3]",
+    "type": "ma",
+    "choices": {
+      "1": "%w<1 2 3>",
+      "2": "%w>1 2 3>",
+      "3": "%w>1 2 3<",
+      "4": "%w<1 2 3<"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>(\"\" << 48) + 48.chr)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"00\"",
+      "2": "\"4848\"",
+      "3": "Error",
+      "4": "[48, \"0\"]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%Q{#{%w==}#{%W==}#{Array.new}#{[]}}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"[][][][]\"",
+      "2": "Error",
+      "3": "4",
+      "4": "\"#{%w==}#{%W==}#{Array.new}#{[]}\""
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Select valid ways to run shell command",
+    "type": "ma",
+    "choices": {
+      "1": "`echo 'hi'`",
+      "2": "%x(echo 'hi')",
+      "3": "system(\"echo 'hi'\")",
+      "4": "exec(\"echo 'hi'\")"
+    },
+    "answer": ["1", "2", "3", "4"],
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%s[hello]</code>",
+    "type": "mc",
+    "choices": {
+      "1": ":hello",
+      "2": "[:hello]",
+      "3": "[\"hello\"]",
+      "4": "\"hello\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What code returns the symbol: hello?",
+    "type": "mc",
+    "choices": {
+      "1": "%q(hello)",
+      "2": "%s(hello)",
+      "3": "%i(hello)",
+      "4": "%w(hello)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>.%R[[0]] == /[0]/</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "false",
+      "3": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%r[[0]] == /[0]/</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%q_[=_=]_</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "\"[=_=]\"",
+      "3": "\"[==]\"",
+      "4": "\"==\""
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%q[#{\"1\"}] == %Q[#{\"1\"}]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%q[satoshi] == %q%satoshi%</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts %Q[#{\"ivan\"} \"susanin\"]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"ivan \\\"susanin\\\"\"",
+      "2": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+      "3": "Error",
+      "4": "\"ivan susanin\""
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts %q[#{\"ivan\"} \"susanin\"]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+      "2": "\"ivan \\\"susanin\\\"\"",
+      "3": "Error",
+      "4": "\"ivan susanin\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts %i{ein zwei drei}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[:ein, :zwei, :drei]",
+      "2": "[\"ein\", \"zwei\", \"drei\"]",
+      "3": "Error",
+      "4": "\"ein zwei drei\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%h{} == Hash.new</code>",
+    "type": "mc",
+    "choices": {
+      "1": "SyntaxError",
+      "2": "true",
+      "3": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will ary contain after executing the code\n<code>[[1,2], [3,4]].map { |a; b| b }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[nil, nil]",
+      "2": "[2, 3]",
+      "3": "[[1,2], [3,4]]",
+      "4": "SyntaxError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 > 2 ** 10 ** 10</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>Float::INFINITY - Float::INFINITY</code>",
+    "type": "mc",
+    "choices": {
+      "1": "NaN",
+      "2": "0",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 == Float::INFINITY</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>2 ** 10 ** 2 == 2 ** (10 ** 2)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>16 ** 0.5</code>",
+    "type": "mc",
+    "choices": {
+      "1": "4.0",
+      "2": "4",
+      "3": "8",
+      "4": "32"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'8' ** 2</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "16",
+      "3": "64",
+      "4": "88888888"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'8' * 4</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"8888\"",
+      "2": "32",
+      "3": "\"32\"",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'8888' / 4</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "2222",
+      "3": "\"2222\"",
+      "4": "\"4\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>1 / 3  * 3</code>",
+    "type": "mc",
+    "choices": {
+      "1": "0",
+      "2": "0.9999999999996",
+      "3": "1.0000000000004",
+      "4": "1"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>1 / 3.0  * 3.0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "1",
+      "2": "0.9999999999996",
+      "3": "1.0000000000004",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts 1 / 0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "Infinity",
+      "3": "0",
+      "4": "1"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts 1/10r + 2/10r</code>",
+    "type": "mc",
+    "choices": {
+      "1": "3/10",
+      "2": "Error",
+      "3": "\"1/10r2/10r\"",
+      "4": "0.3"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>0.1 + 0.2</code>",
+    "type": "mc",
+    "choices": {
+      "1": "0.30000000000000004",
+      "2": "0.3",
+      "3": "0",
+      "4": "1"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n <code>print 1 + 1.5</code>",
+    "type": "mc",
+    "choices": {
+      "1": "2.5",
+      "2": "2",
+      "3": "3"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>print 1.5 + '4'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "5.5",
+      "3": "1.5",
+      "4": "5"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>print '4' + 1.5</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "5.5",
+      "3": "1.5",
+      "4": "5"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>print 1.5 + true</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "true",
+      "3": "1.5",
+      "4": "2.5"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>print 42.length</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "2",
+      "3": "42",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>true + false</code>",
+    "choices": {
+      "1": "Error",
+      "2": "true",
+      "3": "false",
+      "4": "1",
+      "5": "0"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>print Array.new.tap { |a| a << 1 << 2 << 3 }</code>",
     "choices": {
       "1": "[1, 2, 3]",
       "2": "[]",
@@ -113,7 +629,12 @@
       "4": "lam.yield 'kuku'"
     },
     "type": "ma",
-    "answer": ["1", "2", "3", "4"],
+    "answer": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
     "tags": [
       "advanced-level"
     ],
@@ -205,8 +726,6 @@
     ],
     "explanation": ""
   },
-
-
   {
     "question": "What returns <code>loop.size</code>",
     "choices": {

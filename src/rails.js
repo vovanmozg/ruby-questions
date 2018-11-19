@@ -1,4 +1,4 @@
-[
+var data = [
   {
     "question": "",
     "type": "mc",
@@ -457,5 +457,8 @@
     ],
     "explanation": ""
   }
-]
+];
+
+module.exports = data;
+
 

@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "question": "What will be the output of the following code?\n<code>...</code>",
     "type": "mc",

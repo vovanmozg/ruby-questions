@@ -1,7 +1,7 @@
 [
   {
     "question": "",
-    "type": "",
+    "type": "mc",
     "choices": {
       "1": "",
       "2": "",
@@ -10,11 +10,216 @@
     },
     "answer": "1",
     "tags": [
-      "rails5"
+      "rails5", "-level"
     ],
     "explanation": ""
   },
-
+  {
+    "question": "Is there valid way to define two actions in the controller?\n<code>before_action :action1\nbefore_action :action2</code>",
+    "type": "mc",
+    "choices": {
+      "1": "yes",
+      "2": "no",
+      "3": "I don't know"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What does <code>flash.keep(:notice)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "flash value to be carried over to another request",
+      "2": "keep value until it it will be cleaned",
+      "3": "returns :notice value",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What method is needed to save a message for display between requests?",
+    "type": "mc",
+    "choices": {
+      "1": "flash.keep",
+      "2": "flash.save",
+      "3": "flash.store",
+      "4": "flash.carry"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What you should write in the controller to prevent filter defined in ApplicationController?",
+    "type": "mc",
+    "choices": {
+      "1": "skip_before_action",
+      "2": "before_action",
+      "3": "cancel_before_action",
+      "4": "disable_before_action"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which filters there are in a controller?",
+    "type": "mc",
+    "choices": {
+      "1": "before, after, around",
+      "2": "before, after",
+      "3": "before, after, custom",
+      "4": "before, after, around, custom"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What format is missing in standard Rails installation?",
+    "type": "mc",
+    "choices": {
+      "1": "csv",
+      "2": "html",
+      "3": "xml",
+      "4": "json"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What type of serializer is missing in Rails",
+    "type": "mc",
+    "choices": {
+      "1": "json",
+      "2": "hybrid",
+      "3": "custom",
+      "4": "xml"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of <code>@user</code>?\n<code>cookies[:user] = { x: -> { 42 }}\n@user = cookies[:user].call</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "\"{ x: -> { 42 }}\"",
+      "3": "42",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to set cookie",
+    "type": "mc",
+    "choices": {
+      "1": "cookies[:name] = 'Grindelwald'",
+      "2": "cookies.set(:name, 'Grindelwald')",
+      "3": "cookies = {name: 'Grindelwald'}",
+      "4": "cookies.write(:name, 'Grindelwald')"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Can flash in controller to contain more than one value?",
+    "type": "mc",
+    "choices": {
+      "1": "yes",
+      "2": "no"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginer-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is the purpose of <code>flash.now</code>",
+    "type": "mc",
+    "choices": {
+      "1": "for show message this request",
+      "2": "for return all flash values",
+      "3": "for return all flash values and remove its"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to convert word to singular form?",
+    "type": "mc",
+    "choices": {
+      "1": "'posts'.singularize",
+      "2": "'posts'.to_singular",
+      "3": "'posts'.singular",
+      "4": "Rails not contain appropriate method"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "after_filter valid options:",
+    "choices": {
+      "1": ":only, :except, :if, :unless",
+      "2": ":only, :except",
+      "3": ":only, :except, :every, :noone",
+      "4": ":if, :unless"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "type": "mc",
+    "explanation": ""
+  },
+  {
+    "question": "What type of before_filter call not supported in controllers?",
+    "choices": {
+      "1": "With String argument",
+      "2": "With Symbol argument",
+      "3": "With Class argument",
+      "4": "With Block"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "type": "mc",
+    "explanation": ""
+  },
   {
     "question": "Where is the session method not accessible?",
     "type": "mc",
@@ -26,7 +231,7 @@
     },
     "answer": "1",
     "tags": [
-      "rails5"
+      "rails5", "beginner-level"
     ],
     "explanation": ""
   },
@@ -41,7 +246,7 @@
     },
     "answer": "1",
     "tags": [
-      "rails5"
+      "rails5", "intermediate-level"
     ],
     "explanation": ""
   },

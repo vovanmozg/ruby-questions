@@ -15,6 +15,126 @@ var data = [
     "explanation": ""
   },
   {
+    "question": "routes.rb contains only one line: <code>resources :books</code>. What contains params of request <code> DELETE /photos/:id</code>",
+    "type": "mc",
+    "choices": {
+      "1": "{ id: '17', controller: 'books', action: 'delete' }",
+      "2": "{ id: '17', controller: 'books', action: 'destroy' }",
+      "3": "{ id: '17' }"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What route will not be created by <code>resources :photos</code>",
+    "type": "mc",
+    "choices": {
+      "1": "POST /photos/:id",
+      "2": "GET /photos",
+      "3": "GET /photos/:id",
+      "4": "DELETE /photos/:id"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What amount of routes creates next entry in routing file:\n<code>resource :geocoder\nresolve('Geocoder') { [:geocoder] }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "6",
+      "2": "7",
+      "3": "5",
+      "4": "1"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": "<p>Because you might want to use the same controller for a singular route (<code>/account</code>) and a plural route (<code>/accounts/45</code>), singular resources map to plural controllers. So that, for example, <code>resource :photo</code> and <code>resources :photos</code> creates both singular and plural routes that map to the same controller (<code>PhotosController</code>).</p>"
+  },
+  {
+    "question": "What route will be generate with next code: <code>get 'profile', action: :show, controller: 'users'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "/users/show",
+      "2": "/profile/show",
+      "3": "/pfofile/users/show",
+      "4": "/users/show/profile"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which file contains routes config?",
+    "type": "mc",
+    "choices": {
+      "1": "/config/routes.rb",
+      "2": "/config/router.rb",
+      "3": "/config/routing.rb",
+      "4": "/app/router.rb"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns path helper <code>edit_photo_path(10)</code> for next entry in routing file <code>resources :photos</code>",
+    "type": "mc",
+    "choices": {
+      "1": "/photos/10/edit",
+      "2": "/photos/edit/10",
+      "3": "/photos/edit",
+      "4": "/photos"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which helper returns <code>"/photos/10"<code> for next entry in routing file <code>resources :photos</code>",
+    "type": "mc",
+    "choices": {
+      "1": "photos_path",
+      "2": "photo_path",
+      "3": "photo_url",
+      "4": "photo_view_path"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+
+  {
+    "question": "How to list all routes from command line",
+    "type": "mc",
+    "choices": {
+      "1": "rake routes",
+      "2": "rails routes",
+      "3": "rake show routes",
+      "4": "rails show routes"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "Is there valid way to define two actions in the controller?\n<code>before_action :action1\nbefore_action :action2</code>",
     "type": "mc",
     "choices": {

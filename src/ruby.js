@@ -14,6 +14,444 @@ module.exports = [
     ],
     "explanation": ""
   },
+ {
+    "question": "What will be the output of the following code?\n<code>puts [1, 2, 3].each_with_object({}) { |a, b| a }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "{}",
+      "2": "{1: 1, 2: 2, 3: 3}",
+      "3": "[]",
+      "4": "[1, 2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts [1, 2, 3].reduce({}) { |a, b| a[b] = b }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "{1: 1, 2: 2, 3: 3}",
+      "3": "3",
+      "4": "[1, 2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts 17_100</code>",
+    "type": "mc",
+    "choices": {
+      "1": "17_100",
+      "2": "17100",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What the better name for variable?\n<code>... = Time.now.strftime('%Y/%m/%d')</code>",
+    "type": "mc",
+    "choices": {
+      "1": "current_date",
+      "2": "currentData",
+      "3": "yyyymmdstr",
+      "4": "cd"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>[1, 2] | [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2, 3]",
+      "2": "[1, 2]",
+      "3": "[2]",
+      "4": "[2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>[1, 2] || [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2]",
+      "2": "[2, 3]",
+      "3": "[2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>[1, 2] & [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[2]",
+      "2": "[2, 3]",
+      "3": "[1, 2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>[1, 2] && [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[2, 3]",
+      "2": "[1, 2]",
+      "3": "[2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to get a following result?\n<code>\"[1, 2]\"</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2] || [2, 3]",
+      "2": "[1, 2] && [2, 3]",
+      "3": "[1, 2] and [2, 3]",
+      "4": "[1, 2] | [2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to get a following result?\n<code>\"[2]\"</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2] & [2, 3]",
+      "2": "[1, 2] && [2, 3]",
+      "3": "[1, 2] || [2, 3]",
+      "4": "[1, 2] | [2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to get a following result?\n<code>[2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2] && [2, 3]",
+      "2": "[1, 2] & [2, 3]",
+      "3": "[1, 2] || [2, 3]",
+      "4": "[1, 2] | [2, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts [1, 2] + [2, 3] === [1, 2] | [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts (1..5) === 3</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p (1..10).grep(7..10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[7, 8, 9, 10]",
+      "2": "true",
+      "3": "7, 8, 9",
+      "4": "10"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>(42 === Numeric) == (Numeric === 42)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>(42 == Numeric) === (Numeric == 42)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "false",
+      "3": "true",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>/ell/ === 'Hello'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "String"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>x = {a: 1}\n" +
+      "y = x < {b: 2}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "{a: 1, b: 2}",
+      "3": "{b: 2}",
+      "4": "{a: 1}",
+      "5": "Error",
+      "6": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What result of<code>53.divmod(10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[5, 3]",
+      "2": "5.3",
+      "3": "53",
+      "4": "[0, 3]"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>a, b = [1, 2]\n" +
+      "print \"#{a}#{b}\"</code>",
+    "type": "mc",
+    "choices": {
+      "1": "12",
+      "2": "Error",
+      "3": "[1, 2]nil",
+      "4": "1, 2"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>a, b = 15, 20\n" +
+      "begin\n" +
+      "\ta, b = b, a % b\n" +
+      "end until b == 0 \n" +
+      "p a</code>",
+    "type": "mc",
+    "choices": {
+      "1": "5",
+      "2": "10",
+      "3": "15",
+      "4": "0"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>[1] - 1</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "[]",
+      "3": "[1, -1]",
+      "4": "[0]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>[1, 2] + [2, 3] - [2]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 3]",
+      "2": "[1, 2, 3]",
+      "3": "Error",
+      "4": "[1, 2, 2, -2]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How to access the class private method?",
+    "type": "mc",
+    "choices": {
+      "1": "instance.send(:method_name)",
+      "2": "instance.call(:method_name)",
+      "3": "instance.self(:method_name)",
+      "4": "no way"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What makes the command <code>rake -T</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Shows the list of tasks",
+      "2": "Creates task",
+      "3": "Runs default task",
+      "4": "Turns on execute tracing"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is valid name for rake file?",
+    "type": "ma",
+    "choices": {
+      "1": "rakefile",
+      "2": "Rakefile",
+      "3": "rakefile.rb",
+      "4": "Rakefile.rb"
+    },
+    "answer": ["1", "2", "3", "4"],
+    "tags": [
+      "rails5", "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is the output of this code?\n<code>def foo\n	Proc.new { return 'jo' }[]\n	'mo'\nend\ndef bar\n	->() { return 'jo' }[]\n	'mo'\nend\nprint foo, bar</code>",
+    "type": "mc",
+    "choices": {
+      "1": "mojo",
+      "2": "jomo",
+      "3": "jojo",
+      "4": "momo"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is the output of this code?\n<code>require 'prime'\np Prime.each(7).map{ |x| 5 % x }</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2, 0, 5]",
+      "2": "[4]",
+      "3": "[1, 2, 0]",
+      "4": "[2, 3, 5, 7, 11, 13, 17]"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
   {
     "question": "What will be the output of the following code?\n<code>2 ** (10 ** 10)</code>",
     "type": "mc",

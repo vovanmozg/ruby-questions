@@ -14,7 +14,57 @@ module.exports = [
     ],
     "explanation": ""
   },
- {
+  {
+    "question": "What will be the output of the following code?\n<code>def test\n" +
+      "  def test\n" +
+      "    2\n" +
+      "  end\n" +
+      "  1\n" +
+      "end</code>",
+    "type": "mc",
+    "choices": {
+      "1": "12",
+      "2": "11",
+      "3": "22",
+      "4": "21"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What is correct manner to check method <code>:foo</code> is defined in class <code>A</code>\n",
+    "type": "mc",
+    "choices": {
+      "1": "class.method_defined?(:foo)",
+      "2": "method_defined?(:foo, A)",
+      "3": "method_defined?(A, :foo)",
+      "4": "foo.method_defined?(A)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will happen if you run the program with the key <code>-w</code>?\n",
+    "type": "mc",
+    "choices": {
+      "1": "turn warnings on for your script",
+      "2": "turn warnings off",
+      "3": "sets default warning level",
+      "4": "turns on tainting checks"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What will be the output of the following code?\n<code>puts [1, 2, 3].each_with_object({}) { |a, b| a }</code>",
     "type": "mc",
     "choices": {

@@ -15,6 +15,66 @@ var data = [
     "explanation": ""
   },
   {
+    "question": "What <code>flash.keep(:notice)</code>does",
+    "type": "mc",
+    "choices": {
+      "1": "Flash value to be carried over to another request",
+      "2": "Keep value until it will be cleaned",
+      "3": "Returns :notice value",
+      "4": "Raise Error"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What expressions called in the action body will return the controller name?",
+    "type": "ma",
+    "choices": {
+      "1": "params[:controller]",
+      "2": "controller_name",
+      "3": "params[:controller_name]",
+      "4": "controller"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What expressions called in the action body will return the action name?",
+    "type": "ma",
+    "choices": {
+      "1": "params[:action]",
+      "2": "action_name",
+      "3": "action",
+      "4": "params[:action_name]"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What format is correct for describing query string parameter?",
+    "type": "mc",
+    "choices": {
+      "1": "get '/clients/:status'",
+      "2": "get '/clients/#status'",
+      "3": "get '/clients/[status]'",
+      "4": "get '/clients/@status'"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "routes.rb contains only one line: <code>resources :books</code>. What contains params of request <code> DELETE /photos/:id</code>",
     "type": "mc",
     "choices": {
@@ -104,7 +164,7 @@ var data = [
     "explanation": ""
   },
   {
-    "question": "Which helper returns <code>"/photos/10"<code> for next entry in routing file <code>resources :photos</code>",
+    "question": "Which helper returns <code>/photos/10<code> for next entry in routing file <code>resources :photos</code>",
     "type": "mc",
     "choices": {
       "1": "photos_path",

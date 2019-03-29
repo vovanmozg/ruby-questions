@@ -15,6 +15,405 @@ module.exports = [
     "explanation": ""
   },
   {
+    "question": "What error is not inherited from StandardError",
+    "type": "mc",
+    "choices": {
+      "1": "SyntaxError",
+      "2": "FiberError",
+      "3": "NameError",
+      "4": "RuntimeError"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What error is inherited from StandardError",
+    "type": "mc",
+    "choices": {
+      "1": "ThreadError",
+      "2": "LoadError",
+      "3": "SecurityError",
+      "4": "SystemExit"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>Range.new(*[2, -3].sort).sum</code>",
+    "type": "mc",
+    "choices": {
+      "1": "-3",
+      "2": "0",
+      "3": "-1",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What expression returns <code>-3</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Range.new(*[2, -3].sort).sum",
+      "2": "Range.new([2, -3].sort).sum",
+      "3": "[2, -3].sort.sum",
+      "4": "Range.new([-3, 2].sort).sum"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>!!:false</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>{a: 1} + {b: 2}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "{a: 1, b: 2}",
+      "3": "[{a: 1}, {b: 2}]",
+      "4": "{ab: 3}"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p begin;1/0.0;rescue;2;end</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Infinity",
+      "2": "2",
+      "3": "ZeroDivisionError",
+      "4": "Block"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p begin;1/0;rescue;2;end</code>",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "Infinity",
+      "3": "ZeroDivisionError",
+      "4": "Block"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>module M; class A; end; end\n" +
+      "p M::A.new.class</code>",
+    "type": "mc",
+    "choices": {
+      "1": "M::A",
+      "2": "A",
+      "3": "Class<A>",
+      "4": "Class<M::A>"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What code should precede <code>p -[]*-[]</code> to get 16",
+    "type": "mc",
+    "choices": {
+      "1": "Array.class_eval { def -@; 4; end }",
+      "2": "Array.instance_eval { def -@; 4; end }",
+      "3": "def Array.-@; 4; end",
+      "4": "Array.add_method(:-@, ->{4})"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the next code? <code>[1, 1, 2].tally</code>",
+    "type": "mc",
+    "choices": {
+      "1": "{ 1 => 2, 2 => 1 }",
+      "2": "[[1], [2]]",
+      "3": "{ 1 => 1, 2 => nil }",
+      "4": "[2, 1, 1]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>def foo(*a)\n" +
+      "\tprint *a\n" +
+      "end\n" +
+      "foo(1, 2)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "12",
+      "2": "[1,2]",
+      "3": "Error",
+      "4": "2"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "Which way is preferable?",
+    "type": "mc",
+    "choices": {
+      "1": "if an_object && an_object.method?",
+      "2": "if an_object != nil && an_object.method? == true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" or \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "hello",
+      "2": "world",
+      "3": "hello world",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo =(\"hello\" || \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "hello",
+      "2": "world",
+      "3": "hello world",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" and \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "world",
+      "2": "hello",
+      "3": "hello world",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" && \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "world",
+      "2": "hello",
+      "3": "hello world",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" | \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "hello",
+      "3": "world",
+      "4": "hello world"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" & \"world\")</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "hello",
+      "3": "world",
+      "4": "hello world"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts !!0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>(lambda {}).is_a?(Proc) == true</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "",
+      "4": ""
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>(42 if 5) == (5 && 42)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What faster?",
+    "type": "mc",
+    "choices": {
+      "1": "flat_map",
+      "2": "map.flatten"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What code is need to generate the following output?\n<code>[:a, :b, :c]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "%i(a b c)",
+      "2": "%S(a, b, c)",
+      "3": "%w(a b c)",
+      "4": "%r(a, b, c)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>%I(a b c#{1)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[:a, :b, :c1]",
+      "2": "Error",
+      "3": "[:a, :b, :c#{1)]",
+      "4": "['a', 'b', 'c1']"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>a = 1; a &&= 2; puts a</code>",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "1",
+      "3": "Error",
+      "4": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts !!0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What will be the output of the following code?\n<code>def test\n" +
       "  def test\n" +
       "    2\n" +

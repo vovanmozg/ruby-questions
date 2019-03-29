@@ -1,6 +1,6 @@
 var data = [
   {
-    "question": "",
+    "question": "What will be the output of the following code?\n<code>...</code>",
     "type": "mc",
     "choices": {
       "1": "",
@@ -11,6 +11,24 @@ var data = [
     "answer": "1",
     "tags": [
       "rails5", "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>require 'active_support'\n" +
+      "class A; KU = [1,2,3]; end\n" +
+      "A.delegate :sum, to: :KU\n" +
+      "p A.new.sum</code>",
+    "type": "mc",
+    "choices": {
+      "1": "6",
+      "2": "[1, 2, 3]",
+      "3": ":KU",
+      "4": ":sum"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "advanced-level"
     ],
     "explanation": ""
   },

@@ -1,4 +1,5 @@
 var data = [
+  /*
   {
     "question": "What will be the output of the following code?\n<code>...</code>",
     "type": "mc",
@@ -14,6 +15,7 @@ var data = [
     ],
     "explanation": ""
   },
+  */
   {
     "question": "What will be the output of the following code?\n<code>require 'active_support'\n" +
       "class A; KU = [1,2,3]; end\n" +

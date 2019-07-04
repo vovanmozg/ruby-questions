@@ -1,4 +1,5 @@
 module.exports = [
+  /*
   {
     "question": "What will be the output of the following code?\n<code>...</code>",
     "type": "mc",
@@ -14,6 +15,7 @@ module.exports = [
     ],
     "explanation": ""
   },
+  */
   {
     "question": "What error is not inherited from StandardError",
     "type": "mc",

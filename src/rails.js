@@ -17,6 +17,51 @@ var data = [
   },
   */
   {
+    "question": "What right ways to disable forgery protection for specific action?",
+    "type": "ma",
+    "choices": {
+      "1": "protect_from_forgery except: :index",
+      "2": "skip_before_action :verify_authenticity_token, only: :index",
+      "3": "disable_protect_from_forgery only: :index",
+      "4": "skip_before_action :verify_authenticity_token, except: :index"
+    },
+    "answer": ["1", "2"],
+    "tags": [
+      "rails5", "advanced-level"
+    ],
+    "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
+  },
+  {
+    "question": "What is purpose of <code>protect_from_forgery</code>?",
+    "type": "mc",
+    "choices": {
+      "1": "Protect forms from CSRF",
+      "2": "Enables CAPTCHA for forms",
+      "3": "Protect models from invalid parameters",
+      "4": "Protect forms from DDOS"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
+  },
+  {
+    "question": "How to add authentication token to manually created form?",
+    "type": "mc",
+    "choices": {
+      "1": "form_authenticity_token",
+      "2": "protect_forgery_token",
+      "3": "forgery_protection_token",
+      "4": "scrf_token"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
+  },
+  {
     "question": "What will be the output of the following code?\n<code>require 'active_support'\n" +
       "class A; KU = [1,2,3]; end\n" +
       "A.delegate :sum, to: :KU\n" +

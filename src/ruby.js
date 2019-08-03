@@ -17,6 +17,179 @@ module.exports = [
   },
   */
   {
+    "question": "What will be the output of the following code?\n<code>puts [1,nil,2].compact</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1,2]",
+      "2": "[1,2,nil]",
+      "3": "[1,nil,2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": "https://apidock.com/ruby/Array/compact"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts { String => -> { } }[String]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "String",
+      "3": "Proc",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts String > Object</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Object",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://apidock.com/ruby/Module/%3E"
+  },
+  {
+    "question": "Which expression will return true?",
+    "type": "mc",
+    "choices": {
+      "1": "Class < Module",
+      "2": "String > Object",
+      "3": "Kernel <= Module",
+      "4": "StandardError < ArgumentError"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://apidock.com/ruby/Module/%3E%3D"
+  },
+  {
+    "question": "<code>x = [a: 1, b: 2]</code>\nWhich expression will return true?",
+    "type": "mc",
+    "choices": {
+      "1": "x[0][:a] == 1",
+      "2": "x[:a] == 1",
+      "3": "x[:a] == :b",
+      "4": "x[0] == 1"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "How do pick randomly from an array?",
+    "type": "mc",
+    "choices": {
+      "1": "ar.sample",
+      "2": "ar.rand",
+      "3": "ar.random",
+      "4": "ar.pick_random"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "https://apidock.com/ruby/Array/sample"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>What will be output of this code?\n" +
+      "f = File.open('file.txt', 'w')\n" +
+      "f.write('1')\n" +
+      "File.rename('file.txt', 'file2.txt')\n" +
+      "f.write('2')\n" +
+      "f.close\n" +
+      "p IO.read('file2.txt')\n</code>",
+    "type": "mc",
+    "choices": {
+      "1": "12",
+      "2": "1",
+      "3": "2",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'Minkovsky'[/k/]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"k\"",
+      "2": "[\"k\", \"k\"]",
+      "3": "[3, 7]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": "https://apidock.com/ruby/String/%5B%5D"
+  },
+  {
+    "question": "Choise right way to get a resulting string \"Hello world!\"",
+    "type": "ma",
+    "choices": {
+      "1": "\"Hello\" + \"world\" + \"!\"",
+      "2": "\"Hello\".concat(\" world\", \"!\")",
+      "3": "\"Hello\" << \"world\" << \"!\"",
+      "4": "concat(\"Hello\", \" world\", \"!\")"
+    },
+    "answer": ["1", "2", "3"],
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>text = \"hello\"\n" +
+      "text.concat(\"2\")\n" +
+      "p text</code>",
+    "type": "mc",
+    "choices": {
+      "1": "hello2",
+      "2": "hello",
+      "3": "hellohello",
+      "4": "hello hello"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "https://apidock.com/ruby/String/concat"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>p \"hello\".concat(33)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "hello!",
+      "2": "hello33",
+      "3": "hello",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "https://apidock.com/ruby/String/concat"
+  },
+  {
     "question": "What error is not inherited from StandardError",
     "type": "mc",
     "choices": {
@@ -904,20 +1077,6 @@ module.exports = [
     "explanation": ""
   },
   {
-    "question": "What will be the output of the following code?\n<code>2 ** (10 ** 10)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "Infinity",
-      "2": "Error",
-      "3": "2E10000000000"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
     "question": "What will be the output of the following code?\n<code>[:name, :age].zip('igor', 33)</code>",
     "type": "mc",
     "choices": {
@@ -1359,27 +1518,57 @@ module.exports = [
     "explanation": ""
   },
   {
+    "question": "What will be the output of the following code?\n<code>2 ** (10 **10) < 3 ** (10 ** 10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "2E10000000000"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>2 ** (10 ** 10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Infinity",
+      "2": "Error",
+      "3": "2E10000000000",
+      "4": "200"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>2 ** (10 **10) < 1 / 0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "true",
+      "3": "false",
+      "4": "Infinity"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 > 2 ** 10 ** 10</code>",
     "type": "mc",
     "choices": {
       "1": "false",
       "2": "true",
       "3": "error"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the output of the following code?\n<code>Float::INFINITY - Float::INFINITY</code>",
-    "type": "mc",
-    "choices": {
-      "1": "NaN",
-      "2": "0",
-      "3": "nil",
-      "4": "Error"
     },
     "answer": "1",
     "tags": [
@@ -1410,7 +1599,22 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "-level"
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>2 ** 10 ** 2 == 2 ** (10 ** 2)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "Float::INFINITY"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
     ],
     "explanation": ""
   },
@@ -1441,6 +1645,21 @@ module.exports = [
     "answer": "1",
     "tags": [
       "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>Float::INFINITY - Float::INFINITY</code>",
+    "type": "mc",
+    "choices": {
+      "1": "NaN",
+      "2": "0",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
     ],
     "explanation": ""
   },

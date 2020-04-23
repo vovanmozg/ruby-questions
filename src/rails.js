@@ -17,6 +17,128 @@ var data = [
   },
   */
   {
+    "question": "How to run Rails server and make it available for queries from the network?",
+    "type": "mc",
+    "choices": {
+      "1": "rails s -b 0.0.0.0",
+      "2": "rails s -a 0.0.0.0",
+      "3": "rails s -a 127.0.0.1",
+      "4": "rails s -b 127.0.0.1"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What mixin can you use to streaming live data?",
+    "type": "mc",
+    "choices": {
+      "1": "ActionController::Live",
+      "2": "ActionController::LiveStreaming",
+      "3": "ActionController::Streaming",
+      "4": "ActionController::Stream"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "intermediate-level"
+    ],
+    "explanation": "https://api.rubyonrails.org/classes/ActionController/Live.html"
+  },
+  {
+    "question": "Where the default 404 template is located?",
+    "type": "mc",
+    "choices": {
+      "1": "public/404.html",
+      "2": "public/pages/404.html",
+      "3": "app/assets/404.html",
+      "4": "app/views/404.html"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "<code>routes.rb</code> contains only one line: <code>resources :books</code>. " +
+      "What action in the <code>Books</code> controller will be called when " +
+      "<code>DELETE /books/42</code> is requested?",
+    "type": "mc",
+    "choices": {
+      "1": "destroy",
+      "2": "delete",
+      "3": "remove",
+      "4": "Other"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "<code>routes.rb</code> contains only one line: <code>resources :books</code>. " +
+      "What controller will be used when <code>DELETE /books/42</code> is requested?",
+    "type": "mc",
+    "choices": {
+      "1": "BooksController",
+      "2": "BookController",
+      "4": "Other"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>'data'.pluralize</code>",
+    "type": "mc",
+    "choices": {
+      "1": "data",
+      "2": "datas",
+      "3": "Error",
+      "4": "Data"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": "https://apidock.com/rails/ActionView/Helpers/TextHelper/pluralize"
+  },
+  {
+    "question": "What will return the following code?\n<code>'cookie'.pluralize</code>",
+    "type": "mc",
+    "choices": {
+      "1": "cookies",
+      "2": "cookie",
+      "3": "Cookies",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": "https://apidock.com/rails/ActionView/Helpers/TextHelper/pluralize"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>handler = File.open(filename)\np handler.pos</code>",
+    "type": "mc",
+    "choices": {
+      "1": "0",
+      "2": "IO::START",
+      "3": "1",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "https://ruby-doc.org/core-2.5.3/IO.html#method-i-pos"
+  },
+  {
     "question": "What right ways to disable forgery protection for specific action?",
     "type": "ma",
     "choices": {

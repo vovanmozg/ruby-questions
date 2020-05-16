@@ -17,6 +17,323 @@ module.exports = [
   },
   */
   {
+    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "'b'",
+      "5": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>3.to_a</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "[3]",
+      "3": "[1,2,3]",
+      "4": "[0,1,2,3]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>Object === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>String === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>Class === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>['ivan','oleg','egor'].grep(/eg/)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "['oleg','egor']",
+      "2": "['eg']",
+      "3": "['eg','eg']",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10).grep(3..5)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[3,4,5]",
+      "2": "[3]",
+      "3": "3",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10).grep(-2..2)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1,2]",
+      "2": "[1]",
+      "3": "1",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10).grep(8..12)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[8,9,10]",
+      "2": "[8]",
+      "3": "7",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10).grep(3...5)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[3,4]",
+      "2": "[8]",
+      "3": "7",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10).grep(-2...2)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1]",
+      "2": "[1,2]",
+      "3": "1",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1...10).grep(8...12)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[8,9]",
+      "2": "[8,9,10]",
+      "3": "8",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1...10).grep(->(x){x%2==0}</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[2,4,6,8]",
+      "2": "[2,4,6,8,10]",
+      "3": "[3,5,7,9]",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>0Xaa == 0XAa</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be `a` variable contain?\n<code>a = ??</code>",
+    "type": "mc",
+    "choices": {
+      "1": "?",
+      "2": "??",
+      "3": "Error",
+      "4": "false",
+      "5": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.dup.foo</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "42",
+      "3": "nil",
+      "4": "Object"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://stackoverflow.com/questions/10183370"
+  },
+  {
+    "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.clone.foo</code>",
+    "type": "mc",
+    "choices": {
+      "1": "42",
+      "2": "Error",
+      "3": "nil",
+      "4": "Object"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://stackoverflow.com/questions/10183370"
+  },
+  {
+    "question": "What will return the following code?\n<code>obj = Object.new\ndef obj.foo\n  42\nend\nobj.dup.foo</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "42",
+      "3": "nil",
+      "4": "Object"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://stackoverflow.com/questions/10183370"
+  },
+  {
+    "question": "What will return the following code?\n<code>obj = Object.new\ndef obj.foo\n  42\nend\nobj.clone.foo</code>",
+    "type": "mc",
+    "choices": {
+      "1": "42",
+      "2": "Error",
+      "3": "nil",
+      "4": "Object"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "https://stackoverflow.com/questions/10183370"
+  },
+  {
     "question": "What will return the following code?\n<code>5.minutes.to_f</code>",
     "type": "mc",
     "choices": {

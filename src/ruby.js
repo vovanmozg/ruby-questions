@@ -17,6 +17,221 @@ module.exports = [
   },
   */
   {
+    "question": "What will return the following code?\n<code>[{ a: 1 }, { a: 2 }].map(&->(x) { x[:a] })</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2]",
+      "2": "Error",
+      "3": "[:a, :a]",
+      "4": "[:x, :x]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>->(str){str[0]=''}[str='123'] && str</code>",
+    "type": "mc",
+    "choices": {
+      "1": "23",
+      "2": "123",
+      "3": "true",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>{a: 1, b: 2, c: 1}.invert</code>",
+    "type": "mc",
+    "choices": {
+      "1": "{1=>:c, 2=>:b}",
+      "2": "{c: 1, b: 2, a: 1}",
+      "3": "{1=>:a, 2=>:b, 1=>:c}",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[[0]][0]|[0]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[0]",
+      "2": "0",
+      "3": "nil",
+      "4": "false",
+      "5": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[1,2] || [5,1,2]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1,2]",
+      "2": "[1,2,5]",
+      "3": "[1,2,5,1,2]",
+      "4": "true",
+      "5": "false",
+      "6": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[1,2] | [5,1,2]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1,2,5]",
+      "2": "[5,1,2]",
+      "3": "[1,2,5,1,2]",
+      "4": "true",
+      "5": "false",
+      "6": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[1,2] && [5,1,2]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[5,1,2]",
+      "2": "[1,2,5]",
+      "3": "[1,2,5,1,2]",
+      "4": "[1,2]",
+      "5": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[1,2] & [5,1,2]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[1,2]",
+      "2": "[1,2,5]",
+      "3": "[1,2,5,1,2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>true && 0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "0",
+      "2": "false",
+      "3": "true",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>true & 0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>0 & true</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "false",
+      "3": "true",
+      "4": "0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>'abcd'.tap(&:capitalize)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "abcd",
+      "2": "Error",
+      "3": "ABCD",
+      "4": "Abcd"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>'abcd'.tap(&:capitalize!)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Abcd",
+      "2": "Error",
+      "3": "ABCD",
+      "4": "abcd"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>['11/06/2018'].map(&Date.method(:parse))</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Date object",
+      "2": "[nil]",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What will return the following code?\n<code>/b/ === /b/</code>",
     "type": "mc",
     "choices": {

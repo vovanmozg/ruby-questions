@@ -15,7 +15,21 @@ var data = [
     ],
     "explanation": ""
   },
+
   */
+  {
+    "question": "Using Fillet.zero? you can check if the file is empty.",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "rails5", "beginner-level"
+    ],
+    "explanation": ""
+  },
   {
     "question": "How to run Rails server and make it available for queries from the network?",
     "type": "mc",

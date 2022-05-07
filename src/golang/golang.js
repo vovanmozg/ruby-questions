@@ -182,7 +182,23 @@ module.exports = [
     ],
     "explanation": ""
   },
+  {
+    "question": "What is sync.WaitGroup used for",
+    "type": "mc",
+    "choices": {
+      "1": "To wait for the timer to complete",
+      "2": "To wait for the completion of the work of a bunch of goroutines",
+      "3": "To wait for a given event (trigger) to occur in another goroutine",
+      "4": "For organizing thread-safe conditions of any kind"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
 ]
+
 
 
 

@@ -186,8 +186,8 @@ module.exports = [
     "question": "What is sync.WaitGroup used for",
     "type": "mc",
     "choices": {
-      "1": "To wait for the timer to complete",
-      "2": "To wait for the completion of the work of a bunch of goroutines",
+      "1": "To wait for the completion of the work of a bunch of goroutines",
+      "2": "To wait for the timer to complete",
       "3": "To wait for a given event (trigger) to occur in another goroutine",
       "4": "For organizing thread-safe conditions of any kind"
     },
@@ -197,12 +197,22 @@ module.exports = [
     ],
     "explanation": ""
   },
+    {
+    "question": "What key should be used to build the program to enable the race detector?",
+    "type": "mc",
+    "choices": {
+      "1": "-race",
+      "2": "-detector",
+      "3": "-racedetect",
+      "4": "-enable_race_detector"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  }
 ]
-
-
-
-
-
 
 
 

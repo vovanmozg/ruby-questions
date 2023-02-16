@@ -3444,6 +3444,37 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
+    "explanation": "The code will iterate through each element of the array [1, 2, 3], and for each element that is equal to 1, it will replace it with the string 'first'. The result will be the new array ['first', 2, 3]."
+  },
+  {
+    "question": "What is the difference between #puts and #print?",
+    "type": "mc",
+    "choices": {
+      "1": "#puts appends a newline character to the output. #print prints a value of special variable $_ when called without arguments.",
+      "2": "#puts prints the value of a special variable $_ when called without arguments. #print appends a newline character to the output.",
+      "3": "#puts and #print are two different names for the same method.",
+      "4": "#puts is used to output integers and #print is used to output strings."
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
     "explanation": ""
+  },
+  {
+    "question": "What is the difference between an instance variable and a class variable?",
+    "type": "mc",
+    "choices": {
+      "1": "A class variable is evaluated in reference to the class object created by the enclosing class definition while an instance variable is evaluated in reference to self. Instance variables cannot be referenced outside of instance methods.",
+      "2": "An instance variable is evaluated in reference to self while a class variable is evaluated in reference to the class object created by the enclosing class definition. Class variables cannot be referenced outside of class methods.",
+      "3": "Both instance variables and class variables are evaluated in reference to the class object created by the enclosing class definition. Instance variables can be referenced outside of instance methods while class variables cannot be referenced outside of class methods.",
+      "4": "A class variable is used to store information that is specific to an instance of a class, while an instance variable is used to store information that is specific to the class itself."
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "A class variable is declared using @@ at the beginning of the variable name and is shared among all instances of a class, while an instance variable is declared using @ at the beginning of the variable name and is unique to each instance of a class. Instance variables are accessible from instance methods of a class, while class variables are accessible from class methods and class level only."
   }
+
 ]

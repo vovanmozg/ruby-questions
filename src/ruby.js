@@ -1965,7 +1965,7 @@ module.exports = [
     "explanation": ""
   },
   {
-    "question": "What result of<code>53.divmod(10)</code>",
+    "question": "What result of <code>53.divmod(10)</code>",
     "type": "mc",
     "choices": {
       "1": "[5, 3]",

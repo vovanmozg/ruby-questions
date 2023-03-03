@@ -1536,9 +1536,7 @@ module.exports = [
     "type": "mc",
     "choices": {
       "1": "true",
-      "2": "false",
-      "3": "",
-      "4": ""
+      "2": "false"
     },
     "answer": "1",
     "tags": [

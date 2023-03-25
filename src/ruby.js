@@ -274,16 +274,20 @@ module.exports = [
     "question": "What will return the following code?\n<code>3.to_a</code>",
     "type": "mc",
     "choices": {
-      "1": "Error",
+      "1": "NoMethodError",
       "2": "[3]",
       "3": "[1,2,3]",
       "4": "[0,1,2,3]"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "to_a"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `to_a` method is defined for certain types of objects, such as arrays, ranges, and hashes. The `to_a` method is used to convert these objects to an array.\n" +
+      "However, the `to_a` method is not defined for integers. When we call the to_a method on an integer like `3`, Ruby raises a `NoMethodError`, indicating that the `to_a` method is undefined for integers.\n" +
+      "To convert an integer to an array in Ruby, we can use the `Array` method with the integer as an argument, like this:\n" +
+      "`Array(3) #=> [3]`\n" +
+      "This will convert the integer `3` to an array containing a single element `3`."
   },
   {
     "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
@@ -296,9 +300,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "===", "regex"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the `===` operator returns `true` if the regex matches the input string.\n" +
+      "In this case, the regex `/^[0-9]*$/` matches any string that contains zero or more digits from 0 to 9. The `^` character anchors the pattern to the beginning of the string, and the `$` character anchors the pattern to the end of the string. So the regex matches only strings that consist entirely of digits.\n" +
+      "The input string `'2048'` consists entirely of digits, so it matches the regex `/^[0-9]*$/`. Therefore, the `===` operator returns `true`."
   },
   {
     "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
@@ -311,9 +317,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "===", "regex"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the === operator returns true if the regex matches the input string.\n" +
+      "The regular expression `/^[^0-9]*$/` matches strings that contain zero or more characters that are not digits, from the beginning `^` to the end `$` of the string.\n" +
+      "In this case, the string being tested is `'2048'`, which contains digits. Therefore, the regular expression will not match the string, and the `===` operator will return `false`."
   },
   {
     "question": "What will return the following code?\n<code>Object === 'text'</code>",

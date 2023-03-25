@@ -1,6 +1,6 @@
 {
   "name": "ruby-questions",
-  "version": "0.6.0",
+  "version": "0.8.0",
   "description": "Ruby questions and answers for make quizzes",
   "main": "index.js",
   "scripts": {

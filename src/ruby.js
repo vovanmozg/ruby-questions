@@ -29,7 +29,17 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The code will return an array containing the values of " +
+      "the a property for each object in the original array.\n" +
+      "In this case, the original array is [{ a: 1 }, { a: 2 }], which " +
+      "contains two objects with the property a. The map method is called " +
+      "on this array and a lambda function (also known as a <em>stabby lambda" +
+      "</em> in Ruby) is passed as an argument.\n" +
+      "The lambda function takes a single parameter x, which represents each" +
+      " object in the original array. The function returns the value of the " +
+      "a property for each object.\n" +
+      "So, the output of the code will be the array [1, 2], which contains " +
+      "the values of the a property for each object in the original array."
   },
   {
     "question": "What will return the following code?\n<code>->(str){str[0]=''}[str='123'] && str</code>",
@@ -44,7 +54,10 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "A lambda function is defined: `->(str){str[0]=''}`. This function takes a string argument `str` and modifies its first character to an empty string.\n" +
+      "The lambda function is immediately called with the argument `'123'`, resulting in the string `'23'`.\n" +
+      "The result of the lambda function call is then logically AND-ed (`&&`) with `str`. Since the lambda function call returns the modified string `'23'`, which is a truthy value, the AND expression evaluates to `true`.\n" +
+      "Finally, the value of `str` is returned, which is the original string that was modified by the lambda function, now equal to `'23'`."
   },
   {
     "question": "What will return the following code?\n<code>{a: 1, b: 2, c: 1}.invert</code>",
@@ -59,7 +72,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The following Ruby code `{a: 1, b: 2, c: 1}.invert` will return a new hash where the keys and values are inverted. In other words, the keys of the original hash will become the values of the new hash, and the values of the original hash will become the keys of the new hash.\n" +
+      "In this specific case, the original hash `{a: 1, b: 2, c: 1}` has two keys with the same value (`:a` and `:c` both have a value of `1`). Since a hash can't have duplicate keys, one of the keys will be overwritten. Therefore, the resulting inverted hash will have two keys (`1` and `2`) and two values (`:a` and `:b`), like this: `{1=>:c, 2=>:b}`.\n" +
+      "https://ruby-doc.org/3.2.1/Hash.html#method-i-invert"
   },
   {
     "question": "What will return the following code?\n<code>[[0]][0]|[0]</code>",
@@ -90,9 +105,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "||"
     ],
-    "explanation": ""
+    "explanation": "The `||` operator in Ruby returns the first operand if it is truthy, and the second operand otherwise. In this case, the first operand `[1, 2]` is truthy, so it will be returned.\n" +
+      "Therefore, the overall expression evaluates to `[1, 2]`, which will be returned."
   },
   {
     "question": "What will return the following code?\n<code>[1,2] | [5,1,2]</code>",
@@ -107,9 +123,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "|"
     ],
-    "explanation": ""
+    "explanation": "The vertical bar `|` character is used to perform a set union operation on two arrays, which results in a new array containing all unique elements from both arrays.\n" +
+      "In this case, the first array `[1, 2]` and the second array `[5, 1, 2]` have some common elements, so the resulting array will have only unique elements, namely `[1, 2, 5]`.\n" +
+      "Therefore, the overall expression evaluates to `[1, 2, 5]`, which will be returned."
   },
   {
     "question": "What will return the following code?\n<code>[1,2] && [5,1,2]</code>",
@@ -123,9 +141,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&&"
     ],
-    "explanation": ""
+    "explanation": "The `&&` operator returns the first operand if it is falsy, and the second operand otherwise. In this case, both operands `[1, 2]` and `[5, 1, 2]` are truthy, so the second operand `[5, 1, 2]` will be returned.\n" +
+      "Therefore, the overall expression evaluates to `[5, 1, 2]`, which will be returned."
   },
   {
     "question": "What will return the following code?\n<code>[1,2] & [5,1,2]</code>",
@@ -138,9 +157,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "&"
     ],
-    "explanation": ""
+    "explanation": "The ampersand `&` operator is used to perform a set intersection operation on two arrays, which results in a new array containing only the elements that are present in both arrays.\n" +
+      "In this case, the first array `[1, 2]` and the second array `[5, 1, 2]` have some common elements, namely `1` and `2`, so the resulting array will contain only those elements."
   },
   {
     "question": "What will return the following code?\n<code>true && 0</code>",
@@ -153,9 +173,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&&"
     ],
-    "explanation": ""
+    "explanation": "The `&&` operator returns the first operand if it is falsy, and the second operand otherwise. In this case, the first operand true is truthy, so the second operand 0 will be evaluated. Since 0 is also falsy in Ruby, it will be returned."
   },
   {
     "question": "What will return the following code?\n<code>true & 0</code>",
@@ -168,7 +188,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&"
     ],
     "explanation": ""
   },
@@ -183,9 +203,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&"
     ],
-    "explanation": ""
+    "explanation": "The ampersand `&` character is a bitwise operator used for performing bitwise AND operations on two integers. However, in the given code, one of the operands is a boolean (`true`) and the other operand is an integer (`0`), which will result in a `TypeError`."
   },
   {
     "question": "What will return the following code?\n<code>'abcd'.tap(&:capitalize)</code>",
@@ -198,7 +218,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "tap", "capitalize"
     ],
     "explanation": ""
   },
@@ -227,9 +247,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "map", "Date.parse"
     ],
-    "explanation": ""
+    "explanation": "the <a href='https://apidock.com/ruby/v2_6_3/Array/map'>map</a> method is used to transform each element of an array based on a given block of code. In the given code, the block passed to `map` is <a href='https://apidock.com/ruby/v2_6_3/DateTime/parse/class'>Date.method(:parse)</a>, which retrieves the `parse` method from the `Date` class.\n" +
+      "The `parse` method is a class method of the `Date` class that takes a string as an argument and returns a `Date` object representing the date parsed from that string. In this case, the array `['11/06/2018']` contains a single string element that represents the date `\"11/06/2018\"` in the format \"dd/mm/yyyy\".\n" +
+      "When `map` is called with the `Date.parse` method as the block, it applies the `parse` method to each element of the array and returns a new array with the transformed values. In this case, the `parse` method is called on the string `\"11/06/2018\"`, which returns a Date object representing the date `2018-06-11`.\n" +
+      "Therefore, the expression `['11/06/2018'].map(&Date.method(:parse))` returns an array containing a single `Date` object representing the date `2018-06-11`."
   },
   {
     "question": "What will return the following code?\n<code>/b/ === /b/</code>",
@@ -251,16 +274,20 @@ module.exports = [
     "question": "What will return the following code?\n<code>3.to_a</code>",
     "type": "mc",
     "choices": {
-      "1": "Error",
+      "1": "NoMethodError",
       "2": "[3]",
       "3": "[1,2,3]",
       "4": "[0,1,2,3]"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "to_a"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `to_a` method is defined for certain types of objects, such as arrays, ranges, and hashes. The `to_a` method is used to convert these objects to an array.\n" +
+      "However, the `to_a` method is not defined for integers. When we call the to_a method on an integer like `3`, Ruby raises a `NoMethodError`, indicating that the `to_a` method is undefined for integers.\n" +
+      "To convert an integer to an array in Ruby, we can use the `Array` method with the integer as an argument, like this:\n" +
+      "`Array(3) #=> [3]`\n" +
+      "This will convert the integer `3` to an array containing a single element `3`."
   },
   {
     "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
@@ -273,9 +300,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "===", "regex"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the `===` operator returns `true` if the regex matches the input string.\n" +
+      "In this case, the regex `/^[0-9]*$/` matches any string that contains zero or more digits from 0 to 9. The `^` character anchors the pattern to the beginning of the string, and the `$` character anchors the pattern to the end of the string. So the regex matches only strings that consist entirely of digits.\n" +
+      "The input string `'2048'` consists entirely of digits, so it matches the regex `/^[0-9]*$/`. Therefore, the `===` operator returns `true`."
   },
   {
     "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
@@ -288,9 +317,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "===", "regex"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the === operator returns true if the regex matches the input string.\n" +
+      "The regular expression `/^[^0-9]*$/` matches strings that contain zero or more characters that are not digits, from the beginning `^` to the end `$` of the string.\n" +
+      "In this case, the string being tested is `'2048'`, which contains digits. Therefore, the regular expression will not match the string, and the `===` operator will return `false`."
   },
   {
     "question": "What will return the following code?\n<code>Object === 'text'</code>",
@@ -750,7 +781,8 @@ module.exports = [
       "Note that if you use the == operator instead of ===, the expression " +
       "would return false because a range object is not equal to any of its " +
       "elements." + "\n" +
-      "<a href='https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D'>https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D</a>"
+      "<a href='https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D'" +
+      ">https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D</a>"
   },
   {
     "question": "What will return the following code?\n<code>/b/ === /b/</code>",
@@ -1080,12 +1112,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "compact"
     ],
     "explanation": "https://apidock.com/ruby/Array/compact"
   },
   {
-    "question": "What will be the output of the following code?\n<code>puts { String => -> { } }[String]</code>",
+    "question": "What will be the output of the following code?\n<code>puts({ String => -> { } }[String])</code>",
     "type": "mc",
     "choices": {
       "1": "nil",
@@ -2359,7 +2391,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "<<", "chr"
     ],
     "explanation": ""
   },

@@ -302,7 +302,7 @@ module.exports = [
     "tags": [
       "beginner-level", "===", "regex"
     ],
-    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the `===` operator returns `true` if the regex matches the input string.\n" +
+    "explanation": "In this case, the `===` operator is used for pattern matching. For regular expressions, the `===` operator returns `true` if the regex matches the input string.\n" +
       "In this case, the regex `/^[0-9]*$/` matches any string that contains zero or more digits from 0 to 9. The `^` character anchors the pattern to the beginning of the string, and the `$` character anchors the pattern to the end of the string. So the regex matches only strings that consist entirely of digits.\n" +
       "The input string `'2048'` consists entirely of digits, so it matches the regex `/^[0-9]*$/`. Therefore, the `===` operator returns `true`."
   },
@@ -319,9 +319,108 @@ module.exports = [
     "tags": [
       "beginner-level", "===", "regex"
     ],
-    "explanation": "In Ruby, the `===` operator is used for pattern matching. For regular expressions, the === operator returns true if the regex matches the input string.\n" +
+    "explanation": "In this case, the `===` operator is used for pattern matching. For regular expressions, the === operator returns true if the regex matches the input string.\n" +
       "The regular expression `/^[^0-9]*$/` matches strings that contain zero or more characters that are not digits, from the beginning `^` to the end `$` of the string.\n" +
-      "In this case, the string being tested is `'2048'`, which contains digits. Therefore, the regular expression will not match the string, and the `===` operator will return `false`."
+      "In this case, the string being tested is `'2048'`, which contains digits. Therefore, the regular expression will not match the string, and the `===` operator will return `false`.\n" +
+      "https://stackoverflow.com/questions/4467538/what-does-the-operator-do-in-ruby/4467823#4467823"
+  },
+  {
+    "question": "What will return the following code?\n<code>Object === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": "In this case, the `===` operator checks if the argument is an instance of the receiver class or one of its descendants. The `Object` class is the root of the Ruby class hierarchy, so `Object === 'text'` is equivalent to `'text'.is_a?(Object)`.\n" +
+      "Since every object in Ruby is an instance of the `Object` class, including strings, `'text'` is indeed an instance of `Object`, so the expression will evaluate to `true`.\n" +
+      "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
+  },
+  {
+    "question": "What will return the following code?\n<code>String === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": "In this case, the `===` operator checks if the argument is an instance of the receiver class or one of its descendants. The `String` class is a descendant of the `Object` class, so `String === 'text'` is equivalent to `'text'.is_a?(String)`.\n" +
+      "Keep in mind that for different types the meaning of the operator may be slightly different.\n" +
+      "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
+  },
+  {
+    "question": "What will return the following code?\n<code>'text' === String</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": "Avoid explicit use of the case equality operator `===`. As its name implies it is meant to be used implicitly by case expressions and outside of them it yields some pretty confusing code." +
+      "In this case is better to use `text.is_a?(String)` construction.\n" +
+      "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
+  },
+  {
+    "question": "What will return the following code?\n<code>Class === 'text'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": "In this case, the `===` operator checks if the argument is an instance of the receiver class or one of its descendants. The `Class` class is a descendant of the `Module` class, so `Class === 'text'` is equivalent to `'text'.is_a?(Class)`.\n" +
+      "Since `'text'` is not a class, the expression will evaluate to `false`.\n" +
+      "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
+  },
+  {
+    "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": ""
   },
   {
     "question": "What will return the following code?\n<code>Object === 'text'</code>",
@@ -379,9 +478,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep"
     ],
-    "explanation": ""
+    "explanation": "This code will return an array containing all elements from the original array that match the regular expression /eg/.\n" +
+      "https://ruby-doc.org/core-2.7.1/Enumerable.html#method-i-grep"
   },
   {
     "question": "What will return the following code?\n<code>(1..10).grep(3..5)</code>",
@@ -703,7 +803,7 @@ module.exports = [
     "explanation": "https://ruby-doc.org/core-2.4.0/Integer.html#method-i-digits"
   },
   {
-    "question": "What will return the following code?\n<code>[1...10] === [1...10]</code>",
+    "question": "What will return the following code?\n<code>[1...10] == [1...10]</code>",
     "type": "mc",
     "choices": {
       "1": "true",
@@ -717,7 +817,7 @@ module.exports = [
     "explanation": ""
   },
   {
-    "question": "What will return the following code?\n<code>[1...10] == [1...10]</code>",
+    "question": "What will return the following code?\n<code>[1...10] === [1...10]</code>",
     "type": "mc",
     "choices": {
       "1": "true",
@@ -745,20 +845,6 @@ module.exports = [
     "explanation": ""
   },
   {
-    "question": "What will return the following code?\n<code>(1...10) == (1...10)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
     "question": "What will return the following code?\n<code>(1..10) === 5</code>",
     "type": "mc",
     "choices": {
@@ -769,9 +855,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
-    "explanation": "In Ruby, the === operator is used for pattern matching, " +
+    "explanation": "In this case, the === operator is used for pattern matching, " +
       "and it is implemented differently depending on the type of object " +
       "being compared." + "\n" +
       "When using the === operator with a range object like (1...10), it " +
@@ -785,18 +871,16 @@ module.exports = [
       ">https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D</a>"
   },
   {
-    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
+    "question": "What will return the following code?\n<code>(1...10) == (1...10)</code>",
     "type": "mc",
     "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error",
-      "4": "'b'",
-      "5": "nil"
+      "1": "true",
+      "2": "false",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "advanced-level"
     ],
     "explanation": ""
   },
@@ -815,81 +899,7 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "nil",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "nil",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>Object === 'text'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>String === 'text'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>Class === 'text'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
+
   {
     "question": "What will return the following code?\n<code>['ivan','oleg','egor'].grep(/eg/)</code>",
     "type": "mc",
@@ -904,202 +914,6 @@ module.exports = [
       "beginner-level"
     ],
     "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10).grep(3..5)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[3,4,5]",
-      "2": "[3]",
-      "3": "3",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10).grep(-2..2)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[1,2]",
-      "2": "[1]",
-      "3": "1",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10).grep(8..12)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[8,9,10]",
-      "2": "[8]",
-      "3": "7",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10).grep(3...5)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[3,4]",
-      "2": "[8]",
-      "3": "7",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10).grep(-2...2)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[1]",
-      "2": "[1,2]",
-      "3": "1",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1...10).grep(8...12)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[8,9]",
-      "2": "[8,9,10]",
-      "3": "8",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1...10).grep(->(x){x%2==0}</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[2,4,6,8]",
-      "2": "[2,4,6,8,10]",
-      "3": "[3,5,7,9]",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>0Xaa == 0XAa</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be `a` variable contain?\n<code>a = ??</code>",
-    "type": "mc",
-    "choices": {
-      "1": "?",
-      "2": "??",
-      "3": "Error",
-      "4": "false",
-      "5": "true"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.dup.foo</code>",
-    "type": "mc",
-    "choices": {
-      "1": "Error",
-      "2": "42",
-      "3": "nil",
-      "4": "Object"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
-  },
-  {
-    "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.clone.foo</code>",
-    "type": "mc",
-    "choices": {
-      "1": "42",
-      "2": "Error",
-      "3": "nil",
-      "4": "Object"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
-  },
-  {
-    "question": "What will return the following code?\n<code>obj = Object.new\ndef obj.foo\n  42\nend\nobj.dup.foo</code>",
-    "type": "mc",
-    "choices": {
-      "1": "Error",
-      "2": "42",
-      "3": "nil",
-      "4": "Object"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
-  },
-  {
-    "question": "What will return the following code?\n<code>obj = Object.new\ndef obj.foo\n  42\nend\nobj.clone.foo</code>",
-    "type": "mc",
-    "choices": {
-      "1": "42",
-      "2": "Error",
-      "3": "nil",
-      "4": "Object"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
   },
   {
     "question": "What will be the output of the following code?\n<code>puts [1,nil,2].compact</code>",
@@ -1655,19 +1469,6 @@ module.exports = [
     "answer": "1",
     "tags": [
       "-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the output of the following code?\n<code>puts !!0</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
     ],
     "explanation": ""
   },

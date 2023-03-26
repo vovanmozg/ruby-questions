@@ -403,7 +403,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -418,9 +418,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
-    "explanation": ""
+    "explanation": "In the code `Class === 'text'`, the `Class` is a class in Ruby and the `'text'` is a string object. When `===` is used between `Class` and `'text'`, it will check if `'text'` is an instance of `Class` or its subclass.\n" +
+      "Since `'text'` is not an instance of `Class` or its subclass, the expression `Class === 'text'` will return `false`.\n" +
+      "https://ruby-doc.org/core-2.7.1/Object.html#method-i-3D-3D-3D"
   },
   {
     "question": "What will return the following code?\n<code>[1...10] === [1...10]</code>",
@@ -432,7 +434,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -446,7 +448,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -485,7 +487,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "==="
     ],
     "explanation": ""
   },
@@ -498,7 +500,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "==="
     ],
     "explanation": ""
   },
@@ -513,7 +515,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -528,7 +530,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -543,7 +545,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -558,7 +560,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "==="
     ],
     "explanation": ""
   },
@@ -571,7 +573,7 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "==="
     ],
     "explanation": ""
   },
@@ -602,9 +604,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep"
     ],
-    "explanation": ""
+    "explanation": "The `grep` method in Ruby is used to filter an array or a range based on a given pattern. In this case, the range `(1..10)` is being filtered based on the pattern `3..5`, which is another range that represents the numbers 3, 4, and 5.\n" +
+      "When `grep` is called on a range, it returns an array of all values in the range that match the pattern. So, the resulting array contains the values 3, 4, and 5, which are the values that match the pattern `(3..5)` in the range `(1..10)`.\n" +
+      "https://ruby-doc.org/core-2.7.1/Enumerable.html#method-i-grep"
   },
   {
     "question": "What will return the following code?\n<code>(1..10).grep(-2..2)</code>",
@@ -617,9 +621,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep"
     ],
-    "explanation": ""
+    "explanation": "https://ruby-doc.org/core-2.7.1/Enumerable.html#method-i-grep"
   },
   {
     "question": "What will return the following code?\n<code>(1..10).grep(8..12)</code>",
@@ -632,9 +636,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep"
     ],
-    "explanation": ""
+    "explanation": "https://ruby-doc.org/core-2.7.1/Enumerable.html#method-i-grep"
   },
   {
     "question": "What will return the following code?\n<code>(1..10).grep(3...5)</code>",
@@ -697,6 +701,21 @@ module.exports = [
     "explanation": ""
   },
   {
+    "question": "What will be the output of the following code?\n<code>p (1..10).grep(7..10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[7, 8, 9, 10]",
+      "2": "true",
+      "3": "7, 8, 9",
+      "4": "10"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
     "question": "What will return the following code?\n<code>0Xaa == 0XAa</code>",
     "type": "mc",
     "choices": {
@@ -707,9 +726,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "literal"
     ],
-    "explanation": ""
+    "explanation": "Integers can be represented in various formats, including hexadecimal notation, which starts with `0x` or `0X`, followed by one or more digits (0-9) or letters (A-F). The letters in the hexadecimal notation can be either uppercase or lowercase, and they represent the values 10 to 15.\n" +
+      "In this code, `0Xaa` and `0XAa` are two hexadecimal integer literals. Both represent the same value, which is the decimal value 170.\n" +
+      "https://ruby-doc.org/core-2.7.1/doc/syntax/literals_rdoc.html#label-Numbers"
   },
   {
     "question": "What will be `a` variable contain?\n<code>a = ??</code>",
@@ -1706,21 +1727,6 @@ module.exports = [
     "answer": "1",
     "tags": [
       "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the output of the following code?\n<code>p (1..10).grep(7..10)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[7, 8, 9, 10]",
-      "2": "true",
-      "3": "7, 8, 9",
-      "4": "10"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
     ],
     "explanation": ""
   },

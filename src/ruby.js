@@ -255,22 +255,6 @@ module.exports = [
       "Therefore, the expression `['11/06/2018'].map(&Date.method(:parse))` returns an array containing a single `Date` object representing the date `2018-06-11`."
   },
   {
-    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error",
-      "4": "'b'",
-      "5": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
     "question": "What will return the following code?\n<code>3.to_a</code>",
     "type": "mc",
     "choices": {
@@ -288,6 +272,22 @@ module.exports = [
       "To convert an integer to an array in Ruby, we can use the `Array` method with the integer as an argument, like this:\n" +
       "`Array(3) #=> [3]`\n" +
       "This will convert the integer `3` to an array containing a single element `3`."
+  },
+  {
+    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "'b'",
+      "5": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
   },
   {
     "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
@@ -461,6 +461,159 @@ module.exports = [
       "3": "Error",
       "4": "nil"
     },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>[1...10] === [1...10]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1...10) === (1...10)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will return the following code?\n<code>(1..10) === 5</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": 5
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": "In this case, the === operator is used for pattern matching, " +
+      "and it is implemented differently depending on the type of object " +
+      "being compared." + "\n" +
+      "When using the === operator with a range object like (1...10), it " +
+      "checks if the right-hand side object is an element within the range. " +
+      "In this case, 5 is indeed an element within the range from 1 to 10 " +
+      "(excluding 10), so the expression (1...10) === 5 returns true." + "\n" +
+      "Note that if you use the == operator instead of ===, the expression " +
+      "would return false because a range object is not equal to any of its " +
+      "elements." + "\n" +
+      "<a href='https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D'" +
+      ">https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D</a>"
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts [1, 2] + [2, 3] === [1, 2] | [2, 3]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the output of the following code?\n<code>puts (1..5) === 3</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>(42 === Numeric) == (Numeric === 42)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>(42 == Numeric) === (Numeric == 42)</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "false",
+      "3": "true",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What will be the result of the following code?\n<code>/ell/ === 'Hello'</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "String"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "question": "What returns <code>(1...10) === 5</code>",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "type": "mc",
     "answer": "1",
     "tags": [
       "advanced-level"
@@ -815,60 +968,6 @@ module.exports = [
       "advanced-level"
     ],
     "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>[1...10] === [1...10]</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1...10) === (1...10)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>(1..10) === 5</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": 5
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "==="
-    ],
-    "explanation": "In this case, the === operator is used for pattern matching, " +
-      "and it is implemented differently depending on the type of object " +
-      "being compared." + "\n" +
-      "When using the === operator with a range object like (1...10), it " +
-      "checks if the right-hand side object is an element within the range. " +
-      "In this case, 5 is indeed an element within the range from 1 to 10 " +
-      "(excluding 10), so the expression (1...10) === 5 returns true." + "\n" +
-      "Note that if you use the == operator instead of ===, the expression " +
-      "would return false because a range object is not equal to any of its " +
-      "elements." + "\n" +
-      "<a href='https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D'" +
-      ">https://ruby-doc.org/core-2.7.1/Range.html#method-i-3D-3D-3D</a>"
   },
   {
     "question": "What will return the following code?\n<code>(1...10) == (1...10)</code>",
@@ -1687,32 +1786,6 @@ module.exports = [
     "explanation": ""
   },
   {
-    "question": "What will be the output of the following code?\n<code>puts [1, 2] + [2, 3] === [1, 2] | [2, 3]</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the output of the following code?\n<code>puts (1..5) === 3</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
     "question": "What will be the output of the following code?\n<code>p (1..10).grep(7..10)</code>",
     "type": "mc",
     "choices": {
@@ -1720,66 +1793,6 @@ module.exports = [
       "2": "true",
       "3": "7, 8, 9",
       "4": "10"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the result of the following code?\n<code>(42 === Numeric) == (Numeric === 42)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error",
-      "4": "42"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the result of the following code?\n<code>(42 == Numeric) === (Numeric == 42)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "42"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
-    "type": "mc",
-    "choices": {
-      "1": "Error",
-      "2": "false",
-      "3": "true",
-      "4": "42"
-    },
-    "answer": "1",
-    "tags": [
-      "-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will be the result of the following code?\n<code>/ell/ === 'Hello'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "String"
     },
     "answer": "1",
     "tags": [
@@ -2907,19 +2920,6 @@ module.exports = [
     "answer": "1",
     "tags": [
       "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What returns <code>(1...10) === 5</code>",
-    "choices": {
-      "1": "true",
-      "2": "false"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "advanced-level"
     ],
     "explanation": ""
   },

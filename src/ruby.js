@@ -393,21 +393,6 @@ module.exports = [
       "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
   },
   {
-    "question": "What will return the following code?\n<code>/^[0-9]*$/ === '2048'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "nil",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
     "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
     "type": "mc",
     "choices": {
@@ -419,36 +404,6 @@ module.exports = [
     "answer": "1",
     "tags": [
       "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>Object === 'text'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>String === 'text'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
     ],
     "explanation": ""
   },
@@ -980,37 +935,6 @@ module.exports = [
     "answer": "1",
     "tags": [
       "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "question": "What will return the following code?\n<code>3.to_a</code>",
-    "type": "mc",
-    "choices": {
-      "1": "Error",
-      "2": "[3]",
-      "3": "[1,2,3]",
-      "4": "[0,1,2,3]"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-
-  {
-    "question": "What will return the following code?\n<code>['ivan','oleg','egor'].grep(/eg/)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "['oleg','egor']",
-      "2": "['eg']",
-      "3": "['eg','eg']",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
     ],
     "explanation": ""
   },

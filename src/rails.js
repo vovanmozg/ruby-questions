@@ -878,7 +878,7 @@ var data = [
   },
   {
     "id": "1d1acde2-a592-45a4-9c45-8859786f56af",
-    "question": "Which SQL-query generates next code?\n<code>Connection.uniq.pluck(: interface)</code>",
+    "question": "Which SQL-query generates next code?\n<code>Connection.distinct.pluck(:interface)</code>",
     "type": "",
     "choices": {
       "1": "SELECT DISTINCT interface FROM connections",
@@ -892,7 +892,27 @@ var data = [
       "intermediate-level"
     ],
     "explanation": ""
-  }
+  },
+  {
+    "id": "fa6cb816-a018-4c51-937b-00770614059a",
+    "question": "What will return the following code?\n<code>5.minutes.to_f</code>",
+    "type": "mc",
+    "choices": {
+      "1": "300.0",
+      "2": "300",
+      "3": "5",
+      "4": "5.0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Duration"
+    ],
+    "explanation": "`minutes` method is defined in ActiveSupport gem. " +
+      "`5.minutes` will create a `Duration` object equivalent to 5 minutes. " +
+      "When you call the `to_f` method on that object, it will convert the " +
+      "duration to a float representation of seconds. Since there are 60 " +
+      "seconds in a minute, 5 minutes is equivalent to 300 seconds."
+  },
 ];
 
 module.exports = data;

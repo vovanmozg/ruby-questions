@@ -1,6 +1,7 @@
 var data = [
   /*
   {
+    "id": "",
     "question": "What will be the output of the following code?\n<code>...</code>",
     "type": "mc",
     "choices": {
@@ -18,6 +19,7 @@ var data = [
 
   */
   {
+    "id": "7e771363-6a30-471d-949f-e04738993d5a",
     "question": "Using Fillet.zero? you can check if the file is empty.",
     "type": "mc",
     "choices": {
@@ -31,6 +33,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "aae35d84-fcf0-458a-b4e4-383c1ee2227e",
     "question": "How to run Rails server and make it available for queries from the network?",
     "type": "mc",
     "choices": {
@@ -46,6 +49,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "e284e36c-0164-42a3-9921-eebc7b20de36",
     "question": "What mixin can you use to streaming live data?",
     "type": "mc",
     "choices": {
@@ -61,6 +65,7 @@ var data = [
     "explanation": "https://api.rubyonrails.org/classes/ActionController/Live.html"
   },
   {
+    "id": "e7d5b414-22bd-4062-8e27-65c91b44dafc",
     "question": "Where the default 404 template is located?",
     "type": "mc",
     "choices": {
@@ -76,6 +81,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "e3efe754-d28c-4ea4-b76a-f041f7b71b1e",
     "question": "<code>routes.rb</code> contains only one line: <code>resources :books</code>. " +
       "What action in the <code>Books</code> controller will be called when " +
       "<code>DELETE /books/42</code> is requested?",
@@ -93,6 +99,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "c82ab160-e234-4bef-ae29-46d13d7837e2",
     "question": "<code>routes.rb</code> contains only one line: <code>resources :books</code>. " +
       "What controller will be used when <code>DELETE /books/42</code> is requested?",
     "type": "mc",
@@ -108,6 +115,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "21a625fe-81da-45d1-9092-93a947129110",
     "question": "What will be the output of the following code?\n<code>'data'.pluralize</code>",
     "type": "mc",
     "choices": {
@@ -123,6 +131,7 @@ var data = [
     "explanation": "https://apidock.com/rails/ActionView/Helpers/TextHelper/pluralize"
   },
   {
+    "id": "593ed499-0c23-4560-9e8e-31e4d2aacb9e",
     "question": "What will return the following code?\n<code>'cookie'.pluralize</code>",
     "type": "mc",
     "choices": {
@@ -138,6 +147,7 @@ var data = [
     "explanation": "https://apidock.com/rails/ActionView/Helpers/TextHelper/pluralize"
   },
   {
+    "id": "44bd78a7-eea6-4ac6-8ef7-22a58ed4721c",
     "question": "What will be the output of the following code?\n<code>handler = File.open(filename)\np handler.pos</code>",
     "type": "mc",
     "choices": {
@@ -153,6 +163,7 @@ var data = [
     "explanation": "https://ruby-doc.org/core-2.5.3/IO.html#method-i-pos"
   },
   {
+    "id": "99c26a2d-32e9-4ac9-8e31-d60024250bf2",
     "question": "What right ways to disable forgery protection for specific action?",
     "type": "ma",
     "choices": {
@@ -168,6 +179,7 @@ var data = [
     "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
   },
   {
+    "id": "d4dccf8f-9d7b-4e6c-8acd-2a28cedd78ec",
     "question": "What is purpose of <code>protect_from_forgery</code>?",
     "type": "mc",
     "choices": {
@@ -183,6 +195,7 @@ var data = [
     "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
   },
   {
+    "id": "db2d0590-176f-4432-a4c8-1cfcddfb4b58",
     "question": "How to add authentication token to manually created form?",
     "type": "mc",
     "choices": {
@@ -198,6 +211,7 @@ var data = [
     "explanation": "https://edgeapi.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html"
   },
   {
+    "id": "3c519629-e1c0-4e49-b08e-ac5cc2828e8c",
     "question": "What will be the output of the following code?\n<code>require 'active_support'\n" +
       "class A; KU = [1,2,3]; end\n" +
       "A.delegate :sum, to: :KU\n" +
@@ -216,6 +230,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "a3e73871-1df2-438a-8d2a-29732e7d7542",
     "question": "What <code>flash.keep(:notice)</code>does",
     "type": "mc",
     "choices": {
@@ -231,6 +246,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "e829551c-49c9-4958-aeea-45d3f8fcd177",
     "question": "What expressions called in the action body will return the controller name?",
     "type": "ma",
     "choices": {
@@ -246,6 +262,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "5c9e64b5-3e27-43b7-89e1-fec6f449a7a2",
     "question": "What expressions called in the action body will return the action name?",
     "type": "ma",
     "choices": {
@@ -261,6 +278,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "f368779d-d7bf-4b3f-8023-f63fdc64ba46",
     "question": "What format is correct for describing query string parameter?",
     "type": "mc",
     "choices": {
@@ -276,6 +294,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "357129a8-e10a-43dd-b862-93660c4a9a48",
     "question": "routes.rb contains only one line: <code>resources :books</code>. What contains params of request <code> DELETE /photos/:id</code>",
     "type": "mc",
     "choices": {
@@ -290,6 +309,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "3c04446a-870d-4973-9ba9-59f9936d6abe",
     "question": "What route will not be created by <code>resources :photos</code>",
     "type": "mc",
     "choices": {
@@ -305,6 +325,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "800195d3-3c3f-43b0-83ae-cc1af65d4566",
     "question": "What amount of routes creates next entry in routing file:\n<code>resource :geocoder\nresolve('Geocoder') { [:geocoder] }</code>",
     "type": "mc",
     "choices": {
@@ -320,6 +341,7 @@ var data = [
     "explanation": "<p>Because you might want to use the same controller for a singular route (<code>/account</code>) and a plural route (<code>/accounts/45</code>), singular resources map to plural controllers. So that, for example, <code>resource :photo</code> and <code>resources :photos</code> creates both singular and plural routes that map to the same controller (<code>PhotosController</code>).</p>"
   },
   {
+    "id": "0ae5b431-78dc-4829-889e-1d02e10a5e22",
     "question": "What route will be generate with next code: <code>get 'profile', action: :show, controller: 'users'</code>",
     "type": "mc",
     "choices": {
@@ -335,6 +357,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "8e9bb1a8-83a4-42ad-aa27-eb4d800e42f0",
     "question": "Which file contains routes config?",
     "type": "mc",
     "choices": {
@@ -350,6 +373,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "2470a912-6c8e-491b-a088-228a755dc8b9",
     "question": "What returns path helper <code>edit_photo_path(10)</code> for next entry in routing file <code>resources :photos</code>",
     "type": "mc",
     "choices": {
@@ -365,6 +389,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "defff0eb-6428-4479-8a2c-95cf90ab7f21",
     "question": "Which helper returns <code>/photos/10<code> for next entry in routing file <code>resources :photos</code>",
     "type": "mc",
     "choices": {
@@ -381,6 +406,7 @@ var data = [
   },
 
   {
+    "id": "aa34178d-32fb-49ea-90ec-4d81ad354aa3",
     "question": "How to list all routes from command line",
     "type": "mc",
     "choices": {
@@ -396,6 +422,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "dca6835b-0280-44e7-9628-d18a328e71dd",
     "question": "Is there valid way to define two actions in the controller?\n<code>before_action :action1\nbefore_action :action2</code>",
     "type": "mc",
     "choices": {
@@ -410,6 +437,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "c2e0d785-b300-48d4-8218-97ffb29a3c5c",
     "question": "What does <code>flash.keep(:notice)</code>",
     "type": "mc",
     "choices": {
@@ -425,6 +453,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "3ef34087-6f37-4ae6-af1f-da63296561e3",
     "question": "What method is needed to save a message for display between requests?",
     "type": "mc",
     "choices": {
@@ -440,6 +469,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "52e1432d-b1f2-4ea7-9a47-8a079deb00ed",
     "question": "What you should write in the controller to prevent filter defined in ApplicationController?",
     "type": "mc",
     "choices": {
@@ -455,6 +485,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "d140ba8a-72ac-431e-9c1e-a017526d3b7b",
     "question": "Which filters there are in a controller?",
     "type": "mc",
     "choices": {
@@ -470,6 +501,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "98eff2bb-9c4b-4bcf-8e35-ecc7256416c6",
     "question": "What format is missing in standard Rails installation?",
     "type": "mc",
     "choices": {
@@ -485,6 +517,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "fe2973ef-7943-4fd7-9a94-a94cfae12099",
     "question": "What type of serializer is missing in Rails",
     "type": "mc",
     "choices": {
@@ -500,6 +533,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "eaea2727-ce49-4582-a53a-2b9d45f984c5",
     "question": "What will be the value of <code>@user</code>?\n<code>cookies[:user] = { x: -> { 42 }}\n@user = cookies[:user].call</code>",
     "type": "mc",
     "choices": {
@@ -515,6 +549,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "a6ca8ec5-1cbc-4acb-8d53-bcc5ab89ea80",
     "question": "How to set cookie",
     "type": "mc",
     "choices": {
@@ -530,6 +565,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "5ac5f7de-db4f-4df0-a409-d85e9d0e6b21",
     "question": "Can flash in controller to contain more than one value?",
     "type": "mc",
     "choices": {
@@ -543,6 +579,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "0b58bc2c-d44f-430e-ba41-d2f518c2d904",
     "question": "What is the purpose of <code>flash.now</code>",
     "type": "mc",
     "choices": {
@@ -557,6 +594,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "f7cd3106-2fce-4306-a742-32c45a6ae4bd",
     "question": "How to convert word to singular form?",
     "type": "mc",
     "choices": {
@@ -572,6 +610,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "0dd63665-a6f8-4dee-970a-3396fa765adc",
     "question": "after_filter valid options:",
     "choices": {
       "1": ":only, :except, :if, :unless",
@@ -587,6 +626,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "7e207fae-d0ce-4744-bc8a-d0224b8c623e",
     "question": "What type of before_filter call not supported in controllers?",
     "choices": {
       "1": "With String argument",
@@ -602,6 +642,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "c6c53b15-4be7-4ffb-b1d1-e0c115d5aabd",
     "question": "Where is the session method not accessible?",
     "type": "mc",
     "choices": {
@@ -617,6 +658,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "a6f850fe-e002-4266-b8ee-f145ba9481d5",
     "question": "What will add the params.require(:person) code to the controller and send the HTTP request with the fields name, age, sometext?",
     "type": "mc",
     "choices": {
@@ -632,6 +674,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "337507ad-c512-49d7-aa5c-4314c1ef3d42",
     "question": "What is the preferred method for naming controllers?",
     "type": "mc",
     "choices": {
@@ -646,6 +689,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "67ba56a9-e76e-4dce-b78a-300bc0c2282b",
     "question": "What's not in Rails?",
     "type": "mc",
     "choices": {
@@ -662,6 +706,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "1ebfc7d0-724b-4d29-a62d-5a2682a596c7",
     "question": "What does CRUD stand for?",
     "type": "mc",
     "choices": {
@@ -678,6 +723,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "776cb62b-1549-4c71-8968-b9773ef352ac",
     "question": "What Does MVC Stand For?",
     "type": "mc",
     "choices": {
@@ -694,6 +740,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "3ca90e1f-09c9-4738-9eeb-1ecef4f9e8af",
     "question": "Which query corresponds to the following code?\n<code>User.order(\"last_name DESC\").limit(1).offset(1)</code>",
     "type": "mc",
     "choices": {
@@ -710,6 +757,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "c0e8ac54-bd05-4ab6-8913-7704b35109f9",
     "question": "There is animals table.\nid name legs eyes\n1 cat 4 2\n2 dog 4 2\n3 spider 8 8\nWhat will the following code output?\n<code>Animals.where(legs: 4).pluck(:name)</code>",
     "type": "mc",
     "choices": {
@@ -726,6 +774,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "c8a2cd00-ef10-4887-9aed-920537ff0f51",
     "question": "How to remove row with callbacks",
     "type": "mc",
     "choices": {
@@ -741,6 +790,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "55dc85a5-6c99-47d8-907c-5aee51dd06f2",
     "question": "What is correct Action Controller filters",
     "type": "ma",
     "choices": {
@@ -760,6 +810,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "385e7c3e-2eb7-4f64-89f9-b48f10947476",
     "question": "Flash is a object of",
     "type": "mc",
     "choices": {
@@ -775,6 +826,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "0dbbedda-0a42-48fe-aec9-c107426b5cfb",
     "question": "Select the correct way of model getting:",
     "type": "ma",
     "choices": {
@@ -795,6 +847,7 @@ var data = [
     "explanation": "<p>For every field (also known as an attribute) you define in your table, Active Record provides a finder method. If you have a field called <code>first_name</code> on your <code>Client</code> model for example, you get <code>find_by_first_name</code> for free from Active Record. If you have a <code>locked</code> field on the <code>Client</code> model, you also get <code>find_by_locked</code> method.</p>"
   },
   {
+    "id": "6a445af4-8ab5-49c1-ac61-abae494d326a",
     "question": "Is this code correct?\n<code>Product.find_by_sql('SELECT * FROM products')</code>",
     "type": "",
     "choices": {
@@ -808,6 +861,7 @@ var data = [
     "explanation": ""
   },
   {
+    "id": "660e157e-6dc3-424a-b096-086d71d43c9b",
     "question": "Which SQL-query generates next code?\n<code>Connection.where(active: true).pluck(:id)</code>",
     "type": "mc",
     "choices": {
@@ -823,7 +877,8 @@ var data = [
     "explanation": ""
   },
   {
-    "question": "Which SQL-query generates next code?\n<code>Connection.uniq.pluck(: interface)</code>",
+    "id": "1d1acde2-a592-45a4-9c45-8859786f56af",
+    "question": "Which SQL-query generates next code?\n<code>Connection.distinct.pluck(:interface)</code>",
     "type": "",
     "choices": {
       "1": "SELECT DISTINCT interface FROM connections",
@@ -837,7 +892,27 @@ var data = [
       "intermediate-level"
     ],
     "explanation": ""
-  }
+  },
+  {
+    "id": "fa6cb816-a018-4c51-937b-00770614059a",
+    "question": "What will return the following code?\n<code>5.minutes.to_f</code>",
+    "type": "mc",
+    "choices": {
+      "1": "300.0",
+      "2": "300",
+      "3": "5",
+      "4": "5.0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Duration"
+    ],
+    "explanation": "`minutes` method is defined in ActiveSupport gem. " +
+      "`5.minutes` will create a `Duration` object equivalent to 5 minutes. " +
+      "When you call the `to_f` method on that object, it will convert the " +
+      "duration to a float representation of seconds. Since there are 60 " +
+      "seconds in a minute, 5 minutes is equivalent to 300 seconds."
+  },
 ];
 
 module.exports = data;

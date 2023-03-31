@@ -29,7 +29,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#map", "map", "lambda"
     ],
     "explanation": "The code will return an array containing the values of " +
       "the a property for each object in the original array.\n" +
@@ -55,7 +55,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "lambda", "String"
     ],
     "explanation": "A lambda function is defined: `->(str){str[0]=''}`. This function takes a string argument `str` and modifies its first character to an empty string.\n" +
       "The lambda function is immediately called with the argument `'123'`, resulting in the string `'23'`.\n" +
@@ -74,7 +74,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Hash", "invert", "Hash#invert"
     ],
     "explanation": "The following Ruby code `{a: 1, b: 2, c: 1}.invert` will return a new hash where the keys and values are inverted. In other words, the keys of the original hash will become the values of the new hash, and the values of the original hash will become the keys of the new hash.\n" +
       "In this specific case, the original hash `{a: 1, b: 2, c: 1}` has two keys with the same value (`:a` and `:c` both have a value of `1`). Since a hash can't have duplicate keys, one of the keys will be overwritten. Therefore, the resulting inverted hash will have two keys (`1` and `2`) and two values (`:a` and `:b`), like this: `{1=>:c, 2=>:b}`.\n" +
@@ -93,7 +93,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array"
     ],
     "explanation": ""
   },
@@ -231,9 +231,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "tap", "capitalize"
+      "intermediate-level", "tap", "capitalize", "proc"
     ],
-    "explanation": ""
+    "explanation": "When `&:capitalize` is used as an argument to a method " +
+      "call, it will convert the symbol :capitalize into a Proc instance " +
+      "with the Symbol#to_proc method. `tap` applies `capitalize` method to " +
+      "'abcd' but capitalize is not mutating method, so 'abcd' string will " +
+      "not be changed.\n" +
+      "https://blog.pjam.me/posts/ruby-symbol-to-proc-the-short-version/"
   },
   {
     "id": "519d2980-c25f-4af3-a91c-70df2c63fad1",
@@ -247,9 +252,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "tap", "capitalize!"
     ],
-    "explanation": ""
+    "explanation": "The code provided uses the `tap` method, which is a Ruby " +
+      "method that yields self to the given block and returns self. The " +
+      "block of code `&:capitalize!` is using the `capitalize!` method, " +
+      "which modifies the original string by capitalizing the first letter " +
+      "of the string and downcasing the remaining characters."
   },
   {
     "id": "57f8e530-cf18-4028-a95f-fa05fac83415",
@@ -624,7 +633,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level", "grep"
+      "beginner-level", "grep", "Enumerable.grep"
     ],
     "explanation": "This code will return an array containing all elements from the original array that match the regular expression /eg/.\n" +
       "https://ruby-doc.org/core-2.7.1/Enumerable.html#method-i-grep"
@@ -691,9 +700,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep", "range"
     ],
-    "explanation": ""
+    "explanation": "The expression `(1..10).grep(3...5)` will return an array containing the elements of the range `1..10` that match the pattern specified by the range `3...5`.\n" +
+      "In this case, the range `3...5` specifies a pattern that includes all the integers from 3 up to, but not including, 5. So the expression will return an array `[3, 4]`.\n" +
+      "The `grep` method in Ruby is usually used to search for patterns in arrays or enumerables, but it can also be used with ranges. When used with a range, `grep` checks each element of the range against the pattern and returns a new array containing the elements that match."
   },
   {
     "id": "6463977e-b7d6-4c6a-875c-0a5ec131c7d6",
@@ -707,9 +718,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep", "range"
     ],
-    "explanation": ""
+    "explanation": "The provided Ruby code uses the `grep` method to filter " +
+      "elements from a range `(1..10)` that match the given pattern " +
+      "`(-2...2)`. The pattern is an exclusive range, meaning it includes " +
+      "the start value (-2) but excludes the end value (2). Since the " +
+      "pattern is a range of (-2...2), and the range (1..10) starts from 1, " +
+      "there is only one element that matches the pattern, which is 1."
   },
   {
     "id": "c4b0c94f-97aa-49fa-9553-afd53f701e42",
@@ -723,13 +739,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "grep", "range"
     ],
-    "explanation": ""
+    "explanation": "The provided code uses the `grep` method to filter " +
+      "elements from a range (1...10) that match the given pattern (8...12). " +
+      "Both ranges are exclusive, meaning they include the start value but " +
+      "exclude the end value."
   },
   {
     "id": "66183e3d-3a30-4523-9742-f665c091a37e",
-    "question": "What will return the following code?\n<code>(1...10).grep(->(x){x%2==0}</code>",
+    "question": "What will return the following code?\n<code>(1...10).grep(->(x){x%2==0})</code>",
     "type": "mc",
     "choices": {
       "1": "[2,4,6,8]",
@@ -739,9 +758,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "grep", "lambda", "range"
     ],
-    "explanation": ""
+    "explanation": "This code uses the `grep` method to filter elements from " +
+      "the range (1...10) that match the given lambda function. The lambda " +
+      "function checks if the element (x) is an even number (x % 2 == 0). " +
+      "The range is (1...10), an exclusive range, meaning it includes the " +
+      "start value (1) but excludes the end value (10)."
   },
   {
     "id": "4e9158b1-5276-4463-91f6-5269573d7b96",
@@ -755,9 +778,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "grep", "range"
     ],
-    "explanation": ""
+    "explanation": "This code uses the `grep` method to filter elements from " +
+      "a range (1..10) that match the given pattern (7..10). The pattern is " +
+      "an inclusive range, meaning it includes both the start value (7) and " +
+      "the end value (10). Since the pattern is a range of (7..10), the " +
+      "overlapping elements are 7, 8, 9, and 10."
   },
   {
     "id": "69778c80-eb8d-439b-9526-7fc140d98217",
@@ -799,16 +826,23 @@ module.exports = [
     "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.dup.foo</code>",
     "type": "mc",
     "choices": {
-      "1": "Error",
+      "1": "NoMethodError",
       "2": "42",
       "3": "nil",
       "4": "Object"
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "dup", "singleton-methods"
     ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
+    "explanation": "The provided code defines a singleton method `foo` on an " +
+      "instance of `Object` and then attempts to duplicate the object and " +
+      "call the method `foo` on the duplicated object. However, there's an " +
+      "issue with this code. Singleton methods are not copied when you " +
+      "duplicate an object using the `dup` method. Therefore, calling the " +
+      "`foo` method on the duplicated object will raise a `NoMethodError`, " +
+      "because the `foo` method is not defined on the duplicated object." +
+      "https://stackoverflow.com/questions/10183370"
   },
   {
     "id": "4ae27912-b4a6-405d-bcb5-47242946167b",
@@ -822,9 +856,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "clone", "singleton-methods"
     ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
+    "explanation": "This code defines a singleton method `foo` on an " +
+      "instance of `Object`, clones the object, and then calls the method " +
+      "`foo` on the cloned object. In this case, the `clone` method creates " +
+      "a shallow copy of the object and preserves the singleton methods. " +
+      "https://stackoverflow.com/questions/10183370"
   },
   {
     "id": "7c24b1dc-6f13-4f0e-9b61-f3007f7e1226",
@@ -840,7 +878,14 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
+    "explanation": "This code defines a singleton method `foo` on an " +
+      "instance of `Object` and then attempts to duplicate the object and " +
+      "call the method foo on the duplicated object. However, there's an " +
+      "issue with this code. Singleton methods are not copied when you " +
+      "duplicate an object using the `dup` method. Therefore, calling the " +
+      "foo method on the duplicated object will raise a NoMethodError, " +
+      "because the `foo` method is not defined on the duplicated object." +
+      "https://stackoverflow.com/questions/10183370"
   },
   {
     "id": "a34fd9b7-996a-49b2-9ae8-19138eef78b6",
@@ -854,25 +899,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "clone"
     ],
-    "explanation": "https://stackoverflow.com/questions/10183370"
-  },
-  {
-    "id": "fa6cb816-a018-4c51-937b-00770614059a",
-    "question": "What will return the following code?\n<code>5.minutes.to_f</code>",
-    "type": "mc",
-    "choices": {
-      "1": "300.0",
-      "2": "300",
-      "3": "5",
-      "4": "5.0"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
+    "explanation": "The provided Ruby code defines a singleton method `foo` " +
+      "on an instance of `Object`, clones the object, and then calls the " +
+      "method `foo` on the cloned object. In this case, the `clone` method " +
+      "creates a shallow copy of the object and preserves the singleton " +
+      "methods. Therefore, calling the `foo` method on the cloned object " +
+      "will return the value `42`." +
+      "https://stackoverflow.com/questions/10183370"
   },
   {
     "id": "d7f1a103-e057-495d-a324-2f002cadf0d0",
@@ -886,7 +921,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "errors"
     ],
     "explanation": ""
   },
@@ -902,7 +937,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "advanced-level", "errors"
     ],
     "explanation": ""
   },
@@ -918,13 +953,18 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "p", "method", "proc", "map"
     ],
-    "explanation": ""
+    "explanation": "The provided Ruby code uses %w{ one two three } to create an array of strings and then attempts to call the map method with the p method as its argument using the & syntax." +
+      "The `&` syntax is used to convert a method into a proc. In this case, " +
+      "the `method(:p)` expression creates a `Method` object for the " +
+      "built-in `p` method. And then `p` method is applied to all elements " +
+      "of array. `p` prints value and also returns it. This code is similar " +
+      "to the following: ```%w{ one two three }.map { |e| p e }```"
   },
   {
     "id": "e7f435eb-7028-44e4-9033-72a3e14c4442",
-    "question": "What will be the output of the following code?\n<code>def a\n" +
+    "question": "What will be the output of calling `foo` method?\n<code>def foo\n" +
       "  print 'kuku'\n" +
       "  return\n" +
       "ensure\n" +
@@ -939,9 +979,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "ensure"
     ],
-    "explanation": "https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/ensure.html"
+    "explanation": "When you call the method `foo`, it will execute the following steps:\n" +
+      "The `print 'kuku'` statement will be executed, and 'kuku' will be printed.\n" +
+      "The `return` statement will be executed, and the method will start to return.\n" +
+      "The `ensure` block will be executed, and 'epta' will be printed.\n" +
+      "https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/ensure.html"
   },
   {
     "id": "a19324fb-12d7-4cdf-bba0-be09937b9a58",
@@ -969,13 +1013,17 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "methods"
     ],
-    "explanation": ""
+    "explanation": "In this code snippet, we define a class `B` with a " +
+      "method `!`. The method `!` will print the integer `42`. After " +
+      "defining the class, we create a new instance of the `B` class and " +
+      "call the `!` method on that instance.\n" +
+      "https://docs.ruby-lang.org/en/3.0/syntax/methods_rdoc.html#label-Method+Names"
   },
   {
     "id": "dd765c6a-1667-47dc-8a1d-d3cc6e993314",
-    "question": "What will be the output of the following code?\n<code>123.digits</code>",
+    "question": "What will return the following code?\n<code>123.digits</code>",
     "type": "mc",
     "choices": {
       "1": "[3, 2, 1]",
@@ -985,7 +1033,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Integer#digits"
     ],
     "explanation": "https://ruby-doc.org/core-2.4.0/Integer.html#method-i-digits"
   },
@@ -1000,13 +1048,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Range", "Array"
     ],
-    "explanation": ""
+    "explanation": "In this case, you are comparing two arrays, each " +
+      "containing a single element, which is the range (1...10). Two arrays " +
+      "are considered equal if they have the same elements in the same order."
   },
   {
     "id": "7c747401-9dee-4324-b50b-a5878aaa86db",
-    "question": "What will return the following code?\n<code>(1...10) == (1...10)</code>",
+    "question": "What will return the following code?```(1...10) == (1...10)```",
     "type": "mc",
     "choices": {
       "1": "true",
@@ -1015,13 +1065,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "intermediate-level", "Range"
     ],
-    "explanation": ""
+    "explanation": "Ruby compares the range objects based on their starting " +
+      "and ending values, as well as the inclusiveness of the range. In this " +
+      "case, both ranges have the same starting value (1), the same ending " +
+      "value (10), and are exclusive (indicated by `...`)."
   },
   {
     "id": "df3b70b2-879d-40d7-b2c4-5c15d6dad69a",
-    "question": "What will be the output of the following code?\n<code>puts [1,nil,2].compact</code>",
+    "question": "What will be the output of the following code?```puts [1,nil,2].compact```",
     "type": "mc",
     "choices": {
       "1": "[1,2]",
@@ -1031,23 +1084,24 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "compact"
+      "intermediate-level", "Array#compact"
     ],
-    "explanation": "https://apidock.com/ruby/Array/compact"
+    "explanation": "The `compact` method is used to remove `nil` elements from an array.\n" +
+      "https://apidock.com/ruby/Array/compact"
   },
   {
-    "id": "2dede66f-fbb2-47db-b1bd-08df29f1ea90",
-    "question": "What will be the output of the following code?\n<code>puts({ String => -> { } }[String])</code>",
+    "id": "2dede66f-fbb2-47db-b1bd-08df29f1ea91",
+    "question": "What will return the following code?```{ String => -> { } }[String]```",
     "type": "mc",
     "choices": {
-      "1": "nil",
+      "1": "#<Proc:...",
       "2": "String",
-      "3": "Proc",
+      "3": "nil",
       "4": "Error"
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "lambda", "Proc"
     ],
     "explanation": ""
   },
@@ -1725,7 +1779,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "style-guide"
     ],
     "explanation": ""
   },

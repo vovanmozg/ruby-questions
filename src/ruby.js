@@ -1,22 +1,4 @@
 module.exports = [
-  /*
-  {
-    "id": "8db9c11f-3312-49e9-b408-43564008a682",
-    "question": "What will be the output of the following code?\n<code>...</code>",
-    "type": "mc",
-    "choices": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": ""
-    },
-    "answer": "1",
-    "tags": [
-      "-level"
-    ],
-    "explanation": ""
-  },
-  */
   {
     "id": "f4ffa8c6-d986-44c6-8987-c7e2e6a745b3",
     "question": "What will return the following code?\n<code>[{ a: 1 }, { a: 2 }].map(&->(x) { x[:a] })</code>",
@@ -3512,6 +3494,288 @@ module.exports = [
       "beginner-level"
     ],
     "explanation": "A class variable is declared using @@ at the beginning of the variable name and is shared among all instances of a class, while an instance variable is declared using @ at the beginning of the variable name and is unique to each instance of a class. Instance variables are accessible from instance methods of a class, while class variables are accessible from class methods and class level only."
-  }
+  },
+  {
+    "id": "c0b0b2f1-3b1f-4b0f-9b0f-3b3b0f2b0b0b",
+    "question": "What will return the following code?" +
+      "```def a(x); yield x; end\n" +
+      "a(3.14, &:to_i)```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "3.14",
+      "3": "SyntaxError",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "blocks", "yield", "Proc"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "c36096cf-a75e-4761-ac4c-0d1f8e8ee8d0",
+    "question": "What will return the following code?" +
+      "```def a(x); yield x; end\n" +
+      "a(&:to_i, 3.14)```",
+    "type": "mc",
+    "choices": {
+      "1": "SyntaxError",
+      "2": "3",
+      "3": "3.14",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "blocks", "yield", "Proc"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "b6a99612-2567-43d1-a0ab-2fa9fa2a7b23",
+    "question": "What will return the following code?" +
+      "```def foo(&b1, &b2); b1.call + b2.call; end\n" +
+      "foo { 1 } { 2 }```",
+    "type": "mc",
+    "choices": {
+      "1": "SyntaxError",
+      "2": "3",
+      "3": "1",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "blocks", "yield", "Proc"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "194b274d-ffda-4189-928d-08078d2006ce",
+    "question": "What will be the output the following code?" +
+      "```def foo" +
+      "  Proc.new { return }.call" +
+      "  42" +
+      "end" +
+      "puts foo```",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "42",
+      "3": "#<Proc:...",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "return", "Proc"
+    ],
+    "explanation": "The `return` statement inside the `Proc` object will " +
+      "make the method `foo` return immediately, without executing any " +
+      "further code within the method. This means that the number `42` will " +
+      "not be reached."
+  },
+  {
+    "id": "dbed86b5-8e67-4bdb-9c21-8843bd750131",
+    "question": "What will return the following code?```'key'.object_id == 'key'.object_id```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "frozen-strings"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "42ee6d12-e188-4242-bbec-b9ef7d0ad999",
+    "question": "What will return the following code?" +
+      "```# frozen_string_literal: true" +
+      "'key'.object_id == 'key'.object_id```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "frozen-strings"
+    ],
+    "explanation": "Since the `frozen_string_literal` is set to `true`, Ruby" +
+      " will reuse the frozen string literal objects for performance " +
+      "reasons. This means that both occurrences of the string literal " +
+      "`'key'` will have the same `object_id`."
+  },
+  {
+    "id": "a406c95a-1d4d-4f55-bc15-89e6463eeb23",
+    "question": "What will return the following code?```nil?.nil?```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "2f1627b1-96c6-4ac1-819f-9d199a48e9a4",
+    "question": "What will return the following code?```nil&.nil?```",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "SyntaxError",
+      "3": "true",
+      "4": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "safe-navigation-operator"
+    ],
+    "explanation": "The Ruby code `nil&.nil?` uses the safe navigation " +
+      "operator `&.`. The safe navigation operator allows you to call a " +
+      "method on an object only if the object is not `nil`. If the object " +
+      "is `nil`, the expression will return nil without calling the method."
+  },
+  {
+    "id": "6cf41af4-5b45-4a6d-982c-a8159445d8bb",
+    "question": "What will be the output of the following code?```" +
+      "p (a = -> (x){ x < 2 ? 1 : x*a[x-1]})[4]```",
+    "type": "mc",
+    "choices": {
+      "1": "24",
+      "2": "Error",
+      "3": "nil",
+      "4": "4"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "d9a71c9e-c206-47ea-afbc-bbf5b9f1d818",
+    "question": "What will return the following code?```\"0123456789\"[3.4]```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "34",
+      "3": "3456",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "String", "Float#to_int"
+    ],
+    "explanation": "In this code, you are attempting to access the character " +
+      "at the index `3.4` in the string `\"0123456789\"`. However, the index " +
+      "value should be an integer. Ruby will implicitly convert the float " +
+      "`3.4` to an integer using the `to_int` method before performing the " +
+      "string indexing operation. The `Float#to_int` method truncates the " +
+      "float value to an integer."
+  },
+  {
+    "id": "9f95b554-8840-414d-be43-f16fa8bac381",
+    "question": "What will return the following code?```\"%.5f\" % 9.6e-05```",
+    "type": "mc",
+    "choices": {
+      "1": "\"0.00010\"",
+      "2": "\"0.00009\"",
+      "3": "\"0.000096\"",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": "This code uses string formatting to format a " +
+      "floating-point number with a specific number of decimal places. " +
+      "In this case, the floating-point number is `9.6e-05`, which is " +
+      "scientific notation for `0.000096`. The format string `\"%.5f\"` " +
+      "specifies that the number should be formatted as a floating-point " +
+      "number with 5 decimal places (rounded)."
+  },
+  {
+    "id": "f1b3d535-79d4-4869-ae32-29e4a861164b",
+    "question": "What will return the following code?```{a: 1}.fetch(:b)```",
+    "type": "mc",
+    "choices": {
+      "1": "KeyError",
+      "2": "nil",
+      "3": "false",
+      "4": ":b"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Hash#fetch"
+    ],
+    "explanation": "When using the `fetch` method without providing a " +
+      "default value or block, it will raise a `KeyError` if the key is not " +
+      "found in the hash."
+  },
+  {
+    "id": "77f7f0b7-3f54-480e-a051-79ca3af53fc7",
+    "question": "What will return the following code?```{a: 1}.fetch(:b, 2)```",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "KeyError",
+      "3": "{b: 2}",
+      "4": "nil",
+      "5": "{a: 1, b: 2}"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Hash#fetch"
+    ],
+    "explanation": "The `fetch` method allows you to provide a default value " +
+      "as the second argument, which will be returned if the key is not " +
+      "found in the hash. In this case, the default value is `2`."
+  },
+  {
+    "id": "6653cf97-b49d-4314-aa03-c75f2cb3385d",
+    "question": "What will be the output of the following code?```(2..4).reduce(1, :*)```",
+    "type": "mc",
+    "choices": {
+      "1": "24",
+      "2": "Error",
+      "3": "6",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Range#reduce", "Proc"
+    ],
+    "explanation": "The `reduce` method is used to accumulate a result by " +
+      "applying a binary operation to the elements of an range 2 to 4 " +
+      "inclusive. In this case, the binary operation is multiplication " +
+      "(`:*`), and the initial value is 1. So, 1 * (2 * 3 * 4) = 24"
+  },
 
+  /*
+{
+  "id": "",
+  "question": "What will be the output of the following code?```...```",
+  "type": "mc",
+  "choices": {
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": ""
+  },
+  "answer": "1",
+  "tags": [
+    "-level"
+  ],
+  "explanation": ""
+},
+
+*/
 ]

@@ -3741,7 +3741,7 @@ module.exports = [
   },
   {
     "id": "6653cf97-b49d-4314-aa03-c75f2cb3385d",
-    "question": "What will be the output of the following code?```(2..4).reduce(1, :*)```",
+    "question": "What will return the following code?```(2..4).reduce(1, :*)```",
     "type": "mc",
     "choices": {
       "1": "24",
@@ -3757,6 +3757,337 @@ module.exports = [
       "applying a binary operation to the elements of an range 2 to 4 " +
       "inclusive. In this case, the binary operation is multiplication " +
       "(`:*`), and the initial value is 1. So, 1 * (2 * 3 * 4) = 24"
+  },
+  {
+    "id": "aac1059f-ad9e-4c43-9128-4b2235ef6294",
+    "question": "What will return the following code?```[1,2,3]::size```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "Error",
+      "3": ":method",
+      "4": "#<Method..."
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Class"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "9fe71355-b5a6-47d1-893c-809ac079ae61",
+    "question": "What will return the following code?```['abc', 'foo'][0][0][0]```",
+    "type": "mc",
+    "choices": {
+      "1": "\"a\"",
+      "2": "nil",
+      "3": "Error",
+      "4": "\"\""
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "String"
+    ],
+    "explanation": "`['abc', 'foo'][0]` returns the first element of the list, which is the string `'abc'`.\n" +
+      "`'abc'[0]` returns the first character of the string, which is the character `'a'`.\n" +
+      "`'a'[0]` also returns the first character of the string, which is again the character `'a'`."
+  },
+  {
+    "id": "27ae7cc2-f7dc-4c89-a9e9-ab65a31a6f91",
+    "question": "What will return the following code?```'' << 97```",
+    "type": "mc",
+    "choices": {
+      "1": "\"a\"",
+      "2": "Error",
+      "3": "97",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": "The `<<` operator is used for concatenation when applied " +
+      "to strings. This code is concatenating the character with the ASCII " +
+      "value of `97` to an empty string. The character with the ASCII value " +
+      "of `97` is `'a'`."
+  },
+  {
+    "id": "c8eca4b6-04a4-4c54-89e6-cfcafc90df0a",
+    "question": "What will return the following code?```0.0.nan?```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "0",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Float#nan?"
+    ],
+    "explanation": "The `nan?` method is used to check if a float is a \"Not " +
+      "a Number\" (NaN) value. In this case, you have a float `0.0`, which " +
+      "is a valid number."
+  },
+  {
+    "id": "1801892b-f079-47b5-87ec-7a43704bb39f",
+    "question": "What will be the output of the following code?```(0.0 / 0.0).nan?```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "Float#nan?"
+    ],
+    "explanation": "Dividing 0.0 by 0.0 results in a NaN (Not a Number) " +
+      "value. The nan? method checks if the float is NaN."
+  },
+  {
+    "id": "56b47ae0-0854-4eec-a113-844ecb8391d3",
+    "question": "What will be the output of the following code?```3.to_s(3)```",
+    "type": "mc",
+    "choices": {
+      "1": "\"10\"",
+      "2": "\"3\"",
+      "3": "\"333\"",
+      "4": "\"11\"",
+      "5": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Integer#to_s"
+    ],
+    "explanation": "The `Integer#to_s` method is used to convert a number " +
+      "to a string representation in a specified base (radix). The base 3 " +
+      "numeral system only uses the digits 0, 1, and 2. So, string `'10'`, " +
+      "which represents the number 3 in base 3."
+  },
+  {
+    "id": "d7a071fd-f807-4ea3-ac21-3cd883b16e6d",
+    "question": "Is this syntax valid?```def foo(*); end```",
+    "type": "mc",
+    "choices": {
+      "1": "valid",
+      "2": "invalid"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "splat"
+    ],
+    "explanation": "The `*` in the method definition is used to accept a " +
+      "variable number of arguments, and it's sometimes called a \"splat\"" +
+      " operator. The `foo` method can accept any number of arguments, but" +
+      " it doesn't use or store them in a variable. This can be useful in" +
+      " situations where you want a method to accept any number of arguments " +
+      "but don't care about them, or when you want to override a method in a " +
+      "subclass and ignore the arguments passed to the original method."
+  },
+  {
+    "id": "25db6f0e-3b33-430b-8e46-8adb1dc38da5",
+    "question": "What will return the following code?```x =* 3```",
+    "type": "mc",
+    "choices": {
+      "1": "[3]",
+      "2": "Error",
+      "3": "x multiplied by 3",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "splat"
+    ],
+    "explanation": "This code uses the \"splat\" operator (*) in an " +
+      "assignment context. In this case, the splat operator is used to " +
+      "create an array with the given value. The code `x =* 3` is equivalent " +
+      "to `x = [*3]`.\n" +
+      "So, `x =* 3` will assign the value `[3]` to the variable `x`. "
+  },
+  {
+    "id": "6b865559-bbcf-4d72-a15e-ba442ebae97e",
+    "question": "What will be return following code?```[1,\"nil\",2].compact```",
+    "type": "mc",
+    "choices": {
+      "1": "[1,\"nil\",2]",
+      "2": "[1,2]",
+      "3": "[1,nil,2]",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Array#compact"
+    ],
+    "explanation": "The `compact` method is used on an array to remove all " +
+      "`nil` elements. However, in this code, the element `\"nil\"` is a " +
+      "string, not the actual `nil` value."
+  },
+  {
+    "id": "496ceb23-5ddd-4f9d-a1f3-b80456d5c984",
+    "question": "What code will return the result ```[1,2]```",
+    "type": "mc",
+    "choices": {
+      "1": "[1,nil,2].compact",
+      "2": "[1,nil,2].flatten",
+      "3": "[1,nil,2].clear",
+      "4": "[1,nil,2].collect"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Array#compact"
+    ],
+    "explanation": "The compact method is used on an array to remove all nil elements."
+  }, 
+  {
+    "id": "d76e3b1b-53bd-46c6-8397-c3a3d68f7d1c",
+    "question": "What will return the following code?```" +
+      "module M1\n" +
+      "  def foo;  42; end\n" +
+      "end\n" +
+      "\n" +
+      "class C1\n" +
+      "  extend M1\n" +
+      "end\n" +
+      "\n" +
+      "C1.new.foo```",
+    "type": "mc",
+    "choices": {
+      "1": "NoMethodError",
+      "2": "42",
+      "3": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Module"
+    ],
+    "explanation": "There is a module `M1` with a method `foo`, which " +
+      "returns the integer `42`. Then, we have a class `C1` that uses the " +
+      "`extend` keyword to include the methods from the `M1` module as class " +
+      "methods.\n" +
+      "\n" +
+      "However, when we call `C1.new.foo`, we're attempting to use the " +
+      "`foo` method as an instance method on a new instance of `C1`. The " +
+      "`foo` method was included as a class method, not an instance method, " +
+      "so we will receive a `NoMethodError`."
+  },
+  {
+    "id": "3e30ac82-8965-46c9-92d3-818afacdf1c6",
+    "question": "What will be the output of the following code?```p 42 while false```",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "42",
+      "3": "SyntaxError",
+      "4": "\"\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "while"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "15239b55-c256-4dab-93cf-46cd0fa4c92c",
+    "question": "What will be the output of the following code?```begin\n" +
+      "  p 42\n" +
+      "end while false```",
+    "type": "mc",
+    "choices": {
+      "1": "42",
+      "2": "nil",
+      "3": "SyntaxError",
+      "4": "\"\""
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "while"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "8f12d9e3-b481-4d5a-83a1-97d0261b4edb",
+    "question": "What will be the output of the following code?```begin p 42 end if false```",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "42",
+      "3": "SyntaxError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": "https://newrelic.com/blog/best-practices/weird-ruby-begin-end"
+  },
+  {
+    "id": "7da927d5-17e4-4e8c-add8-797c005890f6",
+    "question": "What will return the following code?```[1].reduce(:a) == [1].inject(:b)```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#reduce", "Array#inject"
+    ],
+    "explanation": "https://ruby-doc.org/3.2.1/Enumerable.html#method-i-reduce"
+  }, 
+  {
+    "id": "e2bb1729-c950-46ed-8c71-90b2091ce5ca",
+    "question": "What will be the output of the following code?```2.size == 3.size```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Integer#size"
+    ],
+    "explanation": "Returns the number of bytes in the machine " +
+      "representation of int (machine dependent)." +
+      "https://ruby-doc.org/3.2.1/Integer.html#method-i-size"
+  },
+  {
+    "id": "a2f6a894-6293-42e5-8788-748c2fac6c26",
+    "question": "What will return the following code?```0.succ - 0.pred```",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "0",
+      "3": "-2",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Integer#succ", "Integer#pred"
+    ],
+    "explanation": "`0.succ` will return `1`, as it is the next integer " +
+      "after `0`. `0.pred` will return `-1`, as it is the previous integer " +
+      "before `0`.\n" +
+      "https://ruby-doc.org/3.2.1/Integer.html#method-i-succ"
+  },
+  {
+    "id": "0cf7ca09-cf6b-4e5f-a8a2-ec4d445fd20a",
+    "question": "What will return the following code?```p = -> { 7 }\n" +
+      "p 1```",
+    "type": "mc",
+    "choices": {
+      "1": "1",
+      "2": "7",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "p"
+    ],
+    "explanation": ""
   },
 
   /*

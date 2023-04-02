@@ -390,7 +390,7 @@ var data = [
   },
   {
     "id": "defff0eb-6428-4479-8a2c-95cf90ab7f21",
-    "question": "Which helper returns <code>/photos/10<code> for next entry in routing file <code>resources :photos</code>",
+    "question": "Which helper returns `/photos/10` for next entry in routing file `resources :photos`",
     "type": "mc",
     "choices": {
       "1": "photos_path",

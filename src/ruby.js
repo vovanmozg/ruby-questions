@@ -1085,11 +1085,15 @@ module.exports = [
     "tags": [
       "advanced-level", "lambda", "Proc"
     ],
-    "explanation": ""
+    "explanation": "The given Ruby code is a hash with a single key-value " +
+      "pair. The key is the `String` class, and the value is a lambda " +
+      "(anonymous function) that takes no arguments and does nothing.\n" +
+      "When you access the value in the hash using the `String` key, it " +
+      "returns the associated lambda."
   },
   {
     "id": "16ebb0f9-c12d-405a-941b-a1f272b8879a",
-    "question": "What will be the output of the following code?\n<code>puts String > Object</code>",
+    "question": "What will be the output of the following code?\n`puts String > Object`",
     "type": "mc",
     "choices": {
       "1": "false",
@@ -1099,9 +1103,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", ">", "Module"
     ],
-    "explanation": "https://apidock.com/ruby/Module/%3E"
+    "explanation": "The given Ruby code is comparing two classes, `String` " +
+      "and `Object`, using the `>` (greater than) operator. This operator " +
+      "checks if the class on the left side is a subclass of the class on " +
+      "the right side.\n" +
+      "In Ruby, the `String` class is a subclass of the `Object` class. " +
+      "So, the expression `String > Object` will return `false` because " +
+      "`String` is not a subclass \"below\" `Object`.\n" +
+      "https://apidock.com/ruby/Module/%3E"
   },
   {
     "id": "058f4744-147f-44df-b23a-3db3a42e599e",
@@ -1115,13 +1126,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", ">", "<", "Module"
     ],
-    "explanation": "https://apidock.com/ruby/Module/%3E%3D"
+    "explanation": "Class is actually a subclass of Module, so this expression will return true.\n" +
+      "https://apidock.com/ruby/Module/%3E"
   },
   {
     "id": "fc5d1ed3-7b26-45c0-bbe6-03f46be062fa",
-    "question": "<code>x = [a: 1, b: 2]</code>\nWhich expression will return true?",
+    "question": "```x = [a: 1, b: 2]```\nWhich expression will return true?",
     "type": "mc",
     "choices": {
       "1": "x[0][:a] == 1",
@@ -1131,9 +1143,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Hash", "Array"
     ],
-    "explanation": ""
+    "explanation": "This code snippet initializes an array `x` with a single " +
+      "element, which is a hash containing two key-value pairs: `:a` with a " +
+      "value of `1` and `:b` with a value of `2`.\n" +
+      "Expression `x[0][:a] == 1` accesses the first element of the array " +
+      "`x` (the hash) and then retrieves the value for the key `:a`, which " +
+      "is `1`. The expression evaluates to `1 == 1`, which returns `true`."
   },
   {
     "id": "8360e9bd-f933-4de9-a794-8372d7fb5b89",
@@ -1147,19 +1164,21 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#sample"
     ],
     "explanation": "https://apidock.com/ruby/Array/sample"
   },
   {
     "id": "c2c20f72-7849-41a9-969c-0b3a38fdc1db",
-    "question": "What will be the output of the following code?\n<code>What will be output of this code?\n" +
+    "question": "What will be the output of the following code?\n" +
+      "<code>" +
       "f = File.open('file.txt', 'w')\n" +
       "f.write('1')\n" +
       "File.rename('file.txt', 'file2.txt')\n" +
       "f.write('2')\n" +
       "f.close\n" +
-      "p IO.read('file2.txt')\n</code>",
+      "p IO.read('file2.txt')\n" +
+      "</code>",
     "type": "mc",
     "choices": {
       "1": "12",
@@ -1169,9 +1188,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "File.open", "File.rename", "File#write", "IO.read"
     ],
-    "explanation": ""
+    "explanation": "The given code snippet performs the following actions:\n" +
+      "\n" +
+      "Opens a file named `file.txt` in write mode, creating it if it doesn't exist.\n" +
+      "Writes the character `1` to the file.\n" +
+      "Renames the file from `file.txt` to `file2.txt`.\n" +
+      "Writes the character `2` to the file, which is now named `file2.txt`.\n" +
+      "Closes the file.\n" +
+      "Reads the contents of `file2.txt` and prints it using the p method."
   },
   {
     "id": "057467ed-22e7-405d-8a32-bf0ee754128d",
@@ -3939,7 +3965,7 @@ module.exports = [
       "beginner-level", "Array#compact"
     ],
     "explanation": "The compact method is used on an array to remove all nil elements."
-  }, 
+  },
   {
     "id": "d76e3b1b-53bd-46c6-8397-c3a3d68f7d1c",
     "question": "What will return the following code?```" +
@@ -4035,7 +4061,7 @@ module.exports = [
       "intermediate-level", "Array#reduce", "Array#inject"
     ],
     "explanation": "https://ruby-doc.org/3.2.1/Enumerable.html#method-i-reduce"
-  }, 
+  },
   {
     "id": "e2bb1729-c950-46ed-8c71-90b2091ce5ca",
     "question": "What will be the output of the following code?```2.size == 3.size```",

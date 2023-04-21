@@ -1201,41 +1201,63 @@ module.exports = [
   },
   {
     "id": "057467ed-22e7-405d-8a32-bf0ee754128d",
-    "question": "What will be the output of the following code?\n<code>'Minkovsky'[/k/]</code>",
+    "question": "What will be the output of the following code?\n`'Minkovsky'[/k/]`",
     "type": "mc",
     "choices": {
       "1": "\"k\"",
       "2": "[\"k\", \"k\"]",
       "3": "[3, 7]",
-      "4": "Error"
+      "4": "SyntaxError"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "String", "[]", "Regexp"
     ],
-    "explanation": "https://apidock.com/ruby/String/%5B%5D"
+    "explanation": "The given Ruby code is using a regular expression to " +
+      "match a pattern in a string. The regular expression `/k/` is looking " +
+      "for the first occurrence of the character 'k' in the string 'Minkovsky'.\n" +
+      "https://apidock.com/ruby/String/%5B%5D"
   },
   {
-    "id": "d072ea00-5593-478e-8f39-adde2c69e901",
-    "question": "Choise right way to get a resulting string \"Hello world!\"",
-    "type": "ma",
+    "id": "ed51916b-4ed4-4ce0-bcc6-cf2e025f302f",
+    "question": "What will be the output of the following code?```'Einstein'[/k/g]```",
+    "type": "mc",
     "choices": {
-      "1": "\"Hello\" + \"world\" + \"!\"",
-      "2": "\"Hello\".concat(\" world\", \"!\")",
-      "3": "\"Hello\" << \"world\" << \"!\"",
-      "4": "concat(\"Hello\", \" world\", \"!\")"
+      "1": "SyntaxError",
+      "2": "[3, 7]",
+      "3": "[\"k\", \"k\"]",
+      "4": "[\"k\", \"g\"]"
     },
-    "answer": ["1", "2", "3"],
+    "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "String", "[]", "Regexp"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, regular expression flags are specified within " +
+      "the pattern itself rather than after the pattern, as seen in some " +
+      "other languages. In your example, `/k/g` is an incorrect syntax for " +
+      "Ruby regular expressions."
   },
+  // {
+  //   "id": "d072ea00-5593-478e-8f39-adde2c69e901",
+  //   "question": "Choose the right way to get a resulting string \"Hello world!\"",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "\"Hello\" + \"world\" + \"!\"",
+  //     "2": "\"Hello\".concat(\" world\", \"!\")",
+  //     "3": "\"Hello\" << \"world\" << \"!\"",
+  //     "4": "concat(\"Hello\", \" world\", \"!\")"
+  //   },
+  //   "answer": ["1", "2", "3"],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "d0d64e0b-f64d-419f-bb75-e18d919e5536",
-    "question": "What will be the output of the following code?\n<code>text = \"hello\"\n" +
+    "question": "What will be the output of the following code?```text = \"hello\"\n" +
       "text.concat(\"2\")\n" +
-      "p text</code>",
+      "p text```",
     "type": "mc",
     "choices": {
       "1": "hello2",
@@ -1245,13 +1267,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "String#concat"
     ],
-    "explanation": "https://apidock.com/ruby/String/concat"
+    "explanation": "1. Assigns the string `\"hello\"` to the variable `text`.\n" +
+      "2. Concatenates the string `\"2\"` to the `text` variable using the `concat` method.\n" +
+      "3. Prints the value of the `text` variable using the `p` method.\n" +
+      "https://apidock.com/ruby/String/concat"
   },
   {
     "id": "b44bac43-be08-44dc-bfbf-9250c34afd41",
-    "question": "What will be the output of the following code?\n<code>p \"hello\".concat(33)</code>",
+    "question": "What will be the output of the following code?```p \"hello\".concat(33)```",
     "type": "mc",
     "choices": {
       "1": "hello!",
@@ -1261,13 +1286,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "String#concat"
     ],
-    "explanation": "https://apidock.com/ruby/String/concat"
+    "explanation": "The given code snippet is trying to concatenate the " +
+      "Unicode code point 33 to the string `\"hello\"`.\n" +
+      "https://apidock.com/ruby/String/concat"
   },
   {
     "id": "e1f7adcd-f6c6-44ba-84ad-da51bbe09840",
-    "question": "What error is not inherited from StandardError",
+    "question": "What error is not inherited from StandardError?",
     "type": "mc",
     "choices": {
       "1": "SyntaxError",
@@ -1277,9 +1304,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "StandardError"
     ],
-    "explanation": ""
+    "explanation": "1. `SyntaxError`: This error is raised when there is a syntax error in the Ruby code. It is a subclass of `ScriptError`, not `StandardError`.\n" +
+      "\n" +
+      "2. `FiberError`: This error is raised when there is an issue with fibers, lightweight concurrency primitives in Ruby. It is a subclass of `StandardError`.\n" +
+      "\n" +
+      "3. `NameError`: This error is raised when a variable, method, or constant is referenced, but it is not defined. It is a subclass of `StandardError`.\n" +
+      "\n" +
+      "4. `RuntimeError`: This error is raised when there is a generic runtime error, and no other error class is specified. It is a subclass of `StandardError`."
   },
   {
     "id": "31098e6a-ccbf-4a11-8584-629c6b825f6f",
@@ -1288,18 +1321,33 @@ module.exports = [
     "choices": {
       "1": "ThreadError",
       "2": "LoadError",
-      "3": "SecurityError",
+      "3": "NotImplementedError",
       "4": "SystemExit"
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "StandardError"
     ],
-    "explanation": ""
+    "explanation": "1. `ThreadError`: This error is raised when there is an " +
+      "issue with thread operations in Ruby. It is a subclass of " +
+      "`StandardError`.\n" +
+      "\n" +
+      "2. `LoadError`: This error is raised when there is an issue with " +
+      "loading external files or libraries in Ruby. It is a subclass of " +
+      "`ScriptError`, not `StandardError`.\n" +
+      "\n" +
+      "3. `NotImplementedError`: This error is raised when a method is " +
+      "called that needs to be implemented by a subclass or a method marked " +
+      "as \"not implemented\" is called. It is a subclass of `ScriptError`, " +
+      "not `StandardError`.\n" +
+      "\n" +
+      "4. `SystemExit`: This error is raised when the Ruby program is " +
+      "terminated using the exit method or when the program finishes " +
+      "executing. It is a subclass of `Exception`, not `StandardError`."
   },
   {
     "id": "9c54ff43-ef84-4fc9-8d20-4da6125e1f2c",
-    "question": "What will be the output of the following code?\n<code>Range.new(*[2, -3].sort).sum</code>",
+    "question": "What will be the output of the following code?```Range.new(*[2, -3].sort).sum```",
     "type": "mc",
     "choices": {
       "1": "-3",
@@ -1309,9 +1357,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Enumerable#sum"
     ],
-    "explanation": ""
+    "explanation": "1. Creates an array `[2, -3]`.\n" +
+      "2. Sorts the array, resulting in `[-3, 2]`.\n" +
+      "3. Uses the splat operator (`*`) to pass the sorted array elements " +
+      "as arguments to `Range.new`, creating a range from -3 to 2.\n" +
+      "4. Computes the sum of the numbers in the range. The range includes " +
+      "the numbers -3, -2, -1, 0, 1, and 2.\n" +
+      "https://ruby-doc.org/core-3.1.0/Enumerable.html#method-i-sum"
   },
   {
     "id": "402e946d-a3f1-4525-84f8-a4813b2a427e",
@@ -2039,22 +2093,22 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "id": "d882a7ad-ca9b-41f3-9d6a-943b7e83121b",
-    "question": "What is valid name for rake file?",
-    "type": "ma",
-    "choices": {
-      "1": "rakefile",
-      "2": "Rakefile",
-      "3": "rakefile.rb",
-      "4": "Rakefile.rb"
-    },
-    "answer": ["1", "2", "3", "4"],
-    "tags": [
-      "rails5", "advanced-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "d882a7ad-ca9b-41f3-9d6a-943b7e83121b",
+  //   "question": "What is valid name for rake file?",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "rakefile",
+  //     "2": "Rakefile",
+  //     "3": "rakefile.rb",
+  //     "4": "Rakefile.rb"
+  //   },
+  //   "answer": ["1", "2", "3", "4"],
+  //   "tags": [
+  //     "rails5", "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "cdb02dd3-b6ba-47f8-81e1-fdb0da86a724",
     "question": "What is the output of this code?\n<code>def foo\n	Proc.new { return 'jo' }[]\n	'mo'\nend\ndef bar\n	->() { return 'jo' }[]\n	'mo'\nend\nprint foo, bar</code>",
@@ -2307,22 +2361,22 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "id": "c0709d49-b597-4e05-943b-56f3196b7c45",
-    "question": "What ways you can create an array [1, 2, 3]",
-    "type": "ma",
-    "choices": {
-      "1": "%w<1 2 3>",
-      "2": "%w>1 2 3>",
-      "3": "%w>1 2 3<",
-      "4": "%w<1 2 3<"
-    },
-    "answer": ["1", "2"],
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "c0709d49-b597-4e05-943b-56f3196b7c45",
+  //   "question": "What ways you can create an array [1, 2, 3]",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "%w<1 2 3>",
+  //     "2": "%w>1 2 3>",
+  //     "3": "%w>1 2 3<",
+  //     "4": "%w<1 2 3<"
+  //   },
+  //   "answer": ["1", "2"],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "54731721-5ea4-43bf-8179-42cf90920672",
     "question": "What will be the output of the following code?\n<code>(\"\" << 48) + 48.chr)</code>",
@@ -2355,22 +2409,22 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "id": "6da36ec4-8426-413f-9159-cf9dd076fbcd",
-    "question": "Select valid ways to run shell command",
-    "type": "ma",
-    "choices": {
-      "1": "`echo 'hi'`",
-      "2": "%x(echo 'hi')",
-      "3": "system(\"echo 'hi'\")",
-      "4": "exec(\"echo 'hi'\")"
-    },
-    "answer": ["1", "2", "3", "4"],
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "6da36ec4-8426-413f-9159-cf9dd076fbcd",
+  //   "question": "Select valid ways to run shell command",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "`echo 'hi'`",
+  //     "2": "%x(echo 'hi')",
+  //     "3": "system(\"echo 'hi'\")",
+  //     "4": "exec(\"echo 'hi'\")"
+  //   },
+  //   "answer": ["1", "2", "3", "4"],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "95aef357-28a5-44af-8338-b1db5b7aa2b6",
     "question": "What will be the output of the following code?\n<code>%s[hello]</code>",
@@ -3018,27 +3072,27 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "id": "4869ce08-9c35-45e6-be2f-82e55962fd0e",
-    "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
-    "choices": {
-      "1": "l.call('kuku')",
-      "2": "l['kuku']",
-      "3": "l.('kuku')",
-      "4": "lam.yield 'kuku'"
-    },
-    "type": "ma",
-    "answer": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "4869ce08-9c35-45e6-be2f-82e55962fd0e",
+  //   "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
+  //   "choices": {
+  //     "1": "l.call('kuku')",
+  //     "2": "l['kuku']",
+  //     "3": "l.('kuku')",
+  //     "4": "lam.yield 'kuku'"
+  //   },
+  //   "type": "ma",
+  //   "answer": [
+  //     "1",
+  //     "2",
+  //     "3",
+  //     "4"
+  //   ],
+  //   "tags": [
+  //     "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "fcd6f775-cb44-4915-8a30-56468b17189d",
     "question": "What is correct ways to create and call lambda?",
@@ -3195,25 +3249,25 @@ module.exports = [
     ],
     "explanation": ""
   },
-  {
-    "id": "3e1fa719-5e45-471d-abee-271dd286e04f",
-    "question": "What methods are in String?",
-    "choices": {
-      "1": "each_line",
-      "2": "each_byte",
-      "3": "each",
-      "4": "forEach"
-    },
-    "type": "ma",
-    "answer": [
-      "1",
-      "2"
-    ],
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "3e1fa719-5e45-471d-abee-271dd286e04f",
+  //   "question": "What methods are in String?",
+  //   "choices": {
+  //     "1": "each_line",
+  //     "2": "each_byte",
+  //     "3": "each",
+  //     "4": "forEach"
+  //   },
+  //   "type": "ma",
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "9a228b6b-aab4-465a-9023-fca0eb4148bc",
     "question": "What will be the output of the following code?\n<code>p [1,2,3].to_s</code>",
@@ -3421,44 +3475,44 @@ module.exports = [
     ],
     "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
   },
-  {
-    "id": "3c8a737e-a48b-4ff9-bdfd-04405877146c",
-    "question": "It what cases a.object_id == b.object_id will return true",
-    "type": "ma",
-    "choices": {
-      "1": "b = (a = 42).dup",
-      "2": "b = (a = :red).dup",
-      "3": "b = (a = { x: 42 }).dup",
-      "4": "b = (a = 'red').dup"
-    },
-    "answer": [
-      "1",
-      "2"
-    ],
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "ff406878-3437-4940-8bed-435c32a8ded6",
-    "question": "What the right way to get 'buzz' string from array without array modify?\n<code>ary = ['foo', 'bar', 'buzz']</code>",
-    "type": "ma",
-    "choices": {
-      "1": "ary.last",
-      "2": "ary[-1]",
-      "3": "ary[3]",
-      "4": "ary.shift"
-    },
-    "answer": [
-      "1",
-      "2"
-    ],
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
+  // {
+  //   "id": "3c8a737e-a48b-4ff9-bdfd-04405877146c",
+  //   "question": "It what cases a.object_id == b.object_id will return true",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "b = (a = 42).dup",
+  //     "2": "b = (a = :red).dup",
+  //     "3": "b = (a = { x: 42 }).dup",
+  //     "4": "b = (a = 'red').dup"
+  //   },
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "ff406878-3437-4940-8bed-435c32a8ded6",
+  //   "question": "What the right way to get 'buzz' string from array without array modify?\n<code>ary = ['foo', 'bar', 'buzz']</code>",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "ary.last",
+  //     "2": "ary[-1]",
+  //     "3": "ary[3]",
+  //     "4": "ary.shift"
+  //   },
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "386baf3d-2882-48be-b71b-e84086ea7371",
     "question": "Can ary contain different types of variables\n<code>ary = [-3, :albert, 'einstein', Object.new]</code>",

@@ -1786,11 +1786,11 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "https://gist.github.com/PragTob/8f037b6cab4bffca411063aced6a7917"
   },
   {
     "id": "8f2fd21c-3435-4a8e-a1f6-2cc25e0d2acb",
-    "question": "What code is need to generate the following output?\n<code>[:a, :b, :c]</code>",
+    "question": "What code is need to generate the following output?```[:a, :b, :c]```",
     "type": "mc",
     "choices": {
       "1": "%i(a b c)",
@@ -1818,11 +1818,11 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "https://gist.github.com/jakimowicz/df1e4afb6e226e25d678"
   },
   {
     "id": "74e177d7-d9b4-4799-8ce0-0ac41b34995c",
-    "question": "What will be the output of the following code?\n<code>a = 1; a &&= 2; puts a</code>",
+    "question": "What will be the output of the following code?```a = 1; a &&= 2; puts a```",
     "type": "mc",
     "choices": {
       "1": "2",
@@ -1832,30 +1832,37 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "-level"
+      "intermediate-level", "&&="
     ],
-    "explanation": ""
+    "explanation": "If the variable `a` is truthy (i.e., not `nil` or " +
+      "`false`), it assigns the right-hand side value (`2`) to `a`."
   },
   {
     "id": "b85b3e4a-e410-4557-84e5-91db23c8f670",
-    "question": "What will be the output of the following code?\n<code>def test\n" +
+    "question": "What will return the following code?```def test\n" +
       "  def test\n" +
       "    2\n" +
       "  end\n" +
       "  1\n" +
-      "end</code>",
+      "end\n" +
+      "test + test```",
     "type": "mc",
     "choices": {
-      "1": "12",
-      "2": "11",
-      "3": "22",
-      "4": "21"
+      "1": "3",
+      "2": "2",
+      "3": "1",
+      "4": "Error"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "methods"
     ],
-    "explanation": ""
+    "explanation": "When the `test` method is called the first time, it " +
+      "defines the inner `test` method and returns `1`. After this call, the " +
+      "inner `test` method will override the outer `test` method. When you " +
+      "call the `test` method again, it will execute the inner `test` method " +
+      "and return `2`. So, the expression `test + test` will return `1 + 2`, " +
+      "which equals `3`."
   },
   {
     "id": "5418c5ee-6f83-4cab-8b0a-2350900c9746",
@@ -1869,7 +1876,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "methods"
     ],
     "explanation": ""
   },
@@ -1887,7 +1894,9 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "Running a Ruby program with the `-w` option will enable " +
+      "verbose mode, which displays additional warnings and diagnostic " +
+      "messages during the execution of your script."
   },
   {
     "id": "b206c7f7-3fa1-4740-8de0-7122e65f298e",
@@ -1901,9 +1910,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Enumerable#each_with_object"
     ],
-    "explanation": ""
+    "explanation": "The `each_with_object` method iterates over the elements " +
+      "of an array, yielding each element to the block along with the " +
+      "provided object. In this case, the provided object is an empty hash " +
+      "(`{}`). The block just returns the element `a` without modifying the " +
+      "hash `b`. Since the hash `b` is never modified in the block, the " +
+      "final result of `each_with_object` will be the unmodified empty hash " +
+      "(`{}`)."
   },
   {
     "id": "4f6c7834-a647-45fb-a171-3502687e4127",
@@ -1923,7 +1938,7 @@ module.exports = [
   },
   {
     "id": "fa55e5a7-9939-45a9-863c-05ea5e6e4943",
-    "question": "What will be the output of the following code?\n<code>puts 17_100</code>",
+    "question": "What will be the output of the following code?```puts 17_100```",
     "type": "mc",
     "choices": {
       "1": "17_100",
@@ -1932,9 +1947,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "numbers"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, you can use underscores as a visual separator " +
+      "for large numbers to make them more readable. These underscores are " +
+      "ignored when the code is executed."
   },
   {
     "id": "a8af112e-03c4-49db-8722-a8da8e552596",
@@ -1950,7 +1967,9 @@ module.exports = [
     "tags": [
       "beginner-level", "style-guide"
     ],
-    "explanation": ""
+    "explanation": "The better name for the variable in this case would be " +
+      "\"current_date\". It is descriptive and follows the snake_case naming " +
+      "convention used in Ruby."
   },
   {
     "id": "7de73184-9dd7-465c-b737-5d5b3de3a8b1",
@@ -1964,9 +1983,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#|"
     ],
-    "explanation": ""
+    "explanation": "The `|` operator performs a set union operation between " +
+      "two arrays, returning a new array containing the unique elements from " +
+      "both arrays.\n" +
+      "https://ruby-doc.org/core-3.1.0/Array.html#method-i-7C"
   },
   {
     "id": "ff0592a8-216e-42a8-86da-0d618b0d2a9e",
@@ -1980,13 +2002,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "||"
     ],
-    "explanation": ""
+    "explanation": "The `||` operator is a logical OR operator in Ruby. It " +
+      "returns the first operand if it is truthy (not `nil` or `false`), " +
+      "otherwise, it returns the second operand. In this case, since the " +
+      "first array `[1, 2]` is truthy, the operator returns `[1, 2]`."
   },
   {
     "id": "0e7ff4d2-d3c7-4035-b284-8f8e0453fff7",
-    "question": "What will be the result of the following code?\n<code>[1, 2] & [2, 3]</code>",
+    "question": "What will be the result of the following code?```[1, 2] & [2, 3]```",
     "type": "mc",
     "choices": {
       "1": "[2]",
@@ -1996,9 +2021,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#&"
     ],
-    "explanation": ""
+    "explanation": "The `&` operator performs an array intersection between " +
+      "the two arrays. It returns a new array containing the elements common " +
+      "to the two arrays, without duplicates. In this case, the element `2` " +
+      "is common to both `[1, 2]` and `[2, 3]`.\n" +
+      "https://ruby-doc.org/core-3.1.0/Array.html#method-i-26"
   },
   {
     "id": "8b9c7df0-0f5b-4579-ba7f-3cb0fbe7b3ae",

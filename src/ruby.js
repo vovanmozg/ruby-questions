@@ -1379,13 +1379,25 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", 'Range.new', 'Splat operator'
     ],
-    "explanation": ""
+    "explanation": "`Range.new([2, -3].sort).sum` and `Range.new([-3, 2].sort).sum`: " +
+      "These expressions are incorrect, as the `Range.new` method expects two arguments for " +
+      "the starting and ending values of the range, but only one argument " +
+      "(an array) is provided.\n" +
+      "\n" +
+      "`[2, -3].sort.sum`: This expression sorts the array `[2, -3]` " +
+      "resulting in `[-3, 2]`, and then calculates the sum of the elements " +
+      "in the array, which is -1.\n" +
+      "\n" +
+      "`Range.new(*[2, -3].sort).sum`: This expression sorts the array " +
+      "`[2, -3]` resulting in `[-3, 2]`, creates a range using the splat " +
+      "operator (`*`) from -3 to 2, and then calculates the sum of the numbers " +
+      "in the range, which is -3."
   },
   {
     "id": "80030412-172b-4840-8230-98a6bdb3b7df",
-    "question": "What will be the output of the following code?\n<code>!!:false</code>",
+    "question": "What will be the output of the following code?```!!:false```",
     "type": "mc",
     "choices": {
       "1": "true",
@@ -1394,29 +1406,34 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "!"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the double exclamation marks (`!!`) are used to " +
+      "convert a value to its boolean equivalent. The given code snippet is " +
+      "trying to convert the symbol `:false` to a boolean value.\n" +
+      "Since the `:false` symbol is truthy (all symbols are truthy in Ruby), " +
+      "applying the double exclamation marks will result in true."
   },
   {
     "id": "db47f4e6-ba66-46c0-8fe6-d6ef4a39b5d0",
-    "question": "What will be the output of the following code?\n<code>{a: 1} + {b: 2}</code>",
+    "question": "What will be the output of the following code?```{a: 1} + {b: 2}```",
     "type": "mc",
     "choices": {
-      "1": "Error",
+      "1": "NoMethodError",
       "2": "{a: 1, b: 2}",
       "3": "[{a: 1}, {b: 2}]",
       "4": "{ab: 3}"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Hash", "+"
     ],
-    "explanation": ""
+    "explanation": "In Ruby, the `+` operator is not supported for merging " +
+      "hashes. The given code snippet will result in an error."
   },
   {
     "id": "6ff9ad57-6567-4092-8501-a18e3faea087",
-    "question": "What will be the output of the following code?\n<code>p begin;1/0.0;rescue;2;end</code>",
+    "question": "What will be the output of the following code?```p begin;1/0.0;rescue;2;end```",
     "type": "mc",
     "choices": {
       "1": "Infinity",
@@ -1426,13 +1443,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Float::INFINITY"
     ],
-    "explanation": ""
+    "explanation": "The expression `1/0.0` results in a `Float::INFINITY`, " +
+      "as dividing by 0.0 in Ruby results in infinity.\n" +
+      "Since there is no exception raised in this case, the `rescue` block " +
+      "does not execute."
   },
   {
     "id": "2eb6dc75-9a10-4adf-afc8-6fb7016dbc06",
-    "question": "What will be the output of the following code?\n<code>p begin;1/0;rescue;2;end</code>",
+    "question": "What will be the output of the following code?```p begin;1/0;rescue;2;end```",
     "type": "mc",
     "choices": {
       "1": "2",
@@ -1444,7 +1464,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The expression `1/0` raises a `ZeroDivisionError` " +
+      "exception, as dividing by 0 is not allowed.\n" +
+      "The `rescue` block is executed because of the raised exception."
   },
   {
     "id": "2ae67dc6-e881-44c8-9a87-99bfff8993cd",
@@ -1459,13 +1481,18 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Module"
     ],
-    "explanation": ""
+    "explanation": "The code will execute as follows:\n" +
+      "A module `M` is defined.\n" +
+      "A class `A` is defined within the module `M`.\n" +
+      "An instance of the class `A` within the module `M` is created using `M::A.new`.\n" +
+      "The `class` method is called on the instance to obtain the class name.\n" +
+      "The `p` method prints the result and returns it as well."
   },
   {
     "id": "47ca76a6-80e7-4b80-9589-be1e7558829d",
-    "question": "What code should precede <code>p -[]*-[]</code> to get 16",
+    "question": "What code should precede `p -[]*-[]` to get 16",
     "type": "mc",
     "choices": {
       "1": "Array.class_eval { def -@; 4; end }",
@@ -1475,13 +1502,19 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Operator overloading"
     ],
-    "explanation": ""
+    "explanation": "To achieve the desired output of 16 with the expression `p -[]*-[]`, we need to override the unary negation operator `-@` for the `Array` class. Here are the given choices and the explanation of each option:\n" +
+      "\n" +
+      "1. `Array.class_eval { def -@; 4; end }`: This option uses `class_eval` to add the `-@` method to the `Array` class, and it returns 4. When the `-@` operator is used on an array, it will now return 4. The expression `-[]*-[]` will become `4 * 4`, which equals 16.\n" +
+      "2. `Array.instance_eval { def -@; 4; end }`: This option uses `instance_eval` to define the `-@` method on the singleton class of the `Array` class itself, not on the instances of the `Array` class. It will not affect the behavior of the `-@` operator on array instances.\n" +
+      "3. `def Array.-@; 4; end`: This option is a syntax error, as it's not a valid way to define a method for the `Array` class.\n" +
+      "4. `Array.add_method(:-@, ->{4})`: This option is incorrect, as there is no `add_method` method for the `Array` class."
+
   },
   {
     "id": "6a964046-f36a-45c5-999e-f12692e7615a",
-    "question": "What will be the output of the next code? <code>[1, 1, 2].tally</code>",
+    "question": "What will be the output of the next code? ```[1, 1, 2].tally```",
     "type": "mc",
     "choices": {
       "1": "{ 1 => 2, 2 => 1 }",
@@ -1491,16 +1524,18 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Enumerable#tally"
     ],
-    "explanation": ""
+    "explanation": "`tally` counts the occurrences of each element in the " +
+      "enumerable (in this case, an array) and returns a hash with the " +
+      "elements as keys and their counts as values.\n"
   },
   {
     "id": "17d1018d-2241-4759-899b-a37079286236",
-    "question": "What will be the output of the following code?\n<code>def foo(*a)\n" +
+    "question": "What will be the output of the following code?```def foo(*a)\n" +
       "\tprint *a\n" +
       "end\n" +
-      "foo(1, 2)</code>",
+      "foo(1, 2)```",
     "type": "mc",
     "choices": {
       "1": "12",
@@ -1510,49 +1545,20 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Splat operator"
     ],
-    "explanation": ""
+    "explanation": "The `print` method is called with the arguments 1 and 2, " +
+      "using the splat operator (`*`) to pass the elements of the array `a` " +
+      "as separate arguments. The `print` method prints the arguments " +
+      "without any separators, resulting in the output \"12\"."
   },
   {
     "id": "45e2026a-fd31-4886-bb1e-eff377700d77",
-    "question": "Which way is preferable?",
+    "question": "Which way is more idiomatic?",
     "type": "mc",
     "choices": {
       "1": "if an_object && an_object.method?",
       "2": "if an_object != nil && an_object.method? == true"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "f8c28b3d-99a7-48bc-ab65-d4e5aef1f791",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" or \"world\")</code>",
-    "type": "mc",
-    "choices": {
-      "1": "hello",
-      "2": "world",
-      "3": "hello world",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "b2d022c7-ebf3-4c30-9ffd-74933b72265a",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo =(\"hello\" || \"world\")</code>",
-    "type": "mc",
-    "choices": {
-      "1": "hello",
-      "2": "world",
-      "3": "hello world",
-      "4": "Error"
     },
     "answer": "1",
     "tags": [
@@ -1625,18 +1631,111 @@ module.exports = [
     "explanation": ""
   },
   {
-    "id": "c9878bc7-5c99-4bf2-8d7c-6d3f6a6192fb",
-    "question": "What will be the output of the following code?\n<code>puts !!0</code>",
+    "id": "b2e92db2-2870-42fb-ba8e-c32e4d36a8e6",
+    "question": "What will be the value of the variable `foo`?```foo = false || true```",
     "type": "mc",
     "choices": {
       "1": "true",
-      "2": "false"
+      "2": "false",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
       "beginner-level"
     ],
     "explanation": ""
+  },
+  {
+    "id": "99532661-1847-466b-a69a-cf7532597007",
+    "question": "What will be the value of the variable `foo`?```foo = false or true```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Precedence order"
+    ],
+    "explanation": "In Ruby, the `or` keyword is used for control flow and " +
+      "has lower precedence than the assignment operator `=`.\n" +
+      "Due to the lower precedence of the `or` keyword, the assignment " +
+      "operator `=` will be executed first. This means the value `false` " +
+      "will be assigned to the variable `foo`. The `or` keyword won't change " +
+      "the outcome in this case."
+  },
+  {
+    "id": "abd951cf-9b39-489e-8e9d-ad5b64ebb903",
+    "question": "What will return the following code?```true or true ? false : true```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "SyntaxError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "or", "Ternary operator", "Precedence order"
+    ],
+    "explanation": "The `or` operator has lower precedence than the ternary " +
+      "conditional operator (`? :`)."
+  },
+  {
+    "id": "c11d7070-ac77-4041-bd74-7d921d60195a",
+    "question": "What will return the following code?```false and false ? false : true```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "SyntaxError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "and", "Ternary operator", "Precedence order"
+    ],
+    "explanation": "The `and` operator has lower precedence than the ternary " +
+      "conditional operator (`? :`). The code is interpreted as follows:" +
+      "```false and (false ? false : true)```.\n" +
+      "Since `false` is the first operand of the `and` operator, the overall " +
+      "expression short-circuits and evaluates to `false` without even " +
+      "evaluating the right-hand side of the `and` operator."
+  },
+
+  {
+    "id": "97512517-214a-459b-bc83-952e42d4ad27",
+    "question": "What will return the following code?```true and not false && !true```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "SyntaxError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Precedence order"
+    ],
+    "explanation": "http://phrogz.net/programmingruby/language.html#table_18.4"
+  },
+  {
+    "id": "c9878bc7-5c99-4bf2-8d7c-6d3f6a6192fb",
+    "question": "What will be the output of the following code?```puts !!0```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "!!0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "In Ruby, the number `0` is considered truthy, unlike " +
+      "some other languages where it might be considered falsy. The given " +
+      "code will output `true`. The double negation operator `!!` is a " +
+      "common trick used to convert a truthy value to `true` and a falsy " +
+      "value to `false`. Since `0` is truthy, applying `!!` to it will " +
+      "result in `true`."
   },
   {
     "id": "da10a58f-9210-4007-a14f-04b43ed5224b",
@@ -1648,13 +1747,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Proc", "lambda"
     ],
-    "explanation": ""
+    "explanation": "The given code checks whether a `lambda` is an instance " +
+      "of the `Proc` class. lambdas in Ruby are indeed instances of the " +
+      "`Proc` class."
   },
   {
     "id": "2a5bfab8-639e-4072-9665-4fc697f1a0b9",
-    "question": "What will be the output of the following code?\n<code>(42 if 5) == (5 && 42)</code>",
+    "question": "What will be the output of the following code?```(42 if 5) == (5 && 42)```",
     "type": "mc",
     "choices": {
       "1": "true",
@@ -1665,7 +1766,13 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The given code compares two expressions:\n" +
+      "1. `(42 if 5)`: Any non-`nil` and non-`false` value is " +
+      "considered truthy. Since `5` is truthy, the `if` condition evaluates " +
+      "to `true`, and the expression returns `42`.\n" +
+      "2. `(5 && 42)`: The `&&` operator returns the first falsy value in " +
+      "the expression, or the last value if all are truthy. Since both `5` " +
+      "and `42` are truthy, the expression returns `42`."
   },
   {
     "id": "908d876f-8622-4410-ba17-580ca3407124",
@@ -4168,6 +4275,44 @@ module.exports = [
       "intermediate-level", "p"
     ],
     "explanation": ""
+  },
+
+  {
+    "id": "6d29d8bd-0641-47ce-b292-7d5a377fb499",
+    "question": "What will return the following code?```true if false```",
+    "type": "mc",
+    "choices": {
+      "1": "nil",
+      "2": "true",
+      "3": "false",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "conditions"
+    ],
+    "explanation": "Since `false` is not true, the condition `if false` is " +
+      "not satisfied. Therefore, the expression will not return any value, " +
+      "and the result will be `nil`."
+  },
+
+  {
+    "id": "19505038-553e-43fc-863d-9f510fb47e6c",
+    "question": "What will return the following code?```false if true unless false```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "conditions"
+    ],
+    "explanation": "This can be understood as follows: " +
+      "```false if (true unless false)``` and can be rewritten as " +
+      "```false if (true if false)``` which is equivalent to ```false```"
   },
 
   /*

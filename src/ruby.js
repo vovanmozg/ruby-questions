@@ -2041,9 +2041,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&&"
     ],
-    "explanation": ""
+    "explanation": "The `&&` operator returns the right-hand operand if both operands are truthy "
   },
   {
     "id": "6f0ae3d6-3722-4fc3-88f3-43d9726f41f3",
@@ -4343,7 +4343,40 @@ module.exports = [
       "```false if (true unless false)``` and can be rewritten as " +
       "```false if (true if false)``` which is equivalent to ```false```"
   },
+  {
+    "id": "76f41b27-daf4-4fe6-bc7e-6bfa25946655",
+    "question": "What will be the output of the following code?```{a: 3.14, b: 0}.transform_values(&:to_i)```",
+    "type": "mc",
+    "choices": {
+      "1": "{a: 3, b: 0}",
+      "2": "Error",
+      "3": "[[a, 3], [b, 0]]",
+      "4": "{3.14 => :a, 0 => :b}"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Hash#transform_values"
+    ],
+    "explanation": "The `transform_values` method applies the given block " +
+      "to each value in the hash and returns a new hash with the transformed values. "
+  },
 
+  {
+    "id": "aa1f843f-4422-4335-9350-360abc0619e9",
+    "question": "Which method of checking file size for zero is wrong?",
+    "type": "mc",
+    "choices": {
+      "1": "File.nil?(\"filename\")",
+      "2": "File.size(\"filename\") == 0",
+      "3": "File.size(\"filename\").zero?",
+      "4": "File.zero?(\"filename\")"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Fixnum#zero?", "File.zero?", "File#size"
+    ],
+    "explanation": ""
+  },
   /*
 {
   "id": "",

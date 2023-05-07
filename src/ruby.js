@@ -2073,7 +2073,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
     "explanation": ""
   },
@@ -2089,7 +2089,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
     "explanation": ""
   },
@@ -2108,7 +2108,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Hash#<"
     ],
     "explanation": ""
   },
@@ -2124,9 +2124,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Integer#divmod"
     ],
-    "explanation": ""
+    "explanation": "The `divmod` method returns an array containing the " +
+      "quotient and the remainder of the division. " +
+      "https://rubyapi.org/3.2/o/integer#method-i-divmod"
   },
   {
     "id": "b445d8ae-2231-4c7b-8d7a-5f8b09f4fcfa",
@@ -2469,7 +2471,13 @@ module.exports = [
   },
   {
     "id": "7ee59e87-1274-42c9-bddb-52ca54750d0b",
-    "question": "What will be the output of the following code?\n<code>class E2 < StandardError; end\nbegin\nputs 1 / 0\nrescue E2 => e\nputs 'oops'\nend</code>",
+      "question": "What will be the output of the following code?```" +
+        "class E2 < StandardError; end" +
+        "begin" +
+        "<div style='width:100%'></div>  puts 1 / 0" +
+        "rescue E2 => e" +
+        "  puts 'oops'" +
+        "end```",
     "type": "mc",
     "choices": {
       "1": "ZeroDivisionError",

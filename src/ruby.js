@@ -2041,9 +2041,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "&&"
     ],
-    "explanation": ""
+    "explanation": "The `&&` operator returns the right-hand operand if both operands are truthy "
   },
   {
     "id": "6f0ae3d6-3722-4fc3-88f3-43d9726f41f3",
@@ -2073,7 +2073,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
     "explanation": ""
   },
@@ -2089,7 +2089,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
     "explanation": ""
   },
@@ -2108,7 +2108,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Hash#<"
     ],
     "explanation": ""
   },
@@ -2124,9 +2124,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Integer#divmod"
     ],
-    "explanation": ""
+    "explanation": "The `divmod` method returns an array containing the " +
+      "quotient and the remainder of the division. " +
+      "https://rubyapi.org/3.2/o/integer#method-i-divmod"
   },
   {
     "id": "b445d8ae-2231-4c7b-8d7a-5f8b09f4fcfa",
@@ -2469,7 +2471,13 @@ module.exports = [
   },
   {
     "id": "7ee59e87-1274-42c9-bddb-52ca54750d0b",
-    "question": "What will be the output of the following code?\n<code>class E2 < StandardError; end\nbegin\nputs 1 / 0\nrescue E2 => e\nputs 'oops'\nend</code>",
+      "question": "What will be the output of the following code?```" +
+        "class E2 < StandardError; end" +
+        "begin" +
+        "<div style='width:100%'></div>  puts 1 / 0" +
+        "rescue E2 => e" +
+        "  puts 'oops'" +
+        "end```",
     "type": "mc",
     "choices": {
       "1": "ZeroDivisionError",
@@ -2750,7 +2758,7 @@ module.exports = [
   },
   {
     "id": "18fc2599-fe12-4000-b8c8-b4c9d7dca04e",
-    "question": "What will be the output of the following code?\n<code>2 ** (10 **10) < 3 ** (10 ** 10)</code>",
+    "question": "What will be the output of the following code?\n<code>2 ** (10 ** 10) < 3 ** (10 ** 10)</code>",
     "type": "mc",
     "choices": {
       "1": "false",
@@ -2760,7 +2768,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "intermediate-level", "Infinity"
     ],
     "explanation": ""
   },
@@ -2776,7 +2784,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "intermediate-level", "Infinity"
     ],
     "explanation": ""
   },
@@ -2807,7 +2815,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "intermediate-level", "Infinity"
     ],
     "explanation": ""
   },
@@ -2821,7 +2829,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Infinity"
     ],
     "explanation": ""
   },
@@ -2868,7 +2876,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "**"
     ],
     "explanation": ""
   },
@@ -2884,7 +2892,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "String"
     ],
     "explanation": ""
   },
@@ -2916,7 +2924,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "String#*"
     ],
     "explanation": ""
   },
@@ -2932,13 +2940,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "String"
     ],
     "explanation": ""
   },
   {
     "id": "92b7ffba-105b-4837-b381-178a79c31aa8",
-    "question": "What will be the output of the following code?\n<code>1 / 3  * 3</code>",
+    "question": "What will be the output of the following code?\n<code>1 / 3 * 3</code>",
     "type": "mc",
     "choices": {
       "1": "0",
@@ -2950,11 +2958,14 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The division operation (`1 / 3`) is an integer " +
+      "division, and the result is rounded down to the nearest " +
+      "integer. In this case, the result of `1 / 3` is `0`. Then, " +
+      "when you multiply `0` by `3`, the final result is still `0`."
   },
   {
     "id": "8a19a418-fc5b-4f4e-90dd-cd56157896c3",
-    "question": "What will be the output of the following code?\n<code>1 / 3.0  * 3.0</code>",
+    "question": "What will be the output of the following code?\n<code>1 / 3.0 * 3.0</code>",
     "type": "mc",
     "choices": {
       "1": "1",
@@ -4342,6 +4353,136 @@ module.exports = [
     "explanation": "This can be understood as follows: " +
       "```false if (true unless false)``` and can be rewritten as " +
       "```false if (true if false)``` which is equivalent to ```false```"
+  },
+  {
+    "id": "76f41b27-daf4-4fe6-bc7e-6bfa25946655",
+    "question": "What will be the output of the following code?```{a: 3.14, b: 0}.transform_values(&:to_i)```",
+    "type": "mc",
+    "choices": {
+      "1": "{a: 3, b: 0}",
+      "2": "Error",
+      "3": "[[a, 3], [b, 0]]",
+      "4": "{3.14 => :a, 0 => :b}"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Hash#transform_values"
+    ],
+    "explanation": "The `transform_values` method applies the given block " +
+      "to each value in the hash and returns a new hash with the transformed values. "
+  },
+  {
+    "id": "aa1f843f-4422-4335-9350-360abc0619e9",
+    "question": "Which method of checking file size for zero is wrong?",
+    "type": "mc",
+    "choices": {
+      "1": "File.nil?(\"filename\")",
+      "2": "File.size(\"filename\") == 0",
+      "3": "File.size(\"filename\").zero?",
+      "4": "File.zero?(\"filename\")"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Fixnum#zero?", "File.zero?", "File#size"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "360abc0f-4422-4335-9350-619e9aa1f843",
+    "question": "What will return the following code ```[1, 2, 3][-1]```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "2",
+      "3": "1",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#[]"
+    ],
+    "explanation": "Using a negative index in Ruby returns the element from the end of the array."
+  },
+  {
+    "id": "a1bc360a-4422-4335-9350-619e9a0ff843",
+    "question": "What will return the following code ```(1..1.0/0).take(2)```",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2]",
+      "2": "3",
+      "3": "2",
+      "4": "Error",
+      "5": "1"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#take", "Range", "Infinity"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "390418ff-8067-4296-bae4-f98de9cde9a8",
+    "question": "What will return the following code ```[1, 2, 4, 2].minmax {|x| x % 2 == 0}```",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "1 4",
+      "3": "1",
+      "4": "4"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#minmax"
+    ],
+    "explanation": "https://rubyapi.org/3.2/o/array#method-i-minmax"
+  },
+  {
+    "id": "4db11d06-8a37-4bab-b986-501f5d65007a",
+    "question": "What will return the following code ```\"3D\".to_i```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "61",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "String#to_i"
+    ],
+    "explanation": "https://rubyapi.org/3.2/o/string#method-i-to_i"
+  },
+  {
+    "id": "cfac985a-020a-463c-acf3-9f208c0cefe9",
+    "question": "What method should be called on `\"3D\"` string to get `(3/1)`",
+    "type": "mc",
+    "choices": {
+      "1": "to_r",
+      "2": "to_d",
+      "3": "to_e",
+      "4": "to_f",
+      "5": "No one"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "String#to_r"
+    ],
+    "explanation": "https://rubyapi.org/3.2/o/string#method-i-to_r"
+  },
+  {
+    "id": "0389ddbd-8093-4686-a0b0-420fd6c0b9bf",
+    "question": "What will be the output of the following code?```5.eql?(5.0)```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Integer#eql?"
+    ],
+    "explanation": "Returns `true` if `self` and `other` are the same " +
+      "type and have equal values."
   },
 
   /*

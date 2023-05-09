@@ -2091,7 +2091,19 @@ module.exports = [
     "tags": [
       "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
-    "explanation": ""
+    "explanation": "Here are the other choices and what they would return:\n" +
+      "The `&&` operator is a logical AND. It returns the second operand if " +
+      "the first is truthy, otherwise, it returns the first operand. In this " +
+      "case, both `[1, 2]` and `[2, 3]` are truthy (non-empty arrays), so it " +
+      "returns `[2, 3]`.\n" +
+      "2. The `&` operator returns the intersection of the two arrays. In " +
+      "this case, it would return `[2]`." +
+      "3. The `||` operator is a logical OR. It returns the first operand " +
+      "if it's truthy, otherwise, it returns the second operand. In this " +
+      "case, `[1, 2]` is truthy, so it returns `[1, 2]`.\n" +
+      "4. The `|` operator returns a new array containing the union of the " +
+      "two arrays (i.e., unique elements from both arrays). In this case, " +
+      "it would return `[1, 2, 3]`."
   },
   {
     "id": "b1fe1b3a-9b3b-4e9e-bb65-03dca540d02e",
@@ -2110,11 +2122,12 @@ module.exports = [
     "tags": [
       "advanced-level", "Hash#<"
     ],
-    "explanation": ""
+    "explanation": "The `Hash#<` operator returns true if hash is subset " +
+      "of other."
   },
   {
     "id": "65d5554e-10a0-4d58-aa04-fe759176fb66",
-    "question": "What result of <code>53.divmod(10)</code>",
+    "question": "What result of `53.divmod(10)`",
     "type": "mc",
     "choices": {
       "1": "[5, 3]",
@@ -2143,9 +2156,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Multiple assignment"
     ],
-    "explanation": ""
+    "explanation": "`a` and `b` are assigned the values 1 and 2 " +
+      "respectively, and the string interpolation inside the `print` " +
+      "statement combines them into a single string \"12\"\n." +
+      "https://docs.ruby-lang.org/en/3.0/syntax/assignment_rdoc.html#label-Multiple+Assignment"
   },
   {
     "id": "0d4b5888-6d72-4c2f-8d21-0b2f7a1cde1e",
@@ -2165,11 +2181,17 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "Here's a step-by-step explanation:\n" +
+      "1. a = 15, b = 20\n" +
+      "2. a, b = b, a % b => a = 20, b = 15\n" +
+      "3. a, b = b, a % b => a = 15, b = 5\n" +
+      "4. a, b = b, a % b => a = 5, b = 0\n" +
+      "At this point, b becomes 0, so the loop terminates, and the value " +
+      "of `a` (5) is printed."
   },
   {
     "id": "eb78cd2e-ed52-490d-8be4-86e942ef197a",
-    "question": "What will be the output of the following code?\n<code>[1] - 1</code>",
+    "question": "What will be the output of the following code?```[1] - 1```",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -2179,13 +2201,16 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#-"
     ],
-    "explanation": ""
+    "explanation": "The given code is incorrect. The `-` operator on an " +
+      "array expects another array as its operand, but you have provided " +
+      "an integer.\n" +
+      "https://rubyapi.org/3.2/o/array#method-i-2D"
   },
   {
     "id": "cb8eb20a-6a2b-4a91-b454-b700d16be4bb",
-    "question": "What will be the output of the following code?\n<code>[1, 2] + [2, 3] - [2]</code>",
+    "question": "What will be the output of the following code?```[1, 2] + [2, 3] - [2]```",
     "type": "mc",
     "choices": {
       "1": "[1, 3]",
@@ -2195,9 +2220,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#+", "Array#-"
     ],
-    "explanation": ""
+    "explanation": "The given code concatenates two arrays `[1, 2]` and " +
+      "`[2, 3]` ([1, 2, 2, 3]) and then removes the elements `2` from the " +
+      "resulting array.\n" +
+      "https://rubyapi.org/3.2/o/array#method-i-2B"
   },
   {
     "id": "a022a5b6-8587-43cd-b7e1-4716821ab96f",
@@ -2211,9 +2239,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Object#send"
     ],
-    "explanation": ""
+    "explanation": "You cannot directly call a private method from outside " +
+      "the class. However, you can use the `send` method to bypass the " +
+      "access control and call the private method. Keep in mind that using " +
+      "`send` to access private methods can potentially break encapsulation " +
+      "and should generally be avoided, as it may lead to unexpected behavior.\n" +
+      "https://rubyapi.org/3.2/o/object#method-i-send"
   },
   {
     "id": "ed9ecc8e-37ed-47f9-b1a8-79d93f3bbb7a",
@@ -2229,7 +2262,7 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "http://docs.seattlerb.org/rake/doc/command_line_usage_rdoc.html"
   },
   // {
   //   "id": "d882a7ad-ca9b-41f3-9d6a-943b7e83121b",
@@ -2249,19 +2282,35 @@ module.exports = [
   // },
   {
     "id": "cdb02dd3-b6ba-47f8-81e1-fdb0da86a724",
-    "question": "What is the output of this code?\n<code>def foo\n	Proc.new { return 'jo' }[]\n	'mo'\nend\ndef bar\n	->() { return 'jo' }[]\n	'mo'\nend\nprint foo, bar</code>",
+    "question": "What is the output of this code?```def foo" +
+      " Proc.new { return 'jo' }[]" +
+      " 'mo'" +
+      "end" +
+      "def bar" +
+      "	->() { return 'jo' }[]" +
+      "	'mo'" +
+      "end" +
+      "print foo, bar```",
     "type": "mc",
     "choices": {
-      "1": "mojo",
-      "2": "jomo",
+      "1": "jomo",
+      "2": "mojo",
       "3": "jojo",
       "4": "momo"
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Proc", "lambda", "return"
     ],
-    "explanation": ""
+    "explanation": "This is because the Proc object created in the `foo` " +
+      "method uses `return` to return the string 'jo', which means the `foo` " +
+      "method terminates immediately and the string 'jo' is printed. In " +
+      "contrast, the lambda function created in the `bar` method uses " +
+      "`return` to return from the lambda function only, but not from the " +
+      "`bar` method. As a result, the `bar` method continues executing after " +
+      "the lambda function is called, and prints the string 'mo' after the " +
+      "lambda function returns 'jo'.\n" +
+      "https://www.rubyguides.com/2016/02/ruby-procs-and-lambdas/"
   },
   {
     "id": "97f6eb65-2892-4678-a135-427c7f08f0f9",
@@ -2275,9 +2324,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Prime.each", "Enumerator#map"
     ],
-    "explanation": ""
+    "explanation": "`Prime.each(7)` generates a prime number sequence up to " +
+      "7, which is `[2, 3, 5, 7]`. The `map` method then iterates through " +
+      "each element in the array and returns the remainder of `5` divided by " +
+      "each element, which is `[1, 2, 0, 5]`.\n" +
+      "https://ruby-doc.org/stdlib-3.0.0/libdoc/prime/rdoc/Prime.html"
   },
   {
     "id": "b754376d-5166-4de7-80ba-1af5c89180c7",
@@ -2291,9 +2344,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#zip"
     ],
-    "explanation": ""
+    "explanation": "https://ruby-doc.org/core-3.0.0/Array.html#method-i-zip"
   },
   {
     "id": "d6cc7c1c-9789-46e6-9838-9847b8070bc8",
@@ -2321,9 +2374,22 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "intermediate-level", "Array#<=>"
     ],
-    "explanation": ""
+    "explanation": "The `<=>` operator in Ruby is the spaceship operator " +
+      "used to compare two objects and returns -1, 0, or 1 depending on " +
+      "whether the left-hand side is less than, equal to, or greater than " +
+      "the right-hand side.\n" +
+      "In the case of the code you provided, the comparison is between two " +
+      "arrays `[1, 2]` and `[2, 1]`. When two arrays are compared using the " +
+      "spaceship operator, Ruby compares the element at index 0 of both " +
+      "arrays first, then moves to the next elements, until it finds a pair " +
+      "of unequal elements or one array runs out of elements.\n" +
+      "In this case, the comparison starts with the first element in each " +
+      "array, `1` and `2`. Since `1` is less than `2`, the comparison " +
+      "returns `-1`. Ruby doesn't compare the second element because it's " +
+      "not necessary.\n" +
+      "https://rubyapi.org/3.2/o/array#method-i-3C-3D-3E"
   },
   {
     "id": "a4134225-1677-4d01-9813-574b4e5b8af2",
@@ -2336,9 +2402,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Hash#==", "Array#to_h"
     ],
-    "explanation": ""
+    "explanation": "1. `{nil => 42}` is a hash with a single key-value pair," +
+      " where the key is `nil` and the value is `42`.\n" +
+      "2. `[[nil, 42]].to_h` is an array containing a single sub-array " +
+      "`[nil, 42]`, which is then converted to a hash using the `to_h` " +
+      "method. The resulting hash is also `{nil => 42}`.\n" +
+      "3. The two hashes are compared using the `==` operator, and since " +
+      "they have the same key-value pairs, the result is `true`."
   },
   {
     "id": "c7a2fa20-9138-4da8-8294-cb975022d87d",
@@ -3104,7 +3176,10 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The given code will raise an error because you're trying " +
+      "to call the length method on an integer (42). The length method is " +
+      "not available for integers, it's usually available for objects like " +
+      "strings or arrays."
   },
   {
     "id": "6a9d1248-88f7-4e78-ab2b-fcc392ebf2a7",
@@ -3266,9 +3341,12 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "lambda"
     ],
-    "explanation": ""
+    "explanation": "Yes, the code is correct. It defines a lambda function " +
+      "`l` that takes three arguments `a`, `b`, and `c`, and returns the sum " +
+      "of these arguments. Then, it calls the lambda function with the " +
+      "arguments 1, 2, and 3 and prints the result."
   },
   {
     "id": "fe31d377-f02b-41e8-aa72-18892b88d15f",
@@ -3885,7 +3963,10 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "This code defines a lambda function `a` that takes " +
+      "a single argument `x`. The lambda function is recursive and " +
+      "calculates the factorial of the given number. The code then calls the " +
+      "lambda function with the argument `4` and prints the result using `p`."
   },
   {
     "id": "d9a71c9e-c206-47ea-afbc-bbf5b9f1d818",

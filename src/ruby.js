@@ -4592,6 +4592,23 @@ module.exports = [
     "explanation": "Returns `true` if `self` and `other` are the same " +
       "type and have equal values."
   },
+  {
+    "id": "61542109-e5e9-42ba-a16a-27704d2932c4",
+    "question": "What will be the output of the following code?```" +
+      "x = 0 / 0.0\n" +
+      "x == x```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "NaN"
+    ],
+    "explanation": ""
+  },
 
   /*
 {

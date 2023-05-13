@@ -2736,7 +2736,13 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "The `%q` notation is used in Ruby to define " +
+      "single-quoted strings. The delimiter character follows the q, and the " +
+      "string literal continues until a matching (unescaped) delimiter is " +
+      "found. The closing delimiter otherwise matches the opening delimiter. " +
+      "If you use '(', '[', '{', '<', you must close it with ')', ']', '}', " +
+      "'>' respectively. You can use most other non-alphanumeric characters " +
+      "as percent string delimiters, such as '%', '|', '^', etc."
   },
   {
     "id": "8420aac6-bc90-44e3-82b2-e2dac2e67913",

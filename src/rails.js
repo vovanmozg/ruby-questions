@@ -913,6 +913,23 @@ var data = [
       "duration to a float representation of seconds. Since there are 60 " +
       "seconds in a minute, 5 minutes is equivalent to 300 seconds."
   },
+  {
+    "id": "d060a27f-f0bd-4372-96a7-71d50d428691",
+    "question": "What configuration parameter uses by RSpec to whitelisted examples or group",
+    "type": "mc",
+    "choices": {
+      "1": "config.filter_run",
+      "2": "config.include",
+      "3": "config.include_filter_run",
+      "4": "config.filter"
+    },
+    "answer": "1",
+    "tags": [
+      "rspec",
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
 ];
 
 module.exports = data;

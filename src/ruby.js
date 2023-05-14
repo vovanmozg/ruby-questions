@@ -2414,7 +2414,11 @@ module.exports = [
   },
   {
     "id": "c7a2fa20-9138-4da8-8294-cb975022d87d",
-    "question": "What will be the output of the following code?\n<code>def bar(*a, &b)\nb.call(a)\nend\nputs bar(1, 2) { |x| x * 2 }</code>",
+    "question": "What will be the output of the following code?```" +
+      "def bar(*a, &b)\n" +
+      " b.call(a)\n" +
+      "end\n" +
+      "p bar(1, 2) { |x| x * 2 }```",
     "type": "mc",
     "choices": {
       "1": "[1, 2, 1, 2]",
@@ -2424,24 +2428,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "d060a27f-f0bd-4372-96a7-71d50d428691",
-    "question": "What configuration parameter uses by RSpec to whitelisted examples or group",
-    "type": "mc",
-    "choices": {
-      "1": "config.filter_run",
-      "2": "config.include",
-      "3": "config.include_filter_run",
-      "4": "config.filter"
-    },
-    "answer": "1",
-    "tags": [
-      "rspec",
-      "intermediate-level"
+      "beginner-level", "Array#*", "Proc#call"
     ],
     "explanation": ""
   },
@@ -2457,9 +2444,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "gem"
     ],
-    "explanation": ""
+    "explanation": "https://guides.rubygems.org/command-reference/"
   },
   {
     "id": "e48d9828-1d69-4f04-8abc-9790d6ec72c3",
@@ -2467,15 +2454,15 @@ module.exports = [
     "type": "mc",
     "choices": {
       "1": "Shows locally installed gems",
-      "2": "Shows list of all gems",
+      "2": "Shows list of all gems from rubygems.org",
       "3": "Shows all gems from Gemfile",
       "4": "No such command"
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "gem"
     ],
-    "explanation": ""
+    "explanation": "https://guides.rubygems.org/command-reference/"
   },
   {
     "id": "4890726d-4297-4949-808d-8637a0ac1905",
@@ -2489,7 +2476,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "gem"
     ],
     "explanation": ""
   },
@@ -2505,9 +2492,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "gem"
     ],
-    "explanation": ""
+    "explanation": "https://guides.rubygems.org/command-reference/"
   },
   {
     "id": "d4a5aabe-1d60-4506-9c37-80cd64588d2b",
@@ -2521,7 +2508,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "irb"
     ],
     "explanation": ""
   },
@@ -2539,15 +2526,19 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "`detect` and `find` are synonyms in Ruby and both " +
+      "methods search an enumerable for the first element that matches the " +
+      "condition specified in the block. In this case, the block " +
+      "`{ |a| a == 2 }` specifies that we are searching for the first " +
+      "element that is equal to `2`."
   },
   {
     "id": "7ee59e87-1274-42c9-bddb-52ca54750d0b",
       "question": "What will be the output of the following code?```" +
         "class E2 < StandardError; end" +
         "begin" +
-        "<div style='width:100%'></div>  puts 1 / 0" +
-        "rescue E2 => e" +
+        "  puts 1 / 0" +
+        "rescue E2" +
         "  puts 'oops'" +
         "end```",
     "type": "mc",
@@ -2558,13 +2549,24 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "rescue"
     ],
-    "explanation": ""
+    "explanation": "In the code, you are attempting to divide by 0, which " +
+      "will raise a `ZeroDivisionError`. However, the rescue block is only " +
+      "set up to handle the `E2` exception, which is a subclass of " +
+      "`StandardError`. Since `ZeroDivisionError` is not a subclass of " +
+      "`E2`, the rescue block will not be executed."
   },
   {
     "id": "6195f1a8-cc53-4762-9946-6cb831b4db2f",
-    "question": "What will be the output of the following code?\n<code>class E2 < StandardError; end\nclass ZeroDivisionError < E2; end\nbegin\nputs 1 / 0\nrescue E2 => e\nputs 'oops'\nend</code>",
+    "question": "What will be the output of the following code?```" +
+      "class E2 < StandardError; end\n" +
+      "class ZeroDivisionError < E2; end\n" +
+      "begin\n" +
+      "puts 1 / 0\n" +
+      "rescue E2\n" +
+      "puts 'oops'\n" +
+      "end```",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -2595,7 +2597,7 @@ module.exports = [
   // },
   {
     "id": "54731721-5ea4-43bf-8179-42cf90920672",
-    "question": "What will be the output of the following code?\n<code>(\"\" << 48) + 48.chr)</code>",
+    "question": "What will return the following code?```(\"\" << 48) + 48.chr)```",
     "type": "mc",
     "choices": {
       "1": "\"00\"",
@@ -2605,13 +2607,18 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "<<", "chr"
+      "intermediate-level", "String#<<", "String#chr"
     ],
-    "explanation": ""
+    "explanation": "1. `\"\" << 48` appends the character with the ASCII " +
+      "value 48 to the empty string. The character with the ASCII value 48 " +
+      "is \"0\", so the result is `\"0\"`.\n" +
+      "2. `48.chr` converts the ASCII value 48 to its corresponding " +
+      "character, which is \"0\".\n" +
+      "3. `\"0\" + \"0\"` concatenates the two strings, resulting in `\"00\"`."
   },
   {
     "id": "dd22c722-106b-4e51-9726-c488dbba4898",
-    "question": "What will be the output of the following code?\n<code>%Q{#{%w==}#{%W==}#{Array.new}#{[]}}</code>",
+    "question": "What will be the output of the following code?```%Q{#{%w==}#{%W==}#{Array.new}#{[]}}```",
     "type": "mc",
     "choices": {
       "1": "\"[][][][]\"",
@@ -2621,9 +2628,19 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "%Q", "%w", "%W", "Array.new"
     ],
-    "explanation": ""
+    "explanation":
+      "1. `%w==` and `%W==` create empty arrays with the `%w` and `%W` " +
+      "notation, respectively. Both notations are used to create an array " +
+      "of strings separated by whitespace, but `%W` allows for string " +
+      "interpolation while `%w` does not. In this case, the arrays are empty " +
+      "because there are no elements between the equal signs `==`.\n" +
+      "2. `Array.new` creates an empty array.\n" +
+      "3. `[]` is an empty array literal.\n" +
+      "4. The `%Q{}` is a way to create a double-quoted string, so it allows " +
+      "for string interpolation. The four empty arrays inside the string " +
+      "interpolation are concatenated, resulting in the string `\"[][][][]\"`."
   },
   // {
   //   "id": "6da36ec4-8426-413f-9159-cf9dd076fbcd",
@@ -2643,7 +2660,7 @@ module.exports = [
   // },
   {
     "id": "95aef357-28a5-44af-8338-b1db5b7aa2b6",
-    "question": "What will be the output of the following code?\n<code>%s[hello]</code>",
+    "question": "What will be the output of the following code?```%s[hello]```",
     "type": "mc",
     "choices": {
       "1": ":hello",
@@ -2653,29 +2670,29 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "%s"
     ],
-    "explanation": ""
+    "explanation": "The `%s` notation is used to create a symbol."
   },
   {
     "id": "0aef3e59-324b-4b2a-a1d7-dcc2d48c106a",
-    "question": "What code returns the symbol: hello?",
+    "question": "What code returns the symbol `:hello`?",
     "type": "mc",
     "choices": {
-      "1": "%q(hello)",
-      "2": "%s(hello)",
+      "1": "%s(hello)",
+      "2": "%q(hello)",
       "3": "%i(hello)",
       "4": "%w(hello)"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "%s"
     ],
     "explanation": ""
   },
   {
     "id": "fed7c542-8ab3-40f3-939c-4fe050cd850a",
-    "question": "What will be the output of the following code?\n<code>.%R[[0]] == /[0]/</code>",
+    "question": "What will be the output of the following code?```.%R[[0]] == /[0]/```",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -2686,7 +2703,7 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "There is no %R[] notation. https://gist.github.com/jakimowicz/df1e4afb6e226e25d678"
   },
   {
     "id": "01e78536-294b-4269-8a78-9010ab4d582f",
@@ -2701,7 +2718,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The output of the code will be `true` because both " +
+      "`%r[[0]]` and `/[0]/` create the same regular expression, which " +
+      "matches a single character '0' enclosed in square brackets."
   },
   {
     "id": "a7db4c7f-3c3c-4577-905e-59d80e44b6ab",
@@ -2717,7 +2736,13 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "The `%q` notation is used in Ruby to define " +
+      "single-quoted strings. The delimiter character follows the q, and the " +
+      "string literal continues until a matching (unescaped) delimiter is " +
+      "found. The closing delimiter otherwise matches the opening delimiter. " +
+      "If you use '(', '[', '{', '<', you must close it with ')', ']', '}', " +
+      "'>' respectively. You can use most other non-alphanumeric characters " +
+      "as percent string delimiters, such as '%', '|', '^', etc."
   },
   {
     "id": "8420aac6-bc90-44e3-82b2-e2dac2e67913",
@@ -2730,9 +2755,17 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "%q", "%Q"
     ],
-    "explanation": ""
+    "explanation":
+      "`%q` is used to create a single-quoted string literal, which does not " +
+      "support interpolation. So `%q[#{\"1\"}]` will produce the string " +
+      "`'#{\"1\"}'`.\n" +
+      "`%Q` is used to create a double-quoted string literal, which supports " +
+      "interpolation. So `%Q[#{\"1\"}]` will interpolate the value of the " +
+      "expression inside the curly braces (`{\"1\"}`) and produce the string " +
+      "`'1'`.\n" +
+      "https://gist.github.com/jakimowicz/df1e4afb6e226e25d678"
   },
   {
     "id": "0304997a-8668-4671-a8fc-208312babf50",
@@ -2745,45 +2778,45 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "%q"
     ],
     "explanation": ""
   },
-  {
-    "id": "d322ae2f-c889-49f3-bdf0-1afab7c3f782",
-    "question": "What will be the output of the following code?\n<code>puts %Q[#{\"ivan\"} \"susanin\"]</code>",
-    "type": "mc",
-    "choices": {
-      "1": "\"ivan \\\"susanin\\\"\"",
-      "2": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
-      "3": "Error",
-      "4": "\"ivan susanin\""
-    },
-    "answer": "1",
-    "tags": [
-      "-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "b1179406-ad74-4b73-84f4-7a5311716754",
-    "question": "What will be the output of the following code?\n<code>puts %q[#{\"ivan\"} \"susanin\"]</code>",
-    "type": "mc",
-    "choices": {
-      "1": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
-      "2": "\"ivan \\\"susanin\\\"\"",
-      "3": "Error",
-      "4": "\"ivan susanin\""
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
+  // { TODO: remove useless questions
+  //   "id": "d322ae2f-c889-49f3-bdf0-1afab7c3f782",
+  //   "question": "What will be the output of the following code?\n<code>puts %Q[#{\"ivan\"} \"susanin\"]</code>",
+  //   "type": "mc",
+  //   "choices": {
+  //     "1": "\"ivan \\\"susanin\\\"\"",
+  //     "2": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+  //     "3": "Error",
+  //     "4": "\"ivan susanin\""
+  //   },
+  //   "answer": "1",
+  //   "tags": [
+  //     "-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "b1179406-ad74-4b73-84f4-7a5311716754",
+  //   "question": "What will be the output of the following code?\n<code>puts %q[#{\"ivan\"} \"susanin\"]</code>",
+  //   "type": "mc",
+  //   "choices": {
+  //     "1": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+  //     "2": "\"ivan \\\"susanin\\\"\"",
+  //     "3": "Error",
+  //     "4": "\"ivan susanin\""
+  //   },
+  //   "answer": "1",
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "f4e0566c-fc82-4221-b07b-258dbba10c58",
-    "question": "What will be the output of the following code?\n<code>puts %i{ein zwei drei}</code>",
+    "question": "What will be the output of the following code?\n<code>p %i{ein zwei drei}</code>",
     "type": "mc",
     "choices": {
       "1": "[:ein, :zwei, :drei]",
@@ -2793,9 +2826,9 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "beginner-level", "%i"
     ],
-    "explanation": ""
+    "explanation": "`%i{}` is used to create an array of symbols."
   },
   {
     "id": "3643b2c1-832a-46c0-b561-e9379f5948f9",
@@ -4564,6 +4597,23 @@ module.exports = [
     ],
     "explanation": "Returns `true` if `self` and `other` are the same " +
       "type and have equal values."
+  },
+  {
+    "id": "61542109-e5e9-42ba-a16a-27704d2932c4",
+    "question": "What will be the output of the following code?```" +
+      "x = 0 / 0.0\n" +
+      "x == x```",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "NaN"
+    ],
+    "explanation": ""
   },
 
   /*

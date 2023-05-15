@@ -136,7 +136,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array"
     ],
     "explanation": "The output of this code will be `NaN`.\n" +
       "The `new Array()` constructor in JavaScript behaves differently based " +
@@ -152,6 +152,68 @@ module.exports = [
       "So when you add `a[0]` and `b[0]`, you are adding `1` and " +
       "`undefined`, which results in `NaN` in JavaScript. So, " +
       "`alert(a[0] + b[0])` alerts `NaN`."
+  },
+
+  {
+    "id": "4daaf22c-0511-44c9-a06c-959d269dc871",
+    "question": "What will be the output of the following code?```" +
+      "for(let i=0; i<10; i++) {\n" +
+      " setTimeout(function() {\n" +
+      "  console.log(i);\n" +
+      " }, 100); }```",
+    "type": "mc",
+    "choices": {
+      "1": "Numbers from 0 to 9",
+      "2": "Numbers from 0 to 10",
+      "3": "10 times number 10",
+      "4": "10 times number 0"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "Scope"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "aefd92fb-71ea-4460-bc71-4c7544387711",
+    "question": "What will be the output of the following code?```1 && 2 && null && 0 && undefined```",
+    "type": "mc",
+    "choices": {
+      "1": "null",
+      "2": "false",
+      "3": "undefined",
+      "4": "0",
+      "5": "1",
+      "6": "2"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "&&"
+    ],
+    "explanation": "The `&&` (logical AND) operator returns " +
+      "the first falsy value it encounters. If it doesn't encounter any " +
+      "falsy values, it returns the last value."
+  },
+  {
+    "id": "977dca2e-bdb3-40b3-af73-79ff50245301",
+    "question": "What will return the following code?```(1,5 - 1) * 2```",
+    "type": "mc",
+    "choices": {
+      "1": "8",
+      "2": "-0.5",
+      "3": "1",
+      "4": "0.999999999",
+      "5": "0.5"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", ","
+    ],
+    "explanation": "The output of this code will be `8`.\n" +
+      "The comma operator (`,`) evaluates each of its operands (from left to " +
+      "right) and returns the value of the last operand. So, in the " +
+      "expression `(1,5 - 1)`, the `5 - 1` is evaluated last, and its result " +
+      "`4` is returned."
   },
   /*
 

@@ -2780,7 +2780,11 @@ module.exports = [
     "tags": [
       "intermediate-level", "%q"
     ],
-    "explanation": ""
+    "explanation": "Here, `%q` is a way to create single-quoted strings, " +
+      "similar to how you would use single quotes (`''`). The characters " +
+      "following `%q` (which are `[` and `%` in your case) are used as " +
+      "delimiters for the string. Since both `%q[satoshi]` and `%q%satoshi%` " +
+      "evaluate to the string `'satoshi'`, the comparison between them is `true`."
   },
   // { TODO: remove useless questions
   //   "id": "d322ae2f-c889-49f3-bdf0-1afab7c3f782",
@@ -2843,7 +2847,8 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "Ruby does not have the `%h` notation for creating a Hash. " +
+      "So, the expression `%h{}` would give a syntax error in Ruby."
   },
   {
     "id": "5f365612-2d0b-4ecd-bdfe-dbb8d158b352",
@@ -2859,7 +2864,16 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "This piece of code is using block parameters and block " +
+      "local variables, specifically the semicolon to define the local " +
+      "block variable `b`. But in this case, `b` is not being assigned any " +
+      "value within the block.\n" +
+      "In Ruby, the block local variables are set up at the start of the " +
+      "block execution. If the variables aren't assigned any values inside " +
+      "the block, they will be `nil`.\n" +
+      "Therefore, the map function will return an array `[nil, nil]`. This " +
+      "is because `map` invokes the given block once for each element of the " +
+      "array and creates a new array containing the values returned by the block."
   },
   {
     "id": "18fc2599-fe12-4000-b8c8-b4c9d7dca04e",
@@ -2875,7 +2889,15 @@ module.exports = [
     "tags": [
       "intermediate-level", "Infinity"
     ],
-    "explanation": ""
+    "explanation": "The expression `2 ** (10 ** 10)` and `3 ** (10 ** 10)` " +
+      "would attempt to calculate 2 and 3 raised to the power of (10 raised " +
+      "to the power of 10). This operation results in a very large number " +
+      "which exceeds the capacity of even a floating point number in most " +
+      "computer systems. In Ruby, when such operations are attempted, Ruby " +
+      "returns the special value `Float::INFINITY`, which represents positive " +
+      "infinity.\n" +
+      "The comparison `Float::INFINITY < Float::INFINITY` is not true, as " +
+      "infinity is not less than infinity."
   },
   {
     "id": "66f8cd99-a1e0-4762-8424-62078a4e5880",
@@ -2889,9 +2911,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "Infinity"
+      "intermediate-level", "Infinity", "**"
     ],
-    "explanation": ""
+    "explanation": "The expression `2 ** (10 ** 10)` attempts to calculate " +
+      "2 raised to the power of (10 raised to the power of 10). This " +
+      "operation would result in an extremely large number that exceeds the " +
+      "capacity of even a floating point number in most computer systems. " +
+      "Therefore, Ruby would return the special constant `Float::INFINITY`, " +
+      "which represents positive infinity, as the output of this operation."
   },
   {
     "id": "e7cd83d7-a398-4544-8146-45c68e349e66",
@@ -2905,38 +2932,46 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Infinity", "ZeroDivisionError", "**"
     ],
-    "explanation": ""
+    "explanation": "The expression `1 / 0` in Ruby results in a " +
+      "`ZeroDivisionError` exception being raised."
   },
-  {
-    "id": "cf2ac631-a3ea-40d9-a056-234c6fae6002",
-    "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 > 2 ** 10 ** 10</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "error"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "Infinity"
-    ],
-    "explanation": ""
-  },
+  // { TODO: remove because of duplicate of 18fc2599-fe12-4000-b8c8-b4c9d7dca04e
+  //   "id": "cf2ac631-a3ea-40d9-a056-234c6fae6002",
+  //   "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 > 2 ** 10 ** 10</code>",
+  //   "type": "mc",
+  //   "choices": {
+  //     "1": "false",
+  //     "2": "true",
+  //     "3": "error"
+  //   },
+  //   "answer": "1",
+  //   "tags": [
+  //     "intermediate-level", "Infinity"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "f2d4ed73-cc45-48e4-a0e0-667284f7b509",
     "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 == Float::INFINITY</code>",
     "type": "mc",
     "choices": {
       "1": "true",
-      "2": "false"
+      "2": "false",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "Infinity"
+      "intermediate-level", "Infinity", "**"
     ],
-    "explanation": ""
+    "explanation": "The expression `10 ** 10 ** 10` would attempt to " +
+      "calculate 10 raised to the power of (10 raised to the power of " +
+      "10). This operation results in a very large number which exceeds the " +
+      "capacity of even a floating point number in most computer systems.\n" +
+      "In Ruby, when such operations are attempted, Ruby returns the special " +
+      "value `Float::INFINITY`, which represents positive infinity.\n" +
+      "So the comparison `10 ** 10 ** 10 == Float::INFINITY` is `true`."
   },
   {
     "id": "7128de51-3140-4be2-aaa2-ca1030664f82",
@@ -2949,25 +2984,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "**"
     ],
-    "explanation": ""
-  },
-  {
-    "id": "13f82949-ff71-4634-96a9-5d36aa4991f0",
-    "question": "What will be the output of the following code?\n<code>2 ** 10 ** 2 == 2 ** (10 ** 2)</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "Float::INFINITY"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
+    "explanation": "The `**` operator is right-associative. That means the " +
+      "expression `2 ** 10 ** 2` is evaluated as `2 ** (10 ** 2)`.\n" +
+      "\n" +
+      "So, the expression `2 ** 10 ** 2` equals `2 ** (10 ** 2)` equals " +
+      "`2 ** 100`."
   },
   {
     "id": "d579ddb9-1c25-49ed-b23d-f62343e78300",
@@ -2983,7 +3006,7 @@ module.exports = [
     "tags": [
       "beginner-level", "**"
     ],
-    "explanation": ""
+    "explanation": "https://ruby-doc.org/core-2.5.0/Integer.html#method-i-2A-2A"
   },
   {
     "id": "81353c07-36cd-4e96-a9b7-8eb4184cfa1e",
@@ -2999,7 +3022,8 @@ module.exports = [
     "tags": [
       "intermediate-level", "String"
     ],
-    "explanation": ""
+    "explanation": "The code `'8' ** 2` would raise a `TypeError` because " +
+      "the exponentiation operator (`**`) doesn't work with string operands."
   },
   {
     "id": "9dd2a4fe-7c0d-42b1-a7b1-8e5857fb1d1d",
@@ -3013,9 +3037,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Float::INFINITY", "NaN"
     ],
-    "explanation": ""
+    "explanation": "The expression `Float::INFINITY - Float::INFINITY` will " +
+      "yield `NaN`, which stands for \"Not a Number\". This is because the " +
+      "concept of infinity in mathematics is an undefined quantity, and " +
+      "operations like subtracting infinity from infinity do not produce a " +
+      "definitive or meaningful result."
   },
   {
     "id": "a5616614-56c5-434b-b17e-1c93316203e6",
@@ -3031,7 +3059,9 @@ module.exports = [
     "tags": [
       "beginner-level", "String#*"
     ],
-    "explanation": ""
+    "explanation": "The expression `'8' * 4` will yield `'8888'`. In this " +
+      "context, the `*` operator is the string repetition operator, not the " +
+      "multiplication operator. Therefore, it repeats the string `'8'` 4 times."
   },
   {
     "id": "2e80857d-3d49-43c6-a1eb-21a6605d161a",
@@ -3047,7 +3077,25 @@ module.exports = [
     "tags": [
       "intermediate-level", "String"
     ],
-    "explanation": ""
+    "explanation": "The operation would fail with an error because division " +
+      "is not a valid operation on strings."
+  },
+  {
+    "id": "245289e0-d06d-4ef6-b3f7-0448f87ef49e",
+    "question": "What will be the output of the following code?```2 ** -1```",
+    "type": "mc",
+    "choices": {
+      "1": "1/2",
+      "2": "0.5",
+      "3": "Error",
+      "4": "NaN"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "Rational"
+    ],
+    "explanation": "This will return `(1/2)`, a Rational object, which is the " +
+      "equivalent of `0.5` in decimal form."
   },
   {
     "id": "92b7ffba-105b-4837-b381-178a79c31aa8",
@@ -3080,7 +3128,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Float#*", "Float#/"
     ],
     "explanation": ""
   },
@@ -3096,9 +3144,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "ZeroDivisionError"
     ],
-    "explanation": ""
+    "explanation": "The output of the following code `puts 1 / 0` will " +
+      "result in a `ZeroDivisionError` being raised."
   },
   {
     "id": "51c5faa7-d058-49cd-a463-fffc63c16e15",
@@ -3112,9 +3161,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Rational"
     ],
-    "explanation": ""
+    "explanation": "`1/10r` and `2/10r` are rational numbers (fractions). " +
+      "`1/10r` represents the rational number `1/10` and `2/10r` represents " +
+      "the rational number `2/10`.\n" +
+      "So the sum `1/10r + 2/10r` gives the rational number `3/10`. The " +
+      "`puts` method will then convert this rational number to a string and " +
+      "output it."
   },
   {
     "id": "c7f59e05-ca0b-4788-976e-274f246ce2c1",
@@ -3130,7 +3184,13 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "The output of `0.1 + 0.2` in Ruby is `0.30000000000000004`.\n" +
+      "This is due to the way floating-point numbers are represented in " +
+      "computer systems. Not all decimal fractions can be represented exactly " +
+      "as binary fractions, hence the small round-off error. \n" +
+      "In the case of `0.1 + 0.2`, the expected mathematical result would " +
+      "be `0.3`, but due to the precision limits of binary floating-point " +
+      "representation, the actual result is `0.30000000000000004`."
   },
   {
     "id": "7e0fb4bd-a2d1-424f-9a0f-a2d42fbc6286",
@@ -3143,9 +3203,13 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Integer#+"
     ],
-    "explanation": ""
+    "explanation": "`1` is an integer.\n" +
+      "`1.5` is a floating-point number (or \"float\").\n" +
+      "When an integer and a float are used together in an operation, the " +
+      "integer is automatically converted into a float so that the precision " +
+      "of the float isn't lost."
   },
   {
     "id": "e784a0b6-9e95-4484-bea8-9851b384e81f",

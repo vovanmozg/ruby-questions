@@ -3223,9 +3223,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Float#+"
     ],
-    "explanation": ""
+    "explanation": "This code will throw an error. A string cannot be " +
+      "coerced into a numeric value (like a float or integer) implicitly. " +
+      "This means that Ruby doesn't automatically convert a string to a " +
+      "number if you're trying to do arithmetic operations with it. "
   },
   {
     "id": "147bed6b-9818-4dc7-8036-3517d30818c5",
@@ -3239,9 +3242,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "String#+"
     ],
-    "explanation": ""
+    "explanation": "The code will produce an error, specifically a " +
+      "`TypeError`. You cannot directly add a string and a float or an " +
+      "integer. "
   },
   {
     "id": "f13d0f41-2411-4ff7-853c-2e2f01ef50ee",
@@ -3255,9 +3260,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Float#+"
     ],
-    "explanation": ""
+    "explanation": "The code will produce an error, specifically a " +
+      "`TypeError`. You cannot directly add a float and a boolean."
   },
   {
     "id": "ce87171e-b03e-45f3-ad29-8380082ec3f6",
@@ -3293,7 +3299,8 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The code will raise a `TypeError`. You can't use " +
+      "arithmetic operators like `+` directly with boolean values."
   },
   {
     "id": "3bda0a73-2d61-46c8-aeb6-d847bbc89785",
@@ -3307,9 +3314,15 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array.new", "Array#tap"
     ],
-    "explanation": ""
+    "explanation": "The output of the given code would be `[1, 2, 3]`.\n" +
+      "The `Array.new` method creates a new, empty array. The `tap` method " +
+      "then yields this array to the block, which adds the elements 1, 2, and " +
+      "3 to it using the `<<` operator. \n" +
+      "After the block execution, `tap` returns the original object (in this " +
+      "case, the array). As a result, the `print` statement outputs the " +
+      "final state of the array, which is `[1, 2, 3]`."
   },
   {
     "id": "bf01a67e-4f01-4a80-8dd7-52d80712ab62",
@@ -3325,7 +3338,18 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "When defining a method, you can use a single asterisk " +
+      "(`*`) before a parameter to indicate that this parameter will capture " +
+      "all the arguments that are not captured by the other parameters. This " +
+      "is often used to define methods that can take a variable number of " +
+      "arguments.\n" +
+      "In this case, the `foo` method takes three parameters: `a`, `*b`, and " +
+      "`c`. \n" +
+      "When `foo(1,2,3,4,5)` is called:\n" +
+      "- `a` captures the first argument `1`\n" +
+      "- `*b` captures all the middle arguments `2, 3, 4` and puts them into " +
+      "an array\n" +
+      "- `c` captures the last argument `5`"
   },
   {
     "id": "eb543470-dd3d-4798-91a2-86f14b6fee71",
@@ -3341,7 +3365,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The second argument passed to `foo` method is __LINE__. " +
+      "__LINE__ is a special constant that gives the line number of the " +
+      "current line of code."
   },
   {
     "id": "1b1c35bd-1902-4b82-893b-5380c6cb8fcc",
@@ -3357,7 +3383,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "This is an example of array deconstruction, where the " +
+      "`*` prefix in front of a variable name is used to gather all " +
+      "remaining items in the array into a new array."
   },
   {
     "id": "75497cd2-d7c3-4e6a-8dd1-67188e7dc4f7",
@@ -3373,21 +3401,26 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "This is due to the way assignment works in Ruby: it " +
+      "attempts to assign each element of the array to each variable on the " +
+      "left side of the `=`. If there are more elements than variables, the " +
+      "extra elements will be discarded. If there are fewer elements than " +
+      "variables, the extra variables will be set to `nil`."
   },
   {
     "id": "4628eb4f-ea50-44c1-aff0-7a6b1a21e0b9",
     "question": "Which way to call lambda is incorrect?\n<code>l = ->(a, &b){b.call(a)}</code>",
     "choices": {
-      "1": "l['world'] { |who| \"Hello, #{who}!\" }",
+      "1": "l('world') { |who| \"Hello, #{who}!\" }",
       "2": "l.('world') { |who| \"Hello, #{who}!\" }",
       "3": "l.call('world') { |who| \"Hello, #{who}!\" }",
-      "4": "l.yield('world') { |who| \"Hello, #{who}!\" }"
+      "4": "l.yield('world') { |who| \"Hello, #{who}!\" }",
+      "5": "l['world'] { |who| \"Hello, #{who}!\" }"
     },
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Lambda#call", "lambda"
     ],
     "explanation": ""
   },
@@ -3424,7 +3457,7 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "lambda"
     ],
     "explanation": ""
   },
@@ -3459,7 +3492,9 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "The code `(1..3).each` returns an Enumerator object. " +
+      "This is because calling `each` without a block on a Range object " +
+      "returns an Enumerator which can be used to iterate over the range."
   },
   {
     "id": "631bce01-4426-488d-90aa-4d98069d7a7e",
@@ -3787,8 +3822,8 @@ module.exports = [
     "question": "What will code output?\n<code>x = true and false\ny = true && false\nx == y</code>",
     "type": "mc",
     "choices": {
-      "1": "true",
-      "2": "false"
+      "1": "false",
+      "2": "true"
     },
     "answer": "1",
     "tags": [

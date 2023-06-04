@@ -3822,8 +3822,8 @@ module.exports = [
     "question": "What will code output?\n<code>x = true and false\ny = true && false\nx == y</code>",
     "type": "mc",
     "choices": {
-      "1": "true",
-      "2": "false"
+      "1": "false",
+      "2": "true"
     },
     "answer": "1",
     "tags": [

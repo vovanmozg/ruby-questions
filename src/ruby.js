@@ -1,5 +1,136 @@
 module.exports = [
   {
+    "id": "40a89e01-f5a7-4942-b4d1-0c7324a2cb72",
+    "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "false",
+      "3": "true",
+      "4": "42"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "==="
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "591b89b2-8e51-46a0-9bd1-890460a17ae4",
+    "question": "What will return the following code?\n<code>true & 0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false",
+      "3": "Error",
+      "4": "0"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "&"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "0edf76b1-0b46-4e8b-af1d-804be041ba30",
+    "question": "What will be `a` variable contain?\n<code>a = ??</code>",
+    "type": "mc",
+    "choices": {
+      "1": "?",
+      "2": "??",
+      "3": "Error",
+      "4": "false",
+      "5": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "7ef0a8e7-534e-4fb2-ae2f-f3d56ca6aab1",
+    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
+    "type": "mc",
+    "choices": {
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "'b'",
+      "5": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "947a529a-edcc-4ce1-9b4b-fec5bc55bb32",
+    "question": "What will return the following code?\n<code>[[0]][0]|[0]</code>",
+    "type": "mc",
+    "choices": {
+      "1": "[0]",
+      "2": "0",
+      "3": "nil",
+      "4": "false",
+      "5": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "8f2fd21c-3435-4a8e-a1f6-2cc25e0d2acb",
+    "question": "What code is need to generate the following output?```[:a, :b, :c]```",
+    "type": "mc",
+    "choices": {
+      "1": "%i(a b c)",
+      "2": "%S(a, b, c)",
+      "3": "%w(a b c)",
+      "4": "%r(a, b, c)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "d7f1a103-e057-495d-a324-2f002cadf0d0",
+    "question": "What class is standard Ruby class?",
+    "type": "mc",
+    "choices": {
+      "1": "TypeError",
+      "2": "ValueError",
+      "3": "MethodError",
+      "4": "InputError"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "errors"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "ed4160a5-307d-415e-afbb-b2207cac90da",
+    "question": "What class is not standard Ruby class?",
+    "type": "mc",
+    "choices": {
+      "1": "NotImplementedError",
+      "2": "NoMemoryError",
+      "3": "NoMethodError",
+      "4": "NoAttributeError"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "errors"
+    ],
+    "explanation": ""
+  },
+  {
     "id": "f4ffa8c6-d986-44c6-8987-c7e2e6a745b3",
     "question": "What will return the following code?\n<code>[{ a: 1 }, { a: 2 }].map(&->(x) { x[:a] })</code>",
     "type": "mc",
@@ -61,23 +192,6 @@ module.exports = [
     "explanation": "The following Ruby code `{a: 1, b: 2, c: 1}.invert` will return a new hash where the keys and values are inverted. In other words, the keys of the original hash will become the values of the new hash, and the values of the original hash will become the keys of the new hash.\n" +
       "In this specific case, the original hash `{a: 1, b: 2, c: 1}` has two keys with the same value (`:a` and `:c` both have a value of `1`). Since a hash can't have duplicate keys, one of the keys will be overwritten. Therefore, the resulting inverted hash will have two keys (`1` and `2`) and two values (`:a` and `:b`), like this: `{1=>:c, 2=>:b}`.\n" +
       "https://ruby-doc.org/3.2.1/Hash.html#method-i-invert"
-  },
-  {
-    "id": "947a529a-edcc-4ce1-9b4b-fec5bc55bb32",
-    "question": "What will return the following code?\n<code>[[0]][0]|[0]</code>",
-    "type": "mc",
-    "choices": {
-      "1": "[0]",
-      "2": "0",
-      "3": "nil",
-      "4": "false",
-      "5": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "Array"
-    ],
-    "explanation": ""
   },
   {
     "id": "07396737-bcb9-4cb3-a40a-ff965f5be0ce",
@@ -168,22 +282,6 @@ module.exports = [
       "beginner-level", "&&"
     ],
     "explanation": "The `&&` operator returns the first operand if it is falsy, and the second operand otherwise. In this case, the first operand true is truthy, so the second operand 0 will be evaluated. Since 0 is also falsy in Ruby, it will be returned."
-  },
-  {
-    "id": "591b89b2-8e51-46a0-9bd1-890460a17ae4",
-    "question": "What will return the following code?\n<code>true & 0</code>",
-    "type": "mc",
-    "choices": {
-      "1": "true",
-      "2": "false",
-      "3": "Error",
-      "4": "0"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level", "&"
-    ],
-    "explanation": ""
   },
   {
     "id": "dbe208ce-b4fc-43e2-8f2c-19fcf1f46fb3",
@@ -279,23 +377,6 @@ module.exports = [
       "To convert an integer to an array in Ruby, we can use the `Array` method with the integer as an argument, like this:\n" +
       "`Array(3) #=> [3]`\n" +
       "This will convert the integer `3` to an array containing a single element `3`."
-  },
-  {
-    "id": "7ef0a8e7-534e-4fb2-ae2f-f3d56ca6aab1",
-    "question": "What will return the following code?\n<code>/b/ === /b/</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "Error",
-      "4": "'b'",
-      "5": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
   },
   {
     "id": "c6129e64-2b6a-44e4-885d-bbfd38ac5036",
@@ -407,22 +488,6 @@ module.exports = [
       "https://thoughtbot.com/blog/case-equality-operator-in-ruby"
   },
   {
-    "id": "020d1950-a717-4dbc-8275-e4ba5e76e56c",
-    "question": "What will return the following code?\n<code>/^[^0-9]*$/ === '2048'</code>",
-    "type": "mc",
-    "choices": {
-      "1": "false",
-      "2": "true",
-      "3": "nil",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "==="
-    ],
-    "explanation": ""
-  },
-  {
     "id": "da0d4a7e-9c8e-44d2-9150-c834c3e43ce4",
     "question": "What will return the following code?\n<code>Class === 'text'</code>",
     "type": "mc",
@@ -451,9 +516,14 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level", "==="
+      "advanced-level", "===",
     ],
-    "explanation": ""
+    "explanation": "The code creates two arrays each containing a single " +
+      "element, which is a range. Two arrays are considered equal if they " +
+      "contain the same number of elements and if each element is equal to " +
+      "the corresponding element in the other array. Since both arrays " +
+      "contain the same single range element (`1...10`), they are considered " +
+      "equal."
   },
   {
     "id": "35d3f427-7c56-4d1f-b0d9-0b1f344e1188",
@@ -468,7 +538,13 @@ module.exports = [
     "tags": [
       "advanced-level", "==="
     ],
-    "explanation": ""
+    "explanation": "The triple equals `===` operator in the context of Range " +
+      "objects is essentially a membership test. It checks if the right-hand " +
+      "operand falls within the range of the left-hand operand.\n" +
+      "In this specific case, the right-hand side `(1...10)` does not fall " +
+      "within the range of the left-hand side `(1...10)`, because the " +
+      "right-hand side is a Range object itself, not an individual number. " +
+      "Therefore, it returns `false`."
   },
   {
     "id": "fbf83d17-08b9-4c41-a065-a2dd8fb4f43c",
@@ -503,27 +579,42 @@ module.exports = [
     "type": "mc",
     "choices": {
       "1": "false",
-      "2": "true"
+      "2": "true",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
       "intermediate-level", "==="
     ],
-    "explanation": ""
+    "explanation": "`[1, 2] + [2, 3]` results in `[1, 2, 2, 3]`. The `+` " +
+      "operator concatenates two arrays.\n" +
+      "`[1, 2] | [2, 3]` results in `[1, 2, 3]`. The `|` operator performs a " +
+      "set union operation which combines the arrays and removes any duplicates.\n" +
+      "In the context of Arrays, `===` behaves the same as `==`, comparing " +
+      "elements of the arrays in order and considering two arrays equal only " +
+      "if all corresponding elements are equal."
   },
   {
     "id": "006e5848-cdc6-41e3-be89-e93856270137",
-    "question": "What will be the output of the following code?\n<code>puts (1..5) === 3</code>",
+    "question": "What will be the output of the following code?\n<code>puts 3 === (1..5)</code>",
     "type": "mc",
     "choices": {
-      "1": "true",
-      "2": "false"
+      "1": "false",
+      "2": "true",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
       "intermediate-level", "==="
     ],
-    "explanation": ""
+    "explanation": "The `===` operator behaves differently depending on the " +
+      "type of the object on its left side. When the left side is a number, " +
+      "the `===` operator essentially behaves like the `==` operator. So " +
+      "`3 === (1..5)` is checking if the integer `3` is equal to the range " +
+      "`(1..5)`, which is obviously `false`.\n" +
+      "Conversely, when the range is on the left side, as in `(1..5) === 3`, " +
+      "the `===` operator checks whether the number on the right side falls " +
+      "within the range, which would return `true`."
   },
   {
     "id": "e6b56812-bd62-4245-b342-48fea1a8fb93",
@@ -539,7 +630,12 @@ module.exports = [
     "tags": [
       "advanced-level", "==="
     ],
-    "explanation": ""
+    "explanation": "In Ruby, `===` is known as the case equality operator. " +
+      "It is used to test equality within a when clause of a case statement.\n" +
+      "For `Numeric === 42`, it will return `true` because `42` is an " +
+      "instance of `Numeric` class.\n" +
+      "However, `42 === Numeric` will return `false` because `Numeric` is " +
+      "not an instance of `Integer` (which is the class of `42`)."
   },
   {
     "id": "71aad3c2-2216-47a2-b560-5a5455163d1f",
@@ -553,25 +649,34 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "advanced-level", "==="
+      "advanced-level", "FalseClass#==="
     ],
-    "explanation": ""
+    "explanation": "In many cases, `===` behaves just like `==`, especially " +
+      "with many of the built-in classes like `Integer`, `String`, `Array`, " +
+      "and `Hash`. So when you do `false === false`, it behaves the same as " +
+      "`false == false` and returns `true`."
   },
+
   {
-    "id": "40a89e01-f5a7-4942-b4d1-0c7324a2cb72",
-    "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
+    "id": "34a182d7-7098-4b57-b603-b4d680b916dd",
+    "question": "What will be the output of the following code?```(TrueClass === TrueClass) == (Object === Object)```",
     "type": "mc",
     "choices": {
-      "1": "Error",
-      "2": "false",
-      "3": "true",
-      "4": "42"
+      "1": "false",
+      "2": "true",
+      "3": "Error",
+      "4": "nil"
     },
     "answer": "1",
     "tags": [
       "advanced-level", "==="
     ],
-    "explanation": ""
+    "explanation": "`TrueClass === TrueClass` checks whether `TrueClass` is " +
+      "a `TrueClass` or an instance of its subclasses, which is not the " +
+      "case, so it returns `false`.\n" +
+      "`Object === Object` checks whether `Object` is an `Object` or an " +
+      "instance of its subclasses. Since `Object` is indeed an instance of " +
+      "itself, this expression returns `true`."
   },
   {
     "id": "fc44101d-e9f9-4b4a-82c8-c43ffbc40251",
@@ -585,23 +690,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "==="
+      "intermediate-level", "RegExp#==="
     ],
-    "explanation": ""
-  },
-  {
-    "id": "b2808207-c9f4-492c-8ab0-ea08c3d798ab",
-    "question": "What returns <code>(1...10) === 5</code>",
-    "choices": {
-      "1": "true",
-      "2": "false"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "advanced-level", "==="
-    ],
-    "explanation": ""
+    "explanation": "The `===` operator behaves differently depending on the " +
+      "context. In the case of a Regular Expression (RegExp) and a string, " +
+      "it checks if the string matches the pattern defined by the RegExp."
   },
   {
     "id": "b183f36b-e10f-4cc8-adae-ce79259f5b2d",
@@ -787,23 +880,6 @@ module.exports = [
       "https://ruby-doc.org/core-2.7.1/doc/syntax/literals_rdoc.html#label-Numbers"
   },
   {
-    "id": "0edf76b1-0b46-4e8b-af1d-804be041ba30",
-    "question": "What will be `a` variable contain?\n<code>a = ??</code>",
-    "type": "mc",
-    "choices": {
-      "1": "?",
-      "2": "??",
-      "3": "Error",
-      "4": "false",
-      "5": "true"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "d3aa38b1-a7c7-4bf3-be9b-de716b14305b",
     "question": "What will return the following code?\n<code>obj = Object.new\nobj.define_singleton_method(:foo) do 42 end\nobj.dup.foo</code>",
     "type": "mc",
@@ -892,38 +968,6 @@ module.exports = [
       "https://stackoverflow.com/questions/10183370"
   },
   {
-    "id": "d7f1a103-e057-495d-a324-2f002cadf0d0",
-    "question": "What class is standard Ruby class?",
-    "type": "mc",
-    "choices": {
-      "1": "TypeError",
-      "2": "ValueError",
-      "3": "MethodError",
-      "4": "InputError"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "errors"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "ed4160a5-307d-415e-afbb-b2207cac90da",
-    "question": "What class is not standard Ruby class?",
-    "type": "mc",
-    "choices": {
-      "1": "NotImplementedError",
-      "2": "NoMemoryError",
-      "3": "NoMethodError",
-      "4": "NoAttributeError"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "errors"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "da37df57-46e5-4a76-9ae6-4ff736f90c3d",
     "question": "What will return the following code?\n<code>%w{ one two three }.map &method(:p)</code>",
     "type": "mc",
@@ -975,13 +1019,20 @@ module.exports = [
     "type": "mc",
     "choices": {
       "1": "false",
-      "2": "true"
+      "2": "true",
+      "3": "Error"
     },
     "answer": "1",
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The `first` method behaves differently based on whether " +
+      "it is provided an argument. \n" +
+      "If it's not provided an argument, it will return the first element of " +
+      "the array. For example, `[1, 2].first` will return `1`.\n" +
+      "If it's provided an argument `n`, it will return the first `n` " +
+      "elements of the array as a new array. For example, `[1, 2].first(1)` " +
+      "will return `[1]`."
   },
   {
     "id": "d6ff6134-7dcd-4a2f-98b6-ef20466a9ae1",
@@ -1564,7 +1615,10 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "Option 1: `if an_object && an_object.method?` is generally considered more idiomatic in Ruby. \n" +
+      "This is because Ruby encourages expressive, concise code. Option 1 leverages Ruby's built-in truthy and falsy values: in Ruby, `nil` and `false` are falsy, and everything else (including `0`, empty arrays, and empty strings) are truthy. \n" +
+      "Option 2 is more verbose and doesn't take full advantage of Ruby's truthiness. Explicitly checking `an_object != nil` and `an_object.method? == true` is generally not necessary in Ruby. \n" +
+      "That being said, if for some reason it's important in your specific context to ensure `an_object` is not `nil` and `an_object.method?` returns the Boolean value `true` (not just a truthy value), then you might want to use Option 2. But in general, Option 1 is more idiomatic Ruby."
   },
   {
     "id": "96f8cd11-df98-4fd6-9d4c-6d48dc3a8b51",
@@ -1787,22 +1841,6 @@ module.exports = [
       "advanced-level"
     ],
     "explanation": "https://gist.github.com/PragTob/8f037b6cab4bffca411063aced6a7917"
-  },
-  {
-    "id": "8f2fd21c-3435-4a8e-a1f6-2cc25e0d2acb",
-    "question": "What code is need to generate the following output?```[:a, :b, :c]```",
-    "type": "mc",
-    "choices": {
-      "1": "%i(a b c)",
-      "2": "%S(a, b, c)",
-      "3": "%w(a b c)",
-      "4": "%r(a, b, c)"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
   },
   {
     "id": "965d2b6e-cb9f-4280-8924-0d9385a0bf63",
@@ -4713,6 +4751,45 @@ module.exports = [
       "advanced-level", "NaN"
     ],
     "explanation": ""
+  },
+  {
+    "id": "c7f69a8b-788d-4016-bfb1-549e5fb8769f",
+    "question": "What will the variable `ar` contain after executing the code?```ar = []\n" +
+      "ar << true ? 1 : 2```",
+    "type": "mc",
+    "choices": {
+      "1": "[true]",
+      "2": "[1]",
+      "3": "true",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#<<", "Precedence"
+    ],
+    "explanation": "The statement `ar << true ? 1 : 2` is interpreted as " +
+      "`(ar << true) ? 1 : 2`, due to the operator precedence rules. The " +
+      "`<<` operator has higher precedence than the ternary operator `? :`."
+  },
+
+  {
+    "id": "be2d0da8-6a66-49a5-b137-b2ec47275bf5",
+    "question": "What will the variable `ar` contain after executing the code?```ar = []\n" +
+      "ar << 1 + 2```",
+    "type": "mc",
+    "choices": {
+      "1": "[3]",
+      "2": "[1]",
+      "3": "nil",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Array#<<", "Precedence"
+    ],
+    "explanation": "`1 + 2` is performed first, resulting in `3`. Then, " +
+      "the `<<` operation is performed, which appends this result to the " +
+      "array `ar`. Therefore, `ar` becomes `[3]`."
   },
 
   /*

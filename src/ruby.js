@@ -1,4 +1,174 @@
 module.exports = [
+  // {
+  //   "id": "4869ce08-9c35-45e6-be2f-82e55962fd0e",
+  //   "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
+  //   "choices": {
+  //     "1": "l.call('kuku')",
+  //     "2": "l['kuku']",
+  //     "3": "l.('kuku')",
+  //     "4": "lam.yield 'kuku'"
+  //   },
+  //   "type": "ma",
+  //   "answer": [
+  //     "1",
+  //     "2",
+  //     "3",
+  //     "4"
+  //   ],
+  //   "tags": [
+  //     "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "d882a7ad-ca9b-41f3-9d6a-943b7e83121b",
+  //   "question": "What is valid name for rake file?",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "rakefile",
+  //     "2": "Rakefile",
+  //     "3": "rakefile.rb",
+  //     "4": "Rakefile.rb"
+  //   },
+  //   "answer": ["1", "2", "3", "4"],
+  //   "tags": [
+  //     "rails5", "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "c0709d49-b597-4e05-943b-56f3196b7c45",
+  //   "question": "What ways you can create an array [1, 2, 3]",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "%w<1 2 3>",
+  //     "2": "%w>1 2 3>",
+  //     "3": "%w>1 2 3<",
+  //     "4": "%w<1 2 3<"
+  //   },
+  //   "answer": ["1", "2"],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "6da36ec4-8426-413f-9159-cf9dd076fbcd",
+  //   "question": "Select valid ways to run shell command",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "`echo 'hi'`",
+  //     "2": "%x(echo 'hi')",
+  //     "3": "system(\"echo 'hi'\")",
+  //     "4": "exec(\"echo 'hi'\")"
+  //   },
+  //   "answer": ["1", "2", "3", "4"],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // { TODO: remove useless questions
+  //   "id": "d322ae2f-c889-49f3-bdf0-1afab7c3f782",
+  //   "question": "What will be the output of the following code?\n<code>puts %Q[#{\"ivan\"} \"susanin\"]</code>",
+  //   "type": "mc",
+  //   "choices": {
+  //     "1": "\"ivan \\\"susanin\\\"\"",
+  //     "2": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+  //     "3": "Error",
+  //     "4": "\"ivan susanin\""
+  //   },
+  //   "answer": "1",
+  //   "tags": [
+  //     "-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "b1179406-ad74-4b73-84f4-7a5311716754",
+  //   "question": "What will be the output of the following code?\n<code>puts %q[#{\"ivan\"} \"susanin\"]</code>",
+  //   "type": "mc",
+  //   "choices": {
+  //     "1": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
+  //     "2": "\"ivan \\\"susanin\\\"\"",
+  //     "3": "Error",
+  //     "4": "\"ivan susanin\""
+  //   },
+  //   "answer": "1",
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  {
+    "id": "0840b2a3-0350-4fe6-9073-72af76b23a30",
+    "question": "What will be the output of the following code?\n<code>p \"#{5 <=> 6}#{5 <=> 4}#{5 <=> 5}\"</code>",
+    "choices": {
+      "1": "-110",
+      "2": "655",
+      "3": "545",
+      "4": "1-10"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "4628eb4f-ea50-44c1-aff0-7a6b1a21e0b9",
+    "question": "Which way to call lambda is incorrect?\n<code>l = ->(a, &b){b.call(a)}</code>",
+    "choices": {
+      "1": "l('world') { |who| \"Hello, #{who}!\" }",
+      "2": "l.('world') { |who| \"Hello, #{who}!\" }",
+      "3": "l.call('world') { |who| \"Hello, #{who}!\" }",
+      "4": "l.yield('world') { |who| \"Hello, #{who}!\" }",
+      "5": "l['world'] { |who| \"Hello, #{who}!\" }"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level", "Lambda#call", "lambda"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "fcd6f775-cb44-4915-8a30-56468b17189d",
+    "question": "What is correct ways to create and call lambda?",
+    "choices": {
+      "1": "-> a,b {a+b}[1,2]",
+      "2": "-> |a,b| {a+b}[1,2]",
+      "3": "-> a,b {a+b}(1,2)",
+      "4": "-> (a,b){a+b}(1,2)"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "advanced-level", "lambda"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "c7a2fa20-9138-4da8-8294-cb975022d87d",
+    "question": "What will be the output of the following code?```" +
+      "def bar(*a, &b)\n" +
+      " b.call(a)\n" +
+      "end\n" +
+      "p bar(1, 2) { |x| x * 2 }```",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 2, 1, 2]",
+      "2": "[2, 4]",
+      "3": "2",
+      "4": "4"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Array#*", "Proc#call"
+    ],
+    "explanation": ""
+  },
   {
     "id": "40a89e01-f5a7-4942-b4d1-0c7324a2cb72",
     "question": "What will be the result of the following code?\n<code>42 == Numeric === Numeric == 42</code>",
@@ -131,6 +301,28 @@ module.exports = [
     "explanation": ""
   },
   {
+    "id": "6195f1a8-cc53-4762-9946-6cb831b4db2f",
+    "question": "What will be the output of the following code?```" +
+      "class E2 < StandardError; end\n" +
+      "class ZeroDivisionError < E2; end\n" +
+      "begin\n" +
+      "puts 1 / 0\n" +
+      "rescue E2\n" +
+      "puts 'oops'\n" +
+      "end```",
+    "type": "mc",
+    "choices": {
+      "1": "Error",
+      "2": "\"oops\"",
+      "3": "Infinity"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
     "id": "5418c5ee-6f83-4cab-8b0a-2350900c9746",
     "question": "What is correct manner to check method <code>:foo</code> is defined in class <code>A</code>",
     "type": "mc",
@@ -143,6 +335,86 @@ module.exports = [
     "answer": "1",
     "tags": [
       "intermediate-level", "methods"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "4890726d-4297-4949-808d-8637a0ac1905",
+    "question": "Which gems not contains in standard Ruby installation?",
+    "type": "mc",
+    "choices": {
+      "1": "mail",
+      "2": "zlib",
+      "3": "webrick",
+      "4": "rdoc"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "gem"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "d4a5aabe-1d60-4506-9c37-80cd64588d2b",
+    "question": "What way to run the Interactive Ruby Shell is included in the ruby distribution?",
+    "type": "mc",
+    "choices": {
+      "1": "irb",
+      "2": "pry",
+      "3": "nothing",
+      "4": "both"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "irb"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "0aef3e59-324b-4b2a-a1d7-dcc2d48c106a",
+    "question": "What code returns the symbol `:hello`?",
+    "type": "mc",
+    "choices": {
+      "1": "%s(hello)",
+      "2": "%q(hello)",
+      "3": "%i(hello)",
+      "4": "%w(hello)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "%s"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "8a19a418-fc5b-4f4e-90dd-cd56157896c3",
+    "question": "What will be the output of the following code?\n<code>1 / 3.0 * 3.0</code>",
+    "type": "mc",
+    "choices": {
+      "1": "1",
+      "2": "0.9999999999996",
+      "3": "1.0000000000004",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level", "Float#*", "Float#/"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "631bce01-4426-488d-90aa-4d98069d7a7e",
+    "question": "What returns <code>(1..5).class</code>",
+    "choices": {
+      "1": "Range",
+      "2": "Array",
+      "3": "Enumerator",
+      "4": "Integer"
+    },
+    "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
     ],
     "explanation": ""
   },
@@ -2140,7 +2412,23 @@ module.exports = [
     "tags": [
       "beginner-level", "Array#&", "Array#&&", "Array#||", "Array#|"
     ],
-    "explanation": ""
+    "explanation": "The `&` operator is used for finding the intersection of " +
+      "two arrays, meaning it will return the common elements between the " +
+      "two arrays. Here it will return [2], as 2 is the common element in " +
+      "both arrays.\n" +
+      "The `&&` operator is a logical AND operator. It returns the first " +
+      "value if it can be interpreted as false; otherwise, it returns the " +
+      "second value. Since arrays are always interpreted as true in a " +
+      "boolean context (unless they're `nil`), this would return the second " +
+      "array, [2, 3].\n" +
+      "The `||` operator is a logical OR operator. It returns the first " +
+      "value if it can be interpreted as true; otherwise, it returns the " +
+      "second value. Since arrays are always interpreted as true in a " +
+      "boolean context (unless they're `nil`), this would return the first " +
+      "array, [1, 2].\n" +
+      "The `|` operator is used for finding the union of two arrays, meaning " +
+      "it combines both arrays and removes any duplicates. In this case, it " +
+      "would return [1, 2, 3]."
   },
   {
     "id": "db7fcacd-a818-4e11-a185-ae9914a9ecaf",
@@ -2329,22 +2617,6 @@ module.exports = [
     ],
     "explanation": "http://docs.seattlerb.org/rake/doc/command_line_usage_rdoc.html"
   },
-  // {
-  //   "id": "d882a7ad-ca9b-41f3-9d6a-943b7e83121b",
-  //   "question": "What is valid name for rake file?",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "rakefile",
-  //     "2": "Rakefile",
-  //     "3": "rakefile.rb",
-  //     "4": "Rakefile.rb"
-  //   },
-  //   "answer": ["1", "2", "3", "4"],
-  //   "tags": [
-  //     "rails5", "advanced-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "cdb02dd3-b6ba-47f8-81e1-fdb0da86a724",
     "question": "What is the output of this code?```def foo" +
@@ -2423,9 +2695,21 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#|"
     ],
-    "explanation": ""
+    "explanation": "The `|` operator in Ruby is used for finding the union " +
+      "of two arrays, which means it combines both arrays and removes any " +
+      "duplicates. The operation is left-associative, which means it groups " +
+      "from left to right.\n" +
+      "Therefore, when we evaluate the expression `([1,2] | [1,3]) | [1,4]`, " +
+      "it first combines `[1,2]` and `[1,3]` to get `[1,2,3]`, and then " +
+      "combines this with `[1,4]` to get `[1,2,3,4]`.\n" +
+      "Similarly, for the expression `[1,2] | ([1,3] | [1,4])`, it first " +
+      "combines `[1,3]` and `[1,4]` to get `[1,3,4]`, and then combines this " +
+      "with `[1,2]` to get `[1,2,3,4]`.\n" +
+      "So the output of the code `([1,2] | [1,3]) | [1,4] == [1,2] | ([1,3] | [1,4])` " +
+      "would be `true`, because the left and right hand side of the `==` " +
+      "operator are both equal to `[1,2,3,4]`."
   },
   {
     "id": "a0dd2626-919c-40c3-a688-a33a627ccd15",
@@ -2478,26 +2762,6 @@ module.exports = [
       "they have the same key-value pairs, the result is `true`."
   },
   {
-    "id": "c7a2fa20-9138-4da8-8294-cb975022d87d",
-    "question": "What will be the output of the following code?```" +
-      "def bar(*a, &b)\n" +
-      " b.call(a)\n" +
-      "end\n" +
-      "p bar(1, 2) { |x| x * 2 }```",
-    "type": "mc",
-    "choices": {
-      "1": "[1, 2, 1, 2]",
-      "2": "[2, 4]",
-      "3": "2",
-      "4": "4"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level", "Array#*", "Proc#call"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "d2a3e174-ac6a-461c-bb45-a07461087d58",
     "question": "How to find all gems, containing 'rails'",
     "type": "mc",
@@ -2530,22 +2794,6 @@ module.exports = [
     "explanation": "https://guides.rubygems.org/command-reference/"
   },
   {
-    "id": "4890726d-4297-4949-808d-8637a0ac1905",
-    "question": "Which gems not contains in standard Ruby installation?",
-    "type": "mc",
-    "choices": {
-      "1": "mail",
-      "2": "zlib",
-      "3": "webrick",
-      "4": "rdoc"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "gem"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "7a58f29d-3e60-4279-9b22-d7c9cc3e1a2f",
     "question": "What does this command?\n<code>gem search ^rails</code>",
     "type": "mc",
@@ -2560,22 +2808,6 @@ module.exports = [
       "beginner-level", "gem"
     ],
     "explanation": "https://guides.rubygems.org/command-reference/"
-  },
-  {
-    "id": "d4a5aabe-1d60-4506-9c37-80cd64588d2b",
-    "question": "What way to run the Interactive Ruby Shell is included in the ruby distribution?",
-    "type": "mc",
-    "choices": {
-      "1": "irb",
-      "2": "pry",
-      "3": "nothing",
-      "4": "both"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "irb"
-    ],
-    "explanation": ""
   },
   {
     "id": "a721dede-3e5d-43e6-8482-b61ca7cf9e10",
@@ -2623,44 +2855,6 @@ module.exports = [
       "`E2`, the rescue block will not be executed."
   },
   {
-    "id": "6195f1a8-cc53-4762-9946-6cb831b4db2f",
-    "question": "What will be the output of the following code?```" +
-      "class E2 < StandardError; end\n" +
-      "class ZeroDivisionError < E2; end\n" +
-      "begin\n" +
-      "puts 1 / 0\n" +
-      "rescue E2\n" +
-      "puts 'oops'\n" +
-      "end```",
-    "type": "mc",
-    "choices": {
-      "1": "Error",
-      "2": "\"oops\"",
-      "3": "Infinity"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  // {
-  //   "id": "c0709d49-b597-4e05-943b-56f3196b7c45",
-  //   "question": "What ways you can create an array [1, 2, 3]",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "%w<1 2 3>",
-  //     "2": "%w>1 2 3>",
-  //     "3": "%w>1 2 3<",
-  //     "4": "%w<1 2 3<"
-  //   },
-  //   "answer": ["1", "2"],
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
-  {
     "id": "54731721-5ea4-43bf-8179-42cf90920672",
     "question": "What will return the following code?```(\"\" << 48) + 48.chr)```",
     "type": "mc",
@@ -2707,22 +2901,6 @@ module.exports = [
       "for string interpolation. The four empty arrays inside the string " +
       "interpolation are concatenated, resulting in the string `\"[][][][]\"`."
   },
-  // {
-  //   "id": "6da36ec4-8426-413f-9159-cf9dd076fbcd",
-  //   "question": "Select valid ways to run shell command",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "`echo 'hi'`",
-  //     "2": "%x(echo 'hi')",
-  //     "3": "system(\"echo 'hi'\")",
-  //     "4": "exec(\"echo 'hi'\")"
-  //   },
-  //   "answer": ["1", "2", "3", "4"],
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "95aef357-28a5-44af-8338-b1db5b7aa2b6",
     "question": "What will be the output of the following code?```%s[hello]```",
@@ -2738,22 +2916,6 @@ module.exports = [
       "intermediate-level", "%s"
     ],
     "explanation": "The `%s` notation is used to create a symbol."
-  },
-  {
-    "id": "0aef3e59-324b-4b2a-a1d7-dcc2d48c106a",
-    "question": "What code returns the symbol `:hello`?",
-    "type": "mc",
-    "choices": {
-      "1": "%s(hello)",
-      "2": "%q(hello)",
-      "3": "%i(hello)",
-      "4": "%w(hello)"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "%s"
-    ],
-    "explanation": ""
   },
   {
     "id": "fed7c542-8ab3-40f3-939c-4fe050cd850a",
@@ -2851,38 +3013,6 @@ module.exports = [
       "delimiters for the string. Since both `%q[satoshi]` and `%q%satoshi%` " +
       "evaluate to the string `'satoshi'`, the comparison between them is `true`."
   },
-  // { TODO: remove useless questions
-  //   "id": "d322ae2f-c889-49f3-bdf0-1afab7c3f782",
-  //   "question": "What will be the output of the following code?\n<code>puts %Q[#{\"ivan\"} \"susanin\"]</code>",
-  //   "type": "mc",
-  //   "choices": {
-  //     "1": "\"ivan \\\"susanin\\\"\"",
-  //     "2": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
-  //     "3": "Error",
-  //     "4": "\"ivan susanin\""
-  //   },
-  //   "answer": "1",
-  //   "tags": [
-  //     "-level"
-  //   ],
-  //   "explanation": ""
-  // },
-  // {
-  //   "id": "b1179406-ad74-4b73-84f4-7a5311716754",
-  //   "question": "What will be the output of the following code?\n<code>puts %q[#{\"ivan\"} \"susanin\"]</code>",
-  //   "type": "mc",
-  //   "choices": {
-  //     "1": "\"\\#{\\\"ivan\\\"} \\\"susanin\\\"\"",
-  //     "2": "\"ivan \\\"susanin\\\"\"",
-  //     "3": "Error",
-  //     "4": "\"ivan susanin\""
-  //   },
-  //   "answer": "1",
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "f4e0566c-fc82-4221-b07b-258dbba10c58",
     "question": "What will be the output of the following code?\n<code>p %i{ein zwei drei}</code>",
@@ -3002,21 +3132,6 @@ module.exports = [
     "explanation": "The expression `1 / 0` in Ruby results in a " +
       "`ZeroDivisionError` exception being raised."
   },
-  // { TODO: remove because of duplicate of 18fc2599-fe12-4000-b8c8-b4c9d7dca04e
-  //   "id": "cf2ac631-a3ea-40d9-a056-234c6fae6002",
-  //   "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 > 2 ** 10 ** 10</code>",
-  //   "type": "mc",
-  //   "choices": {
-  //     "1": "false",
-  //     "2": "true",
-  //     "3": "error"
-  //   },
-  //   "answer": "1",
-  //   "tags": [
-  //     "intermediate-level", "Infinity"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "f2d4ed73-cc45-48e4-a0e0-667284f7b509",
     "question": "What will be the output of the following code?\n<code>10 ** 10 ** 10 == Float::INFINITY</code>",
@@ -3180,22 +3295,6 @@ module.exports = [
       "division, and the result is rounded down to the nearest " +
       "integer. In this case, the result of `1 / 3` is `0`. Then, " +
       "when you multiply `0` by `3`, the final result is still `0`."
-  },
-  {
-    "id": "8a19a418-fc5b-4f4e-90dd-cd56157896c3",
-    "question": "What will be the output of the following code?\n<code>1 / 3.0 * 3.0</code>",
-    "type": "mc",
-    "choices": {
-      "1": "1",
-      "2": "0.9999999999996",
-      "3": "1.0000000000004",
-      "4": "Error"
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level", "Float#*", "Float#/"
-    ],
-    "explanation": ""
   },
   {
     "id": "7b24f956-542e-4e0e-a173-7823a3776d52",
@@ -3473,60 +3572,6 @@ module.exports = [
       "variables, the extra variables will be set to `nil`."
   },
   {
-    "id": "4628eb4f-ea50-44c1-aff0-7a6b1a21e0b9",
-    "question": "Which way to call lambda is incorrect?\n<code>l = ->(a, &b){b.call(a)}</code>",
-    "choices": {
-      "1": "l('world') { |who| \"Hello, #{who}!\" }",
-      "2": "l.('world') { |who| \"Hello, #{who}!\" }",
-      "3": "l.call('world') { |who| \"Hello, #{who}!\" }",
-      "4": "l.yield('world') { |who| \"Hello, #{who}!\" }",
-      "5": "l['world'] { |who| \"Hello, #{who}!\" }"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "advanced-level", "Lambda#call", "lambda"
-    ],
-    "explanation": ""
-  },
-  // {
-  //   "id": "4869ce08-9c35-45e6-be2f-82e55962fd0e",
-  //   "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
-  //   "choices": {
-  //     "1": "l.call('kuku')",
-  //     "2": "l['kuku']",
-  //     "3": "l.('kuku')",
-  //     "4": "lam.yield 'kuku'"
-  //   },
-  //   "type": "ma",
-  //   "answer": [
-  //     "1",
-  //     "2",
-  //     "3",
-  //     "4"
-  //   ],
-  //   "tags": [
-  //     "advanced-level"
-  //   ],
-  //   "explanation": ""
-  // },
-  {
-    "id": "fcd6f775-cb44-4915-8a30-56468b17189d",
-    "question": "What is correct ways to create and call lambda?",
-    "choices": {
-      "1": "-> a,b {a+b}[1,2]",
-      "2": "-> |a,b| {a+b}[1,2]",
-      "3": "-> a,b {a+b}(1,2)",
-      "4": "-> (a,b){a+b}(1,2)"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "advanced-level", "lambda"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "485ef49a-1262-4887-a47f-0f8bdd55c301",
     "question": "Is code correct?\n<code>l = -> a,b,c {a+b+c}\np l[1,2,3]</code>",
     "choices": {
@@ -3560,38 +3605,6 @@ module.exports = [
     "explanation": "The code `(1..3).each` returns an Enumerator object. " +
       "This is because calling `each` without a block on a Range object " +
       "returns an Enumerator which can be used to iterate over the range."
-  },
-  {
-    "id": "631bce01-4426-488d-90aa-4d98069d7a7e",
-    "question": "What returns <code>(1..5).class</code>",
-    "choices": {
-      "1": "Range",
-      "2": "Array",
-      "3": "Enumerator",
-      "4": "Integer"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "0840b2a3-0350-4fe6-9073-72af76b23a30",
-    "question": "What will be the output of the following code?\n<code>p \"#{5 <=> 6}#{5 <=> 4}#{5 <=> 5}\"</code>",
-    "choices": {
-      "1": "-110",
-      "2": "655",
-      "3": "545",
-      "4": "1-10"
-    },
-    "type": "mc",
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
   },
   {
     "id": "2ed4843b-dcee-4f32-b3db-62a368781225",
@@ -4837,5 +4850,8 @@ module.exports = [
   "explanation": ""
 },
 
+
 */
+
+
 ]

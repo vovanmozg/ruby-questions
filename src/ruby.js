@@ -131,6 +131,22 @@ module.exports = [
     "explanation": ""
   },
   {
+    "id": "5418c5ee-6f83-4cab-8b0a-2350900c9746",
+    "question": "What is correct manner to check method <code>:foo</code> is defined in class <code>A</code>",
+    "type": "mc",
+    "choices": {
+      "1": "class.method_defined?(:foo)",
+      "2": "method_defined?(:foo, A)",
+      "3": "method_defined?(A, :foo)",
+      "4": "foo.method_defined?(A)"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "methods"
+    ],
+    "explanation": ""
+  },
+  {
     "id": "f4ffa8c6-d986-44c6-8987-c7e2e6a745b3",
     "question": "What will return the following code?\n<code>[{ a: 1 }, { a: 2 }].map(&->(x) { x[:a] })</code>",
     "type": "mc",
@@ -1622,23 +1638,26 @@ module.exports = [
   },
   {
     "id": "96f8cd11-df98-4fd6-9d4c-6d48dc3a8b51",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" and \"world\")</code>",
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = \"hello\" and \"world\"</code>",
     "type": "mc",
     "choices": {
-      "1": "world",
-      "2": "hello",
+      "1": "hello",
+      "2": "world",
       "3": "hello world",
       "4": "Error"
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "and", "Precedence order"
     ],
-    "explanation": ""
+    "explanation": "The `and` keyword has lower precedence than `=` " +
+      "(assignment operator), so the assignment `foo = \"hello\"` is " +
+      "performed first, then `\"world\"` is evaluated but its result is not " +
+      "stored anywhere."
   },
   {
     "id": "45ea1552-e8b7-48cf-9de7-653b6298f0cb",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" && \"world\")</code>",
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = \"hello\" && \"world\"</code>",
     "type": "mc",
     "choices": {
       "1": "world",
@@ -1648,13 +1667,15 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "beginner-level", "&&", "Precedence order"
     ],
-    "explanation": ""
-  },
+    "explanation": "The `&&` operator is a boolean operator. It returns the " +
+      "first operand if it is false or nil, otherwise, it returns the second " +
+      "operand."
+    },
   {
     "id": "fa56538f-18ae-47a2-bb4f-49837c1cba85",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" | \"world\")</code>",
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = \"hello\" | \"world\"</code>",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -1666,11 +1687,15 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "Trying to use the `|` operator between two strings, like " +
+      "`\"hello\" | \"world\"`, is incorrect and will result in an error. \n" +
+      "This is because the pipe (`|`) operator is not defined for string " +
+      "concatenation or logical OR in Ruby. It is mainly used for performing " +
+      "bitwise OR operations on numbers and union operations on arrays."
   },
   {
     "id": "63407b84-2327-48f5-8205-682e2ee8ea98",
-    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = (\"hello\" & \"world\")</code>",
+    "question": "What will be the value of the variable <code>foo</code>?\n<code>foo = \"hello\" & \"world\"</code>",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -1682,7 +1707,9 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The `&` operator is not defined for String objects. " +
+      "It's mainly used for performing bitwise AND operations on numbers or " +
+      "set intersection operations on arrays."
   },
   {
     "id": "b2e92db2-2870-42fb-ba8e-c32e4d36a8e6",
@@ -1695,9 +1722,11 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "||"
     ],
-    "explanation": ""
+    "explanation": "The `||` operator is a logical OR operator. It returns " +
+      "`true` if either or both of its operands (the values it's working " +
+      "with) are `true`, and `false` only if both operands are `false`."
   },
   {
     "id": "99532661-1847-466b-a69a-cf7532597007",
@@ -1903,22 +1932,6 @@ module.exports = [
       "which equals `3`."
   },
   {
-    "id": "5418c5ee-6f83-4cab-8b0a-2350900c9746",
-    "question": "What is correct manner to check method <code>:foo</code> is defined in class <code>A</code>\n",
-    "type": "mc",
-    "choices": {
-      "1": "class.method_defined?(:foo)",
-      "2": "method_defined?(:foo, A)",
-      "3": "method_defined?(A, :foo)",
-      "4": "foo.method_defined?(A)"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level", "methods"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "5350f1f2-7421-4aa7-8f88-025a7c630c54",
     "question": "What will happen if you run the program with the key <code>-w</code>?\n",
     "type": "mc",
@@ -1970,9 +1983,12 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "-level"
+      "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The code will raise a `TypeError` because the `reduce` " +
+      "function is expecting the block to return the accumulator for the " +
+      "next iteration. However, the block `a[b] = b` returns the value " +
+      "assigned (i.e., `b`), not the accumulator (`a`)."
   },
   {
     "id": "fa55e5a7-9939-45a9-863c-05ea5e6e4943",
@@ -2095,9 +2111,20 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "||"
     ],
-    "explanation": ""
+    "explanation": "1. \"[1, 2] || [2, 3]\": The `||` operator returns the " +
+      "first \"truthy\" value it encounters. Because `[1, 2]` is truthy " +
+      "(i.e., it's a non-empty array), it will return this value.\n" +
+      "2. \"[1, 2] && [2, 3]\": The `&&` operator returns the second value " +
+      "if the first one is truthy. So it will return `[2, 3]`.\n" +
+      "3. \"[1, 2] and [2, 3]\": The `and` operator is similar to `&&` but " +
+      "has lower precedence. However, it doesn't affect the result in this " +
+      "case, as there are no other operations to compete with. So it will " +
+      "return `[2, 3]`.\n" +
+      "4. \"[1, 2] | [2, 3]\": The `|` operator is the set union operator, " +
+      "which combines two arrays and removes duplicates. So it will return " +
+      "`[1, 2, 3]`."
   },
   {
     "id": "a87c174e-7ecd-4b93-a134-bd34b8a1b006",
@@ -4765,7 +4792,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "Array#<<", "Precedence"
+      "intermediate-level", "Array#<<", "Precedence order"
     ],
     "explanation": "The statement `ar << true ? 1 : 2` is interpreted as " +
       "`(ar << true) ? 1 : 2`, due to the operator precedence rules. The " +
@@ -4785,7 +4812,7 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "intermediate-level", "Array#<<", "Precedence"
+      "intermediate-level", "Array#<<", "Precedence order"
     ],
     "explanation": "`1 + 2` is performed first, resulting in `3`. Then, " +
       "the `<<` operation is performed, which appends this result to the " +

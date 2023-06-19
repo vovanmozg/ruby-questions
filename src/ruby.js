@@ -1,5 +1,24 @@
 module.exports = [
   // {
+  //   "id": "3e1fa719-5e45-471d-abee-271dd286e04f",
+  //   "question": "What methods are in String?",
+  //   "choices": {
+  //     "1": "each_line",
+  //     "2": "each_byte",
+  //     "3": "each",
+  //     "4": "forEach"
+  //   },
+  //   "type": "ma",
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
   //   "id": "4869ce08-9c35-45e6-be2f-82e55962fd0e",
   //   "question": "Select correct ways to call lambda\n<code>l = lambda { |a| puts a }</code>",
   //   "choices": {
@@ -95,6 +114,22 @@ module.exports = [
   //     "4": "\"ivan susanin\""
   //   },
   //   "answer": "1",
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "d072ea00-5593-478e-8f39-adde2c69e901",
+  //   "question": "Choose the right way to get a resulting string \"Hello world!\"",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "\"Hello\" + \"world\" + \"!\"",
+  //     "2": "\"Hello\".concat(\" world\", \"!\")",
+  //     "3": "\"Hello\" << \"world\" << \"!\"",
+  //     "4": "concat(\"Hello\", \" world\", \"!\")"
+  //   },
+  //   "answer": ["1", "2", "3"],
   //   "tags": [
   //     "intermediate-level"
   //   ],
@@ -412,6 +447,22 @@ module.exports = [
       "4": "Integer"
     },
     "type": "mc",
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "729b2014-c568-4039-8843-9164c37989d5",
+    "question": "Which method returns Integer ordinal of the first character of the string?",
+    "type": "mc",
+    "choices": {
+      "1": "ord",
+      "2": "code",
+      "3": "enc",
+      "4": "mime"
+    },
     "answer": "1",
     "tags": [
       "intermediate-level"
@@ -1576,22 +1627,6 @@ module.exports = [
       "other languages. In your example, `/k/g` is an incorrect syntax for " +
       "Ruby regular expressions."
   },
-  // {
-  //   "id": "d072ea00-5593-478e-8f39-adde2c69e901",
-  //   "question": "Choose the right way to get a resulting string \"Hello world!\"",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "\"Hello\" + \"world\" + \"!\"",
-  //     "2": "\"Hello\".concat(\" world\", \"!\")",
-  //     "3": "\"Hello\" << \"world\" << \"!\"",
-  //     "4": "concat(\"Hello\", \" world\", \"!\")"
-  //   },
-  //   "answer": ["1", "2", "3"],
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "d0d64e0b-f64d-419f-bb75-e18d919e5536",
     "question": "What will be the output of the following code?```text = \"hello\"\n" +
@@ -3634,9 +3669,13 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "advanced-level"
+      "advanced-level", "Enumerator#next", "Integer#next"
     ],
-    "explanation": ""
+    "explanation": "`[3,2,1].to_enum` turns the array `[3,2,1]` into an Enumerator object.\n" +
+      "The first `.next` call will return the first item in the Enumerator, which is `3`.\n" +
+      "`3.next` is `4`.\n" +
+      "`4.next` is `5`.\n" +
+      "`5.next` is `6`."
   },
   {
     "id": "d0b391c9-426d-4844-b5c2-629f145075e4",
@@ -3650,9 +3689,18 @@ module.exports = [
     "type": "mc",
     "answer": "1",
     "tags": [
-      "intermediate-level"
+      "intermediate-level", "Array#inject", "Range#to_a", "Integer#+"
     ],
-    "explanation": ""
+    "explanation": "The code `(1..5).to_a.inject(:+)` will return the sum of " +
+      "the numbers from 1 to 5.\n" +
+      "Here is a breakdown of what this code does:\n" +
+      "- `(1..5).to_a` will convert the range `1..5` into an array, " +
+      "resulting in `[1,2,3,4,5]`.\n" +
+      "- `.inject(:+)` is a method that is called on an array. It will " +
+      "combine all elements of the array by applying a binary operation that " +
+      "is specified by a block or a symbol. In this case, the symbol `:+` is " +
+      "provided, which stands for addition. So this operation will sum up " +
+      "all elements of the array."
   },
   {
     "id": "ad97532e-4c31-4f4d-a780-432736eb7443",
@@ -3664,45 +3712,22 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level"
+      "beginner-level", "Hash"
     ],
-    "explanation": ""
+    "explanation": "The preferred way to write a hash in Ruby depends on the " +
+      "version you are using and on the style guide you are following.\n" +
+      "\n" +
+      "For Ruby 1.9 and later, the new hash syntax `{a: 'b'}` is preferred " +
+      "as it is more concise and looks cleaner. It was introduced in Ruby " +
+      "1.9 to make the language more elegant. This syntax is also " +
+      "recommended by the popular Ruby style guide, RuboCop.\n" +
+      "\n" +
+      "However, in some cases, like when you have non-symbol keys, you have " +
+      "to use the hashrocket syntax `{ :a => 'b' }`.\n" +
+      "\n" +
+      "So, if you're using Ruby 1.9 or later and dealing with symbol keys, " +
+      "choice \"1\" `{a: 'b'}` would be the preferred way."
   },
-  {
-    "id": "729b2014-c568-4039-8843-9164c37989d5",
-    "question": "Which method returns Integer ordinal of the first character of the string?",
-    "type": "mc",
-    "choices": {
-      "1": "ord",
-      "2": "code",
-      "3": "enc",
-      "4": "mime"
-    },
-    "answer": "1",
-    "tags": [
-      "intermediate-level"
-    ],
-    "explanation": ""
-  },
-  // {
-  //   "id": "3e1fa719-5e45-471d-abee-271dd286e04f",
-  //   "question": "What methods are in String?",
-  //   "choices": {
-  //     "1": "each_line",
-  //     "2": "each_byte",
-  //     "3": "each",
-  //     "4": "forEach"
-  //   },
-  //   "type": "ma",
-  //   "answer": [
-  //     "1",
-  //     "2"
-  //   ],
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "9a228b6b-aab4-465a-9023-fca0eb4148bc",
     "question": "What will be the output of the following code?\n<code>p [1,2,3].to_s</code>",
@@ -3717,7 +3742,12 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The output of the code `[1,2,3].to_s` in Ruby will be `\"[1, 2, 3]\"`.\n" +
+      "\n" +
+      "In Ruby, calling `to_s` on an array will convert the array to a string " +
+      "representation. The resulting string includes the square brackets " +
+      "denoting the array, as well as the elements of the array. The elements " +
+      "are separated by commas and a space for readability."
   },
   {
     "id": "4d968b34-0f38-40b5-8c0d-4eb4424ac45d",
@@ -3733,7 +3763,16 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "You can create a string from an array using the `join` " +
+      "method, which concatenates the array elements into a single string.\n" +
+      "`ary.to_s`: This will convert the array into a string representation " +
+      "which includes square brackets and commas, so it's not the right " +
+      "choice if you want to achieve 'abcde' from ['a', 'b', 'c', 'd', 'e'].\n" +
+      "`ary.implode`: This would not work because `implode` is not a valid " +
+      "method in Ruby. In PHP, `implode` is similar to `join` in Ruby.\n" +
+      "`ary.concat`: The `concat` method is used to append the elements of " +
+      "another array to an existing array. It does not return a string, so " +
+      "this choice is incorrect.\n"
   },
   {
     "id": "b232b189-b81a-4d1a-9960-8040ccc074fe",
@@ -3749,7 +3788,20 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": "https://stackoverflow.com/questions/6259314/"
+    "explanation": "The output of the code will be `0`. Here's why:\n" +
+      "In this code, you're using `each` to iterate over the array `[1,2,3]`," +
+      " and for each iteration you're assigning the current array element to " +
+      "the block variable `i` and then doubling it with `i += i`. However, " +
+      "this `i` is local to the block and does not affect the outer `i` which " +
+      "was initially set to `0`.\n" +
+      "So when you print `i` at the end, it is still `0` because the outer " +
+      "`i` was never changed. The changes were only made to the block-local " +
+      "`i`.\n" +
+      "Please note that this can be a common source of confusion in Ruby. " +
+      "Even though the variable `i` is defined outside of the block, the " +
+      "block gets its own local scope and the `i` inside the block does not " +
+      "overwrite the `i` outside of the block.\n" +
+      "https://stackoverflow.com/questions/6259314/"
   },
   {
     "id": "5b0e5f85-63a8-4aeb-9160-1690649d469b",
@@ -3765,7 +3817,8 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "This code is incorrect. Block parameters cannot be " +
+      "instance variables. You'll get a syntax error if you try to run it."
   },
   {
     "id": "82773ec8-f6a6-48bf-bace-ad2b088bc697",
@@ -3781,7 +3834,12 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "Sorted, order is insertion order\n" +
+      "As of Ruby 1.9, the order in which key-value pairs are inserted into " +
+      "a Hash is preserved when you iterate over that Hash. This means that " +
+      "Hashes have a deterministic order and can be considered ordered " +
+      "collections. This wasn't always the case in older versions of Ruby " +
+      "(prior to 1.9), where Hashes were unordered."
   },
   {
     "id": "101abdff-ea1f-47b7-ad62-f5ee77910efa",

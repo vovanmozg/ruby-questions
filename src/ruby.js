@@ -3855,7 +3855,10 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "The `ancestors` method returns a list of modules " +
+      "included in a class (including self). `BasicObject` is the parent " +
+      "class of all classes in Ruby. It's the top of the Ruby class " +
+      "hierarchy, so its ancestors array only includes `BasicObject` itself."
   },
   {
     "id": "93beb93c-486d-4bef-a042-20c3db01bfd5",

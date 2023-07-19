@@ -4872,7 +4872,6 @@ module.exports = [
       "`(ar << true) ? 1 : 2`, due to the operator precedence rules. The " +
       "`<<` operator has higher precedence than the ternary operator `? :`."
   },
-
   {
     "id": "be2d0da8-6a66-49a5-b137-b2ec47275bf5",
     "question": "What will the variable `ar` contain after executing the code?```ar = []\n" +
@@ -4892,6 +4891,22 @@ module.exports = [
       "the `<<` operation is performed, which appends this result to the " +
       "array `ar`. Therefore, `ar` becomes `[3]`."
   },
+  {
+    "id": "d6e5227c-0034-4bbd-8289-e77772709eb0",
+    "question": "What will be the output of the following code?```[] | [1, 2, 1] == [1, 2, 1].uniq```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "Precedence order", "Array#uniq", "Array#|"
+    ],
+    "explanation": "1. `[] | [1, 2, 1]` gives `[1, 2]`.\n" +
+      "2. `[1, 2, 1].uniq` also results in `[1, 2]`.\n" +
+      "https://ruby-doc.org/core-3.0.0/Array.html#method-i-7C"
+  },
 
   /*
 {
@@ -4910,9 +4925,6 @@ module.exports = [
   ],
   "explanation": ""
 },
-
-
 */
-
 
 ]

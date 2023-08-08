@@ -135,6 +135,44 @@ module.exports = [
   //   ],
   //   "explanation": ""
   // },
+  // {
+  //   "id": "3c8a737e-a48b-4ff9-bdfd-04405877146c",
+  //   "question": "It what cases a.object_id == b.object_id will return true",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "b = (a = 42).dup",
+  //     "2": "b = (a = :red).dup",
+  //     "3": "b = (a = { x: 42 }).dup",
+  //     "4": "b = (a = 'red').dup"
+  //   },
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "advanced-level"
+  //   ],
+  //   "explanation": ""
+  // },
+  // {
+  //   "id": "ff406878-3437-4940-8bed-435c32a8ded6",
+  //   "question": "What the right way to get 'buzz' string from array without array modify?\n<code>ary = ['foo', 'bar', 'buzz']</code>",
+  //   "type": "ma",
+  //   "choices": {
+  //     "1": "ary.last",
+  //     "2": "ary[-1]",
+  //     "3": "ary[3]",
+  //     "4": "ary.shift"
+  //   },
+  //   "answer": [
+  //     "1",
+  //     "2"
+  //   ],
+  //   "tags": [
+  //     "intermediate-level"
+  //   ],
+  //   "explanation": ""
+  // },
   {
     "id": "0840b2a3-0350-4fe6-9073-72af76b23a30",
     "question": "What will be the output of the following code?\n<code>p \"#{5 <=> 6}#{5 <=> 4}#{5 <=> 5}\"</code>",
@@ -232,9 +270,10 @@ module.exports = [
     },
     "answer": "1",
     "tags": [
-      "beginner-level", "&"
+      "intermediate-level", "&"
     ],
-    "explanation": ""
+    "explanation": "The `&` operator, when used with boolean values (`true` and `false`), acts as a logical AND. " +
+      "Since `0` is considered a truthy value (only `nil` and `false` are falsy), `true & 0` returns `true`."
   },
   {
     "id": "0edf76b1-0b46-4e8b-af1d-804be041ba30",
@@ -466,6 +505,74 @@ module.exports = [
     "answer": "1",
     "tags": [
       "intermediate-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "79dd3e8c-65e6-4c03-97e4-90f046988baf",
+    "question": "What will be the output of the following code?\n<code>p ?с</code>",
+    "type": "mc",
+    "choices": {
+      "1": "\"с\"",
+      "2": "Error",
+      "3": "99",
+      "4": "true"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "2ed4843b-dcee-4f32-b3db-62a368781225",
+    "question": "What returns <code>loop.size</code>",
+    "choices": {
+      "1": "Infinity",
+      "2": "Error",
+      "3": "0",
+      "4": "Enumerator"
+    },
+    "type": "",
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "c0b0b2f1-3b1f-4b0f-9b0f-3b3b0f2b0b0b",
+    "question": "What will return the following code?" +
+      "```def a(x); yield x; end\n" +
+      "a(3.14, &:to_i)```",
+    "type": "mc",
+    "choices": {
+      "1": "3",
+      "2": "3.14",
+      "3": "SyntaxError",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "blocks", "yield", "Proc"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "c36096cf-a75e-4761-ac4c-0d1f8e8ee8d0",
+    "question": "What will return the following code?" +
+      "```def a(x); yield x; end\n" +
+      "a(&:to_i, 3.14)```",
+    "type": "mc",
+    "choices": {
+      "1": "SyntaxError",
+      "2": "3",
+      "3": "3.14",
+      "4": "nil"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level", "blocks", "yield", "Proc"
     ],
     "explanation": ""
   },
@@ -3642,22 +3749,6 @@ module.exports = [
       "returns an Enumerator which can be used to iterate over the range."
   },
   {
-    "id": "2ed4843b-dcee-4f32-b3db-62a368781225",
-    "question": "What returns <code>loop.size</code>",
-    "choices": {
-      "1": "Infinity",
-      "2": "Error",
-      "3": "0",
-      "4": "Enumerator"
-    },
-    "type": "",
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "3a1f9077-831b-4f93-a47a-3ac5e5cf21c0",
     "question": "What returns this code?\n<code>[3,2,1].to_enum.next.next.next.next</code>",
     "choices": {
@@ -3874,7 +3965,9 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "The `instance_methods` method returns an array of symbols representing the names of the public " +
+      "and protected instance methods in the receiver. This typically would be used on a class to get instance " +
+      "methods defined in that class and its superclasses."
   },
   {
     "id": "dbdf557f-3b33-436e-a4a4-17d876538c32",
@@ -3890,7 +3983,7 @@ module.exports = [
     "tags": [
       "intermediate-level"
     ],
-    "explanation": ""
+    "explanation": "The `String` class does not have an `each` method defined for it."
   },
   {
     "id": "978ff693-cebb-44c1-b3f6-a6831122a025",
@@ -3906,27 +3999,11 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
-  },
-  {
-    "id": "79dd3e8c-65e6-4c03-97e4-90f046988baf",
-    "question": "What will be the output of the following code?\n<code>p ?с</code>",
-    "type": "mc",
-    "choices": {
-      "1": "\"с\"",
-      "2": "Error",
-      "3": "99",
-      "4": "true"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level"
-    ],
-    "explanation": ""
+    "explanation": "In the given code, `'ruby'[1]` accesses the character at index 1 of the string `'ruby'`"
   },
   {
     "id": "d38defe3-65bc-4646-87ca-fa92d86be3dd",
-    "question": "p ->(_){->(){_*_}}[2][]",
+    "question": "What will return the following code `p ->(_){->(){_*_}}[2][]`?",
     "type": "mc",
     "choices": {
       "1": "4",
@@ -3938,11 +4015,15 @@ module.exports = [
     "tags": [
       "#advanced-level"
     ],
-    "explanation": ""
+    "explanation": "1. `->(_){->(){_*_}}` is a lambda (anonymous function) that takes one argument `_`.\n" +
+      "2. When this lambda is called, it returns another lambda `->(){_*_}` that doesn't take any arguments.\n" +
+      "3. This inner lambda multiplies the argument of the outer lambda by itself (`_*_`).\n" +
+      "4. The outer lambda is called with the argument `2` using `[2]`.\n" +
+      "5. The returned inner lambda (which now effectively represents the square function for the number 2) is immediately called using `[]`."
   },
   {
     "id": "55bb7b2f-ec26-4402-b7d4-4e69b0afc615",
-    "question": "[1,2,3].map{|_| ->(_){->(_){_*_}[_]}[_]}",
+    "question": "What will return the code `[1,2,3].map{|_| ->(_){->(_){_*_}[_]}[_]}`",
     "type": "mc",
     "choices": {
       "1": "[1, 4, 9]",
@@ -3954,7 +4035,11 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "1. The array `[1,2,3]` is being mapped over. So for each element in the array, the code block will execute.\n" +
+      "2. Inside the block, `|_|` receives each element of the array (1, then 2, then 3).\n" +
+      "3. The lambda `->(_){->(_){_*_}[_]}` is then called with the element as its argument.\n" +
+      "4. This lambda, when called with an argument, returns another lambda `->(_){_*_}` that takes an argument and returns the square of that argument.\n" +
+      "5. The inner lambda is then immediately invoked with the same element from the array."
   },
   {
     "id": "b28098b2-dc75-492a-a42b-67304b73252a",
@@ -3969,46 +4054,9 @@ module.exports = [
       "ruby",
       "intermediate-level"
     ],
-    "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
+    "explanation": "Operators `and` and `&&` have different priority. Operator `and` priority lower than `=`, and " +
+      "operator `&&` has higher. The code from the question can be written like this \n (x = true) and false \ny = (true && false)"
   },
-  // {
-  //   "id": "3c8a737e-a48b-4ff9-bdfd-04405877146c",
-  //   "question": "It what cases a.object_id == b.object_id will return true",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "b = (a = 42).dup",
-  //     "2": "b = (a = :red).dup",
-  //     "3": "b = (a = { x: 42 }).dup",
-  //     "4": "b = (a = 'red').dup"
-  //   },
-  //   "answer": [
-  //     "1",
-  //     "2"
-  //   ],
-  //   "tags": [
-  //     "advanced-level"
-  //   ],
-  //   "explanation": ""
-  // },
-  // {
-  //   "id": "ff406878-3437-4940-8bed-435c32a8ded6",
-  //   "question": "What the right way to get 'buzz' string from array without array modify?\n<code>ary = ['foo', 'bar', 'buzz']</code>",
-  //   "type": "ma",
-  //   "choices": {
-  //     "1": "ary.last",
-  //     "2": "ary[-1]",
-  //     "3": "ary[3]",
-  //     "4": "ary.shift"
-  //   },
-  //   "answer": [
-  //     "1",
-  //     "2"
-  //   ],
-  //   "tags": [
-  //     "intermediate-level"
-  //   ],
-  //   "explanation": ""
-  // },
   {
     "id": "386baf3d-2882-48be-b71b-e84086ea7371",
     "question": "Can ary contain different types of variables\n<code>ary = [-3, :albert, 'einstein', Object.new]</code>",
@@ -4021,7 +4069,8 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": ""
+    "explanation": "Arrays (`ary` in this case) can contain elements of different types. Ruby is a dynamically " +
+      "typed language, which means that variables do not have a fixed type, and an array can hold elements of any type."
   },
   {
     "id": "3a48e509-5b2e-41c6-bc7d-2b38e610a4d5",
@@ -4037,7 +4086,8 @@ module.exports = [
     "tags": [
       "beginner-level"
     ],
-    "explanation": "The code will iterate through each element of the array [1, 2, 3], and for each element that is equal to 1, it will replace it with the string 'first'. The result will be the new array ['first', 2, 3]."
+    "explanation": "The code will iterate through each element of the array [1, 2, 3], and for each element that is " +
+      "equal to 1, it will replace it with the string 'first'. The result will be the new array ['first', 2, 3]."
   },
   {
     "id": "ce97b63c-7e0e-4b74-8d70-53c7cad5dd83",
@@ -4072,42 +4122,6 @@ module.exports = [
     "explanation": "A class variable is declared using @@ at the beginning of the variable name and is shared among all instances of a class, while an instance variable is declared using @ at the beginning of the variable name and is unique to each instance of a class. Instance variables are accessible from instance methods of a class, while class variables are accessible from class methods and class level only."
   },
   {
-    "id": "c0b0b2f1-3b1f-4b0f-9b0f-3b3b0f2b0b0b",
-    "question": "What will return the following code?" +
-      "```def a(x); yield x; end\n" +
-      "a(3.14, &:to_i)```",
-    "type": "mc",
-    "choices": {
-      "1": "3",
-      "2": "3.14",
-      "3": "SyntaxError",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "blocks", "yield", "Proc"
-    ],
-    "explanation": ""
-  },
-  {
-    "id": "c36096cf-a75e-4761-ac4c-0d1f8e8ee8d0",
-    "question": "What will return the following code?" +
-      "```def a(x); yield x; end\n" +
-      "a(&:to_i, 3.14)```",
-    "type": "mc",
-    "choices": {
-      "1": "SyntaxError",
-      "2": "3",
-      "3": "3.14",
-      "4": "nil"
-    },
-    "answer": "1",
-    "tags": [
-      "advanced-level", "blocks", "yield", "Proc"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "b6a99612-2567-43d1-a0ab-2fa9fa2a7b23",
     "question": "What will return the following code?" +
       "```def foo(&b1, &b2); b1.call + b2.call; end\n" +
@@ -4123,7 +4137,7 @@ module.exports = [
     "tags": [
       "advanced-level", "blocks", "yield", "Proc"
     ],
-    "explanation": ""
+    "explanation": "Ruby methods cannot accept multiple block parameters"
   },
   {
     "id": "194b274d-ffda-4189-928d-08078d2006ce",

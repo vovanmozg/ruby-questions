@@ -4921,6 +4921,23 @@ module.exports = [
       "2. `[1, 2, 1].uniq` also results in `[1, 2]`.\n" +
       "https://ruby-doc.org/core-3.0.0/Array.html#method-i-7C"
   },
+  {
+    "id": "da609320-d7fd-4baf-ad37-698c78fe591a",
+    "question": "What will be the value of the variable `str`?```" +
+      "str = '123'.freeze and str += '4'```",
+    "type": "mc",
+    "choices": {
+      "1": "1234",
+      "2": "FrozenError",
+      "3": "123",
+      "4": "RuntimeError"
+    },
+    "answer": "1",
+    "tags": [
+      "advanced-level"
+    ],
+    "explanation": ""
+  },
 
   /*
 {

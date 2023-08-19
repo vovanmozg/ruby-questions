@@ -215,6 +215,24 @@ module.exports = [
       "expression `(1,5 - 1)`, the `5 - 1` is evaluated last, and its result " +
       "`4` is returned."
   },
+  {
+    "id": "79bf99aa-6353-4c89-9205-037bcf86f4f5",
+    "question": "What will be the output of the following code?```console.log(1 +  \"2\" + \"2\");```",
+    "type": "mc",
+    "choices": {
+      "1": "122",
+      "2": "32",
+      "3": "NaN",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
+    ],
+    "explanation": "1. The number `1` is added to the string `\"2\"`, so JavaScript will coerce the number `1` to a " +
+      "string, making it `\"1\"`. Then, it will concatenate the strings `\"1\"` and `\"2\"`, resulting in the string `\"12\"`.\n" +
+      "2. The string `\"12\"` is then concatenated with the string `\"2\"`, resulting in the final output: `\"122\"`."
+  },
   /*
 
 {

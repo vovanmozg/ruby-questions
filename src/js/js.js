@@ -121,7 +121,6 @@ module.exports = [
       "the outer scope, because that's where `xValue` was defined. " +
       "Therefore, `1` is logged to the console."
   },
-
   {
     "id": "f6d4c6d2-7f11-4bd0-9f49-be9683a2c0ef",
     "question": "What will be the output of the following code?```" +
@@ -153,7 +152,6 @@ module.exports = [
       "`undefined`, which results in `NaN` in JavaScript. So, " +
       "`alert(a[0] + b[0])` alerts `NaN`."
   },
-
   {
     "id": "4daaf22c-0511-44c9-a06c-959d269dc871",
     "question": "What will be the output of the following code?```" +
@@ -232,6 +230,21 @@ module.exports = [
     "explanation": "1. The number `1` is added to the string `\"2\"`, so JavaScript will coerce the number `1` to a " +
       "string, making it `\"1\"`. Then, it will concatenate the strings `\"1\"` and `\"2\"`, resulting in the string `\"12\"`.\n" +
       "2. The string `\"12\"` is then concatenated with the string `\"2\"`, resulting in the final output: `\"122\"`."
+  },
+  {
+    "id": "98520309-899e-4cac-a768-83678f571728",
+    "question": "What will be the output of the following code?```[1, 10, 2].sort()```",
+    "type": "mc",
+    "choices": {
+      "1": "[1, 10, 2]",
+      "2": "[1, 2, 10]"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level"
+    ],
+    "explanation": "The `sort()` method, when used without a custom compare function, sorts the elements as strings " +
+      "in lexicographic (or \"dictionary\") order."
   },
   /*
 

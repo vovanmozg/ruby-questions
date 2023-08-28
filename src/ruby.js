@@ -4090,22 +4090,6 @@ module.exports = [
       "equal to 1, it will replace it with the string 'first'. The result will be the new array ['first', 2, 3]."
   },
   {
-    "id": "ce97b63c-7e0e-4b74-8d70-53c7cad5dd83",
-    "question": "What is the difference between #puts and #print?",
-    "type": "mc",
-    "choices": {
-      "1": "#puts appends a newline character to the output. #print prints a value of special variable $_ when called without arguments.",
-      "2": "#puts prints the value of a special variable $_ when called without arguments. #print appends a newline character to the output.",
-      "3": "#puts and #print are two different names for the same method.",
-      "4": "#puts is used to output integers and #print is used to output strings."
-    },
-    "answer": "1",
-    "tags": [
-      "beginner-level"
-    ],
-    "explanation": ""
-  },
-  {
     "id": "155fbafd-486e-4568-a67e-b6d520e096dc",
     "question": "What is the difference between an instance variable and a class variable?",
     "type": "mc",
@@ -4176,7 +4160,8 @@ module.exports = [
     "tags": [
       "advanced-level", "frozen-strings"
     ],
-    "explanation": ""
+    "explanation": "This is because each time a string literal is evaluated, a new string object is created with a different `object_id`.\n" +
+      "However, this may not hold true if optimizations like string interning are in play."
   },
   {
     "id": "42ee6d12-e188-4242-bbec-b9ef7d0ad999",
@@ -4935,6 +4920,22 @@ module.exports = [
     "answer": "1",
     "tags": [
       "advanced-level"
+    ],
+    "explanation": ""
+  },
+  {
+    "id": "ce97b63c-7e0e-4b74-8d70-53c7cad5dd83",
+    "question": "What is the difference between #puts and #print?",
+    "type": "mc",
+    "choices": {
+      "1": "#puts appends a newline character to the output. #print prints a value of special variable $_ when called without arguments.",
+      "2": "#puts prints the value of a special variable $_ when called without arguments. #print appends a newline character to the output.",
+      "3": "#puts and #print are two different names for the same method.",
+      "4": "#puts is used to output integers and #print is used to output strings."
+    },
+    "answer": "1",
+    "tags": [
+      "beginner-level"
     ],
     "explanation": ""
   },

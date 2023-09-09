@@ -4197,7 +4197,10 @@ module.exports = [
     "tags": [
       "advanced-level"
     ],
-    "explanation": ""
+    "explanation": "If you call a method without an explicit receiver, it's being called on `self`. So first nil? is " +
+      "called on `self`. The value of `self` varies depending on the context. If you call nil in Ruby console, `self` " +
+      "will be `main`. In this context `nil?` returns `false`. Then `nil?` is called on the result of the previous " +
+      "expression, which is `false`. `false.nil?` returns `false`."
   },
   {
     "id": "2f1627b1-96c6-4ac1-819f-9d199a48e9a4",

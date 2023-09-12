@@ -4567,7 +4567,11 @@ module.exports = [
     "tags": [
       "intermediate-level", "while"
     ],
-    "explanation": ""
+    "explanation": "The code contains a `while` loop modifier. The statement " +
+      "before the `while` keyword will execute if the condition after the `while` " +
+      "keyword evaluates to `true`. However, since the condition here is `false`, " +
+      "the statement before it (`p 42`) will never be executed. Therefore, the " +
+      "output of the following code is `nil`."
   },
   {
     "id": "15239b55-c256-4dab-93cf-46cd0fa4c92c",

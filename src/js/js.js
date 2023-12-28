@@ -246,6 +246,210 @@ module.exports = [
     "explanation": "The `sort()` method, when used without a custom compare function, sorts the elements as strings " +
       "in lexicographic (or \"dictionary\") order."
   },
+  {
+    "id": "d70dae17-1cdc-4a9d-ab7d-f0a2e25abf99",
+    "question": "What will return the following code? `6 / \"3\"`",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "\"2\"",
+      "3": "2.0",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "type-coercion"],
+    "explanation": "When dividing a number by a string containing a number, the string is converted to a number."
+  },
+  {
+    "id": "7a82ca8c-2fe6-4eb9-b468-4a58ef13c433",
+    "question": "What will return the following code? `\"2\" * \"3\"`",
+    "type": "mc",
+    "choices": {
+      "1": "6",
+      "2": "\"6\"",
+      "3": "Error",
+      "4": "\"23\""
+    },
+    "answer": "1",
+    "tags": ["basic-level", "type-coercion"],
+    "explanation": "When multiplying strings that can be converted to numbers, they are converted and the operation is performed."
+  },
+  {
+    "id": "ca0fbe65-256f-4621-860e-e214e8ba1a47",
+    "question": "What will return the following code? `4 + 5 + \"px\"`",
+    "type": "mc",
+    "choices": {
+      "1": "\"9px\"",
+      "2": "\"45px\"",
+      "3": "9px",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "string-concatenation"],
+    "explanation": "JavaScript executes operations from left to right. First it adds the numbers 4 and 5, then converts the result to a string and concatenates with 'px'."
+  },
+  {
+    "id": "16c74038-b4e6-4169-b3fc-1099aa57b6a7",
+    "question": "What will return the following code? `\"$\" + 4 + 5`",
+    "type": "mc",
+    "choices": {
+      "1": "\"$45\"",
+      "2": "\"$9\"",
+      "3": "9",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "string-concatenation"],
+    "explanation": "In this expression, JavaScript treats all operands as strings starting with the first string, thus concatenating them."
+  },
+  {
+    "id": "b19b9718-38c1-4313-abb4-c7409a19b063",
+    "question": "What will return the following code? `\"4\" - 2`",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "\"2\"",
+      "3": "Error",
+      "4": "\"4-2\""
+    },
+    "answer": "1",
+    "tags": ["basic-level", "type-coercion"],
+    "explanation": "The subtraction operator converts strings to numbers if possible, hence '4' becomes 4, and the result is 2."
+  },
+  {
+    "id": "4ef718ea-495d-4e3d-bd10-d13d64b01a82",
+    "question": "What will return the following code? `\"4px\" - 2`",
+    "type": "mc",
+    "choices": {
+      "1": "NaN",
+      "2": "Error",
+      "3": "2px",
+      "4": "\"2px\""
+    },
+    "answer": "3",
+    "tags": ["basic-level", "type-coercion"],
+    "explanation": "When attempting to subtract a number from a string that cannot be fully converted to a number, JavaScript returns NaN (Not a Number)."
+  },
+  {
+    "id": "906a63f0-fa99-425e-806c-b3baa8634a56",
+    "question": "What will return the following code? `7 / 0`",
+    "type": "mc",
+    "choices": {
+      "1": "Infinity",
+      "2": "0",
+      "3": "Error",
+      "4": "NaN"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "arithmetic-operations"],
+    "explanation": "In JavaScript, dividing any number by zero results in Infinity. This is a special numeric value representing infinity."
+  },
+  {
+    "id": "24a61faa-8ef5-4344-b904-463f99acc55f",
+    "question": "What will return the following code? `typeof null`",
+    "type": "mc",
+    "choices": {
+      "1": "\"object\"",
+      "2": "\"null\"",
+      "3": "\"undefined\"",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "types"],
+    "explanation": "`null` is a primitive value, but `typeof null` returns 'object'. https://stackoverflow.com/questions/18808226/why-is-typeof-null-object."
+  },
+  {
+    "id": "e8152344-c44d-4e95-a896-5f161235f356",
+    "question": "What will return the following code? `typeof {}[0]`",
+    "type": "mc",
+    "choices": {
+      "1": "\"undefined\"",
+      "2": "\"object\"",
+      "3": "\"number\"",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["intermediate-level", "types", "objects"],
+    "explanation": "This expression evaluates to `typeof {}` which is 'object', and then attempts to access index [0] of 'object'. Since 'object' is not an array, the result is 'undefined'."
+  },
+  {
+    "id": "1171464c-85e6-474b-808a-e3519a5ad53b",
+    "question": "What will return the following code? `typeof (\"4px\" - 2)`",
+    "type": "mc",
+    "choices": {
+      "1": "\"number\"",
+      "2": "\"string\"",
+      "3": "\"undefined\"",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "types"],
+    "explanation": "The expression `\"4px\" - 2` results in NaN (Not a Number) because '4px' cannot be converted into a number. The typeof NaN is 'number'."
+  },
+  {
+    "id": "9192709a-c52b-4f43-b8c1-e7bee7b3303c",
+    "question": "What will return the following code? `parseInt(\"09\")`",
+    "type": "mc",
+    "choices": {
+      "1": "9",
+      "2": "0",
+      "3": "09",
+      "4": "Error"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "functions"],
+    "explanation": "The `parseInt` function parses a string argument and returns an integer of the specified radix (base). In this case, '09' is parsed as a base-10 integer, resulting in 9."
+  },
+  {
+    "id": "9725d3fe-406a-4340-ae89-0a3bff435d42",
+    "question": "What will return the following code? `5 && 2`",
+    "type": "mc",
+    "choices": {
+      "1": "2",
+      "2": "5",
+      "3": "true",
+      "4": "false"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "logical-operators"],
+    "explanation": "The logical AND (`&&`) operator returns the first falsy value or the last value if none were found. Since both 5 and 2 are truthy, it returns the last value, which is 2."
+  },
+  {
+    "id": "ae685883-d89a-4f91-8105-56f7a71d7a42",
+    "question": "What will return the following code? `5 || 0`",
+    "type": "mc",
+    "choices": {
+      "1": "5",
+      "2": "0",
+      "3": "true",
+      "4": "false"
+    },
+    "answer": "1",
+    "tags": ["basic-level", "logical-operators"],
+    "explanation": "The logical OR (`||`) operator returns the first truthy value it encounters or the last value if no truthy value is found. Since 5 is truthy, it is returned."
+  }
+
+
+  //
+  //
+  //
+  // a4baa8ea-72e1-47da-bd40-b6ef077b5d2d
+  // c095ae1e-3a2a-4f56-a394-5224b99d97cc
+  // 6e9021bb-25e6-419d-abc1-f53b1b24309a
+  // e0ad1ef0-155e-474c-8e60-1c4b80779fef
+  // 62e9a0d3-53c3-40aa-8f64-173b4022d3c7
+  // f5c870b0-b02a-4a54-8bea-105ee90589e5
+  // 4b7566a5-bc90-46b0-8212-18d73fb79975
+  // 331ec0a6-ed1b-47cc-a79c-5dda94ee49b2
+  // ae1cbb7f-f595-41c4-81ed-17d49e295ab0
+  // 88acfc40-bc2e-41da-9c15-4be663c1a153
+  // 20974d9d-7126-4a66-ba15-c16f1ce4c89f
+  // 02d161d4-a3f0-4f3f-9076-3ba11115ceaa
+  // bc9f1926-fc05-44ad-94fc-043f48159b78
+  // 07c0c95f-efd1-49ea-af1e-f1a770c08359
+  // 3ddc4b61-cfab-44db-b05d-d0b81777695e
+  // 22a68a9d-9caa-408d-b756-935bcf63a350
+
   /*
 
 {

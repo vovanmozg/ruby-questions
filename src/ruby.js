@@ -2761,14 +2761,14 @@ module.exports = [
   },
   {
     "id": "cdb02dd3-b6ba-47f8-81e1-fdb0da86a724",
-    "question": "What is the output of this code?```def foo" +
-      " Proc.new { return 'jo' }[]" +
-      " 'mo'" +
-      "end" +
-      "def bar" +
-      "	->() { return 'jo' }[]" +
-      "	'mo'" +
-      "end" +
+    "question": "What is the output of this code?```def foo\n" +
+      " Proc.new { return 'jo' }[]\n" +
+      " 'mo'\n" +
+      "end\n" +
+      "def bar\n" +
+      "	->() { return 'jo' }[]\n" +
+      "	'mo'\n" +
+      "end\n" +
       "print foo, bar```",
     "type": "mc",
     "choices": {
@@ -2974,11 +2974,11 @@ module.exports = [
   {
     "id": "7ee59e87-1274-42c9-bddb-52ca54750d0b",
       "question": "What will be the output of the following code?```" +
-        "class E2 < StandardError; end" +
-        "begin" +
-        "  puts 1 / 0" +
-        "rescue E2" +
-        "  puts 'oops'" +
+        "class E2 < StandardError; end\n" +
+        "begin\n" +
+        "  puts 1 / 0\n" +
+        "rescue E2\n" +
+        "  puts 'oops'\n" +
         "end```",
     "type": "mc",
     "choices": {
@@ -3061,7 +3061,7 @@ module.exports = [
   },
   {
     "id": "fed7c542-8ab3-40f3-939c-4fe050cd850a",
-    "question": "What will be the output of the following code?```.%R[[0]] == /[0]/```",
+    "question": "What will be the output of the following code? ```%R[[0]] == /[0]/```",
     "type": "mc",
     "choices": {
       "1": "Error",
@@ -4126,10 +4126,10 @@ module.exports = [
   {
     "id": "194b274d-ffda-4189-928d-08078d2006ce",
     "question": "What will be the output the following code?" +
-      "```def foo" +
-      "  Proc.new { return }.call" +
-      "  42" +
-      "end" +
+      "```def foo\n" +
+      "  Proc.new { return }.call\n" +
+      "  42\n" +
+      "end\n" +
       "puts foo```",
     "type": "mc",
     "choices": {

@@ -3089,7 +3089,7 @@ module.exports = [
     ],
     "explanation": "The output of the code will be `true` because both " +
       "`%r[[0]]` and `/[0]/` create the same regular expression, which " +
-      "matches a single character '0' enclosed in square brackets."
+      "matches a single character '0'."
   },
   {
     "id": "a7db4c7f-3c3c-4577-905e-59d80e44b6ab",

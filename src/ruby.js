@@ -4730,6 +4730,38 @@ module.exports = [
       "to each value in the hash and returns a new hash with the transformed values. "
   },
   {
+    "id": "76f41b27-daf4-4fe6-bc7e-59466bfa2655",
+    "question": "What will be the output of the following code?```%Q{#{1}} == %{#{1}}```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "2": "Error",
+      "3": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "%Q{}"
+    ],
+    "explanation":
+      "`%Q{#{1}}` creates a string using the `%Q` syntax, which supports interpolation. The `#{1}` inside the string is a Ruby interpolation syntax that evaluates the expression inside the braces (in this case, the integer `1`) and then converts it to a string. So, `%Q{#{1}}` evaluates to `\"1\"`.\n" +
+      "`%{#{1}}` does the same thing but uses the `%` syntax, which is shorthand for `%Q` and thus also supports interpolation. So, `%{#{1}}` also evaluates to `\"1\"`."
+  },
+  {
+    "id": "b2776f41-f4da-e64f-bec7-5fa29466b655",
+    "question":  "What will be the output of the following code?```\"123\"[1..] == \"123\"[1..-1]```",
+    "type": "mc",
+    "choices": {
+      "1": "true",
+      "3": "false"
+    },
+    "answer": "1",
+    "tags": [
+      "intermediate-level", "[]"
+    ],
+    "explanation": "`\"123\"[1..]`: This returns the substring of `\"123\"` starting from index `1` (where index `0` is the first character) to the end of the string. Since string indices start at `0`, index `1` corresponds to the second character, which is `\"2\"`. So, the substring starting from index `1` to the end is `\"23\"`.\n" +
+      "`\"123\"[1..-1]`: This also slices the string `\"123\"`, starting from index `1` to the last character. In Ruby, a negative index counts from the end of the array or string, where `-1` is the last element. So, `[1..-1]` specifies a range that starts from the second character and goes to the end of the string, which is the same as `\"23\"`"
+  },
+  {
     "id": "aa1f843f-4422-4335-9350-360abc0619e9",
     "question": "Which method of checking file size for zero is wrong?",
     "type": "mc",
